@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<MVATrainer>
+	<general>
+		<!--
+			called with arguments
+				1. name
+				2. additional name info
+				3. file suffix
+			%n$s retrieves the n'th argument
+		-->
+		<option name="trainfiles">train_IP_%1$s%2$s.%3$s</option>
+		<name>ImpactParameter</name>
+	</general>
+	<input id="input">
+		<var name="trackSip2d" multiple="true" optional="true"/>
+		<var name="trackSip3d" multiple="true" optional="true"/>
+	</input>
+	<processor id="count" name="ProcCount">
+		<input>
+			<var source="input" name="trackSip2d"/>
+		</input>
+		<config/>
+		<output>
+			<var name="nTracks"/>
+		</output>
+	</processor>
+	<processor id="norm" name="ProcNormalize">
+		<input>
+			<var source="input" name="trackSip2d"/>
+			<var source="input" name="trackSip3d"/>
+			<var source="count" name="nTracks"/>
+		</input>
+		<config>
+			<pdf/>
+			<pdf smooth="10"/>
+			<pdf smooth="10"/>
+		</config>
+		<output>
+			<var name="trackSip2d"/>
+			<var name="trackSip3d"/>
+			<var name="nTracks"/>
+		</output>
+	</processor>
+	<processor id="lkhTrackSip2d" name="ProcLikelihood">
+		<input>
+			<var source="norm" name="trackSip2d"/>
+		</input>
+		<config>
+			<sigbkg/>
+		</config>
+		<output>
+			<var name="discriminator"/>
+		</output>
+	</processor>
+	<processor id="lkhTrackSip3d" name="ProcLikelihood">
+		<input>
+			<var source="norm" name="trackSip3d"/>
+		</input>
+		<config>
+			<sigbkg/>
+		</config>
+		<output>
+			<var name="discriminator"/>
+		</output>
+	</processor>
+	<processor id="opt" name="ProcOptional">
+		<input>
+			<var source="lkhTrackSip2d" name="discriminator"/>
+			<var source="lkhTrackSip3d" name="discriminator"/>
+		</input>
+		<config>
+			<neutral pos="-1"/>
+			<neutral pos="-1"/>
+		</config>
+		<output>
+			<var name="trackSip2d"/>
+			<var name="trackSip3d"/>
+		</output>
+	</processor>
+	<processor id="tmva" name="ProcTMVA">
+		<input>
+			<var source="count" name="nTracks"/>
+			<var source="opt" name="trackSip2d"/>
+			<var source="opt" name="trackSip3d"/>
+		</input>
+		<config>
+			<method type="MLP" name="MLP">!V:NCycles=80:HiddenLayers=5:TestRate=10</method>
+		</config>
+		<output>
+			<var name="discriminator"/>
+		</output>
+	</processor>
+	<output>
+		<var source="tmva" name="discriminator"/>
+	</output>
+</MVATrainer>
