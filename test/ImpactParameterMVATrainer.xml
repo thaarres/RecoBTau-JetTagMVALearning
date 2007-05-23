@@ -9,7 +9,7 @@
 			%n$s retrieves the n'th argument
 		-->
 		<option name="trainfiles">train_IP_%1$s%2$s.%3$s</option>
-		<name>ImpactParameter</name>
+		<option name="id">ImpactParameter</option>
 	</general>
 	<input id="input">
 		<var name="trackSip2d" multiple="true" optional="true"/>
