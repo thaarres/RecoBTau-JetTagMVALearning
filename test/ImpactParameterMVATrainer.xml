@@ -12,6 +12,8 @@
 		<option name="id">ImpactParameter</option>
 	</general>
 	<input id="input">
+		<var name="jetPt" multiple="false" optional="false"/>
+		<var name="jetEta" multiple="false" optional="false"/>
 		<var name="trackSip2d" multiple="true" optional="true"/>
 		<var name="trackSip3d" multiple="true" optional="true"/>
 	</input>
@@ -31,9 +33,9 @@
 			<var source="count" name="nTracks"/>
 		</input>
 		<config>
-			<pdf/>
-			<pdf smooth="10"/>
-			<pdf smooth="10"/>
+			<pdf smooth="3" lower="-80" upper="150"/>
+			<pdf smooth="3" lower="-80" upper="150"/>
+			<pdf lower="0" upper="50"/>
 		</config>
 		<output>
 			<var name="trackSip2d"/>
@@ -41,11 +43,32 @@
 			<var name="nTracks"/>
 		</output>
 	</processor>
-	<processor id="lkhTrackSip2d" name="ProcLikelihood">
+	<processor id="split" name="ProcSplitter">
 		<input>
 			<var source="norm" name="trackSip2d"/>
+			<var source="norm" name="trackSip3d"/>
 		</input>
 		<config>
+			<select first="2"/>
+		</config>
+		<output>
+			<var name="trackSip2d1"/>
+			<var name="trackSip2d2"/>
+			<var name="trackSip2d"/>
+			<var name="trackSip3d1"/>
+			<var name="trackSip3d2"/>
+			<var name="trackSip3d"/>
+		</output>
+	</processor>
+	<processor id="lkhTrackSip2d" name="ProcLikelihood">
+		<input>
+			<var source="split" name="trackSip2d1"/>
+			<var source="split" name="trackSip2d2"/>
+			<var source="split" name="trackSip2d"/>
+		</input>
+		<config>
+			<sigbkg/>
+			<sigbkg/>
 			<sigbkg/>
 		</config>
 		<output>
@@ -54,9 +77,13 @@
 	</processor>
 	<processor id="lkhTrackSip3d" name="ProcLikelihood">
 		<input>
-			<var source="norm" name="trackSip3d"/>
+			<var source="split" name="trackSip3d1"/>
+			<var source="split" name="trackSip3d2"/>
+			<var source="split" name="trackSip3d"/>
 		</input>
 		<config>
+			<sigbkg/>
+			<sigbkg/>
 			<sigbkg/>
 		</config>
 		<output>
@@ -84,7 +111,7 @@
 			<var source="opt" name="trackSip3d"/>
 		</input>
 		<config>
-			<method type="MLP" name="MLP">!V:NCycles=80:HiddenLayers=5:TestRate=10</method>
+			<method type="MLP" name="MLP">!V:NCycles=200:HiddenLayers=10:TestRate=10</method>
 		</config>
 		<output>
 			<var name="discriminator"/>
