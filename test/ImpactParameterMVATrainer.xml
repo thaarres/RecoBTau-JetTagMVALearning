@@ -14,12 +14,16 @@
 	<input id="input">
 		<var name="jetPt" multiple="false" optional="false"/>
 		<var name="jetEta" multiple="false" optional="false"/>
-		<var name="trackSip2d" multiple="true" optional="true"/>
-		<var name="trackSip3d" multiple="true" optional="true"/>
+		<var name="trackSip2dSig" multiple="true" optional="true"/>
+		<var name="trackSip3dSig" multiple="true" optional="true"/>
+		<var name="trackSip2dVal" multiple="true" optional="true"/>
+		<var name="trackSip3dVal" multiple="true" optional="true"/>
+		<var name="trackJetDist" multiple="true" optional="true"/>
+		<var name="trackFirstTrackDist" multiple="true" optional="true"/>
 	</input>
 	<processor id="count" name="ProcCount">
 		<input>
-			<var source="input" name="trackSip2d"/>
+			<var source="input" name="trackSip2dSig"/>
 		</input>
 		<config/>
 		<output>
@@ -28,8 +32,8 @@
 	</processor>
 	<processor id="norm" name="ProcNormalize">
 		<input>
-			<var source="input" name="trackSip2d"/>
-			<var source="input" name="trackSip3d"/>
+			<var source="input" name="trackSip2dSig"/>
+			<var source="input" name="trackSip3dSig"/>
 			<var source="count" name="nTracks"/>
 		</input>
 		<config>
@@ -38,33 +42,33 @@
 			<pdf lower="0" upper="50"/>
 		</config>
 		<output>
-			<var name="trackSip2d"/>
-			<var name="trackSip3d"/>
+			<var name="trackSip2dSig"/>
+			<var name="trackSip3dSig"/>
 			<var name="nTracks"/>
 		</output>
 	</processor>
 	<processor id="split" name="ProcSplitter">
 		<input>
-			<var source="norm" name="trackSip2d"/>
-			<var source="norm" name="trackSip3d"/>
+			<var source="norm" name="trackSip2dSig"/>
+			<var source="norm" name="trackSip3dSig"/>
 		</input>
 		<config>
 			<select first="2"/>
 		</config>
 		<output>
-			<var name="trackSip2d1"/>
-			<var name="trackSip2d2"/>
-			<var name="trackSip2d"/>
-			<var name="trackSip3d1"/>
-			<var name="trackSip3d2"/>
-			<var name="trackSip3d"/>
+			<var name="trackSip2dSig1"/>
+			<var name="trackSip2dSig2"/>
+			<var name="trackSip2dSig"/>
+			<var name="trackSip3dSig1"/>
+			<var name="trackSip3dSig2"/>
+			<var name="trackSip3dSig"/>
 		</output>
 	</processor>
-	<processor id="lkhTrackSip2d" name="ProcLikelihood">
+	<processor id="lkhTrackSip2dSig" name="ProcLikelihood">
 		<input>
-			<var source="split" name="trackSip2d1"/>
-			<var source="split" name="trackSip2d2"/>
-			<var source="split" name="trackSip2d"/>
+			<var source="split" name="trackSip2dSig1"/>
+			<var source="split" name="trackSip2dSig2"/>
+			<var source="split" name="trackSip2dSig"/>
 		</input>
 		<config>
 			<sigbkg/>
@@ -75,11 +79,11 @@
 			<var name="discriminator"/>
 		</output>
 	</processor>
-	<processor id="lkhTrackSip3d" name="ProcLikelihood">
+	<processor id="lkhTrackSip3dSig" name="ProcLikelihood">
 		<input>
-			<var source="split" name="trackSip3d1"/>
-			<var source="split" name="trackSip3d2"/>
-			<var source="split" name="trackSip3d"/>
+			<var source="split" name="trackSip3dSig1"/>
+			<var source="split" name="trackSip3dSig2"/>
+			<var source="split" name="trackSip3dSig"/>
 		</input>
 		<config>
 			<sigbkg/>
@@ -92,23 +96,23 @@
 	</processor>
 	<processor id="opt" name="ProcOptional">
 		<input>
-			<var source="lkhTrackSip2d" name="discriminator"/>
-			<var source="lkhTrackSip3d" name="discriminator"/>
+			<var source="lkhTrackSip2dSig" name="discriminator"/>
+			<var source="lkhTrackSip3dSig" name="discriminator"/>
 		</input>
 		<config>
 			<neutral pos="-1"/>
 			<neutral pos="-1"/>
 		</config>
 		<output>
-			<var name="trackSip2d"/>
-			<var name="trackSip3d"/>
+			<var name="trackSip2dSig"/>
+			<var name="trackSip3dSig"/>
 		</output>
 	</processor>
 	<processor id="tmva" name="ProcTMVA">
 		<input>
 			<var source="count" name="nTracks"/>
-			<var source="opt" name="trackSip2d"/>
-			<var source="opt" name="trackSip3d"/>
+			<var source="opt" name="trackSip2dSig"/>
+			<var source="opt" name="trackSip3dSig"/>
 		</input>
 		<config>
 			<method type="MLP" name="MLP">!V:NCycles=200:HiddenLayers=10:TestRate=10</method>
