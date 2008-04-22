@@ -14,8 +14,22 @@
 	<input id="input">
 		<var name="jetPt" multiple="false" optional="false"/>
 		<var name="jetEta" multiple="false" optional="false"/>
-		<var name="trackSip2d" multiple="true" optional="true"/>
-		<var name="trackSip3d" multiple="true" optional="true"/>
+		<var name="trackSip2dVal" multiple="true" optional="true"/>
+		<var name="trackSip2dSig" multiple="true" optional="true"/>
+		<var name="trackSip3dVal" multiple="true" optional="true"/>
+		<var name="trackSip3dSig" multiple="true" optional="true"/>
+		<var name="trackJetDist" multiple="true" optional="true"/>
+		<var name="trackFirstTrackDist" multiple="true" optional="true"/>
+		<var name="trackMomentum" multiple="true" optional="true"/>
+		<var name="trackEta" multiple="true" optional="true"/>
+		<var name="trackPtRel" multiple="true" optional="true"/>
+		<var name="trackPPar" multiple="true" optional="true"/>
+		<var name="trackDeltaR" multiple="true" optional="true"/>
+		<var name="trackPtRatio" multiple="true" optional="true"/>
+		<var name="trackDecayLenVal" multiple="true" optional="true"/>
+		<var name="trackChi2" multiple="true" optional="true"/>
+		<var name="trackNTotalHits" multiple="true" optional="true"/>
+		<var name="trackNPixelHits" multiple="true" optional="true"/>
 	</input>
 	<processor id="count" name="ProcCount">
 		<input>
