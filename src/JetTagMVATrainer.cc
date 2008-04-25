@@ -160,6 +160,8 @@ void JetTagMVATrainer::analyze(const edm::Event& event,
 			<< "JetTagComputer is not a MVAJetTagComputer "
 			   "in JetTagMVATrainer" << std::endl;
 
+	computer->passEventSetup(es);
+
 	// finalize the JetTagMVALearning <-> JetTagComputer glue setup
 	if (!setupDone)
 		setup(*computer);
@@ -201,8 +203,12 @@ void JetTagMVATrainer::analyze(const edm::Event& event,
 
 		JetInfoMap::iterator pos =
 			jetInfos.find(edm::RefToBase<Jet>(iter->first));
-		if (pos != jetInfos.end())
-			pos->second.flavour = iter->second.getFlavour();
+		if (pos != jetInfos.end()) {
+			int flavour = iter->second.getFlavour();
+			flavour = std::abs(flavour);
+			if (flavour < 100)
+				pos->second.flavour = flavour;
+		}
 	}
 
 	// cached array containing MVAComputer value list
