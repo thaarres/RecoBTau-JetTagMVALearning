@@ -15,6 +15,8 @@
 
 #include "SimDataFormats/JetMatching/interface/JetFlavourMatching.h"
 
+#include "DataFormats/Common/interface/Ref.h"
+#include "DataFormats/Common/interface/View.h"
 #include "DataFormats/BTauReco/interface/JetTagInfo.h"
 #include "DataFormats/BTauReco/interface/TaggingVariable.h"
 
@@ -162,9 +164,9 @@ void JetTagMVATrainer::analyze(const edm::Event& event,
 		values.resize(3 + variables.size());
 		std::vector<Variable::Value>::iterator insert = values.begin();
 
-		(insert++)->value = target;
-		(insert++)->value = jet->pt();
-		(insert++)->value = jet->eta();
+		(insert++)->setValue(target);
+		(insert++)->setValue(jet->pt());
+		(insert++)->setValue(jet->eta());
 		std::copy(computer->iterator(variables.begin()),
 		          computer->iterator(variables.end()), insert);
 
