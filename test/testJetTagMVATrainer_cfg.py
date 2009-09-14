@@ -36,7 +36,7 @@ process.impactParameterMVATrainer = cms.EDFilter("JetTagMVATrainer",
 	signalFlavours = cms.vint32(5, 7),
 	minimumPseudoRapidity = cms.double(0.0),
 	jetTagComputer = cms.string('impactParameterMVAComputer'),
-	jetFlavourMatching = cms.InputTag("IC5byValAlgo"),
+	jetFlavourMatching = cms.InputTag("AK5byValAlgo"),
 	ignoreFlavours = cms.vint32(0)
 )
 
@@ -51,8 +51,8 @@ process.looper = cms.Looper("JetTagMVATrainerLooper",
 
 process.mcAlgoJetFlavour = cms.Sequence(
 	process.myPartons *
-	process.IC5byRef *
-	process.IC5byValAlgo
+	process.AK5byRef *
+	process.AK5byValAlgo
 )
 
 process.p = cms.Path(
