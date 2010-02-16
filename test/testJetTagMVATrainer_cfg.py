@@ -27,7 +27,7 @@ process.jetTagMVATrainerSave = cms.EDFilter("JetTagMVATrainerSave",
 	toCopy = cms.vstring()
 )
 
-process.impactParameterMVATrainer = cms.EDFilter("JetTagMVATrainer",
+process.impactParameterMVATrainer = cms.EDAnalyzer("JetTagMVATrainer",
 	minimumTransverseMomentum = cms.double(10.0),
 	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos")),
 	useCategories = cms.bool(False),
