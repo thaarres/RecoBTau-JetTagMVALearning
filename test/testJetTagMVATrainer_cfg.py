@@ -22,7 +22,7 @@ process.PoolDBOutputService = cms.Service("PoolDBOutputService",
 	))
 )
 
-process.jetTagMVATrainerSave = cms.EDFilter("JetTagMVATrainerSave",
+process.jetTagMVATrainerSave = cms.EDAnalyzer("JetTagMVATrainerSave",
 	toPut = cms.vstring('ImpactParameter'),
 	toCopy = cms.vstring()
 )
