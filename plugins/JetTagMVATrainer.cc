@@ -31,7 +31,7 @@
 #include "RecoBTau/JetTagComputer/interface/GenericMVAComputer.h"
 #include "RecoBTau/JetTagComputer/interface/GenericMVAComputerCache.h"
 #include "RecoBTau/JetTagComputer/interface/TagInfoMVACategorySelector.h"
-#include "RecoBTau/JetTagMVALearning/interface/JetTagMVATrainer.h"
+#include "JetTagMVATrainer.h"
 
 using namespace reco;
 using namespace PhysicsTools;
