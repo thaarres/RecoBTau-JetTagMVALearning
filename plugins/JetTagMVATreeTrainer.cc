@@ -552,8 +552,8 @@ void JetTagMVATreeTrainer::analyze(const edm::Event& event,
 					//std::cout << "bincontent DUSG: " << bincontent_DUSG_lin << " so that weight is: " << weight << std::endl;
 				}
 				
-				// if weights are too small, the training is really small
-				weight = weight * 100;
+				// if weights are too small this might be suboptimal for the training
+				//weight = weight * 100;
 
 				// composite full array of MVAComputer values
 				values.resize(2 + variables.size());
