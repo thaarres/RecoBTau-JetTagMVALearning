@@ -1,1 +1,0 @@
-/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a
