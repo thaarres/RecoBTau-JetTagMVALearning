@@ -1,0 +1,502 @@
+<arguments>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="0"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="1" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="400"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="2" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="800"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="3" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="1200"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="4" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="1600"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="5" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="2000"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="6" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="2400"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="7" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="2800"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="8" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="3200"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="9" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="3600"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="10" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="4000"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="11" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="4400"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="12" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="4800"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="13" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="5200"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="14" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="5600"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="15" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="6000"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="16" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root"  SkipEvents="6400"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="17" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/965935A1-91F1-E111-BED4-002481E94B4E.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="6800"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="18" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="289"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="19" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="689"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="20" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="1089"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="21" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="1489"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="22" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="1889"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="23" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="2289"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="24" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="2689"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="25" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="3089"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="26" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="3489"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="27" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="3889"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="28" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="4289"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="29" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="4689"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="30" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="5089"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="31" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="5489"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="32" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="5889"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="33" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root"  SkipEvents="6289"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="34" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50EF7230-8EF1-E111-A691-00266CFF9FFC.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="6689"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="35" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="141"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="36" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="541"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="37" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="941"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="38" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="1341"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="39" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="1741"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="40" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="2141"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="41" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="2541"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="42" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="2941"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="43" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="3341"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="44" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="3741"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="45" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="4141"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="46" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="4541"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="47" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="4941"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="48" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="5341"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="49" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="5741"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="50" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="6141"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="51" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="6541"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="52" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="6941"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="53" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="7341"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="54" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="7741"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="55" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="8141"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="56" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="8541"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="57" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="8941"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="58" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="9341"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="59" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root"  SkipEvents="9741"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="60" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/0026AFAA-41F1-E111-80E1-00266CF2E2C8.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="10141"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="61" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="378"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="62" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="778"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="63" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="1178"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="64" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="1578"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="65" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="1978"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="66" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="2378"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="67" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="2778"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="68" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="3178"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="69" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="3578"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="70" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="3978"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="71" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="4378"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="72" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="4778"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="73" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="5178"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="74" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="5578"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="75" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="5978"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="76" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="6378"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="77" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="6778"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="78" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="7178"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="79" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="7578"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="80" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="7978"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="81" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="8378"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="82" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="8778"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="83" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="9178"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="84" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="9578"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="85" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root"  SkipEvents="9978"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="86" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/50B48DB1-41F1-E111-91E0-00266CFFA048.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="10378"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="87" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="353"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="88" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="753"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="89" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="1153"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="90" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="1553"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="91" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="1953"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="92" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="2353"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="93" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="2753"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="94" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="3153"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="95" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="3553"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="96" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="3953"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="97" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="4353"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="98" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="4753"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="99" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="5153"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="100" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="5553"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="101" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="5953"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="102" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="6353"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="103" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="6753"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="104" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="7153"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="105" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="7553"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="106" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="7953"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="107" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="8353"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="108" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="8753"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="109" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="9153"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="110" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="9553"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="111" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root"  SkipEvents="9953"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="112" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/706C3EB0-41F1-E111-9008-0025901D492E.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="10353"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="113" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="304"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="114" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="704"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="115" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="1104"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="116" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="1504"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="117" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="1904"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="118" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="2304"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="119" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="2704"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="120" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="3104"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="121" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="3504"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="122" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="3904"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="123" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="4304"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="124" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="4704"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="125" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="5104"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="126" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="5504"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="127" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="5904"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="128" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="6304"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="129" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="6704"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="130" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="7104"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="131" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="7504"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="132" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="7904"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="133" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="8304"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="134" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="8704"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="135" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="9104"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="136" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="9504"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="137" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root"  SkipEvents="9904"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="138" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/3A65BCBA-41F1-E111-833B-0025904B1426.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="10304"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="139" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="18"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="140" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="418"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="141" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="818"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="142" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="1218"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="143" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="1618"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="144" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="2018"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="145" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="2418"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="146" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="2818"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="147" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="3218"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="148" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="3618"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="149" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="4018"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="150" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="4418"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="151" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="4818"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="152" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="5218"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="153" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="5618"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="154" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="6018"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="155" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="6418"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="156" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="6818"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="157" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="7218"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="158" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="7618"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="159" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="8018"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="160" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="8418"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="161" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="8818"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="162" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="9218"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="163" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root"  SkipEvents="9618"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="164" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/BA0A22CB-41F1-E111-88D2-0030487D8121.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="10018"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="165" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="55"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="166" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="455"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="167" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="855"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="168" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="1255"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="169" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="1655"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="170" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="2055"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="171" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="2455"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="172" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="2855"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="173" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="3255"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="174" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="3655"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="175" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="4055"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="176" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="4455"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="177" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="4855"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="178" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="5255"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="179" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="5655"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="180" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="6055"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="181" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="6455"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="182" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="6855"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="183" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="7255"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="184" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="7655"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="185" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="8055"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="186" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="8455"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="187" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="8855"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="188" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root"  SkipEvents="9255"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="189" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/C6CC3EC2-41F1-E111-AA8B-0025904B1446.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="9655"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="190" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="37"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="191" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="437"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="192" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="837"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="193" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="1237"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="194" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="1637"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="195" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="2037"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="196" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="2437"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="197" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="2837"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="198" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="3237"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="199" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="3637"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="200" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="4037"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="201" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="4437"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="202" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="4837"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="203" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="5237"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="204" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="5637"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="205" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="6037"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="206" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="6437"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="207" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="6837"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="208" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="7237"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="209" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="7637"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="210" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="8037"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="211" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="8437"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="212" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="8837"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="213" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="9237"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="214" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root"  SkipEvents="9637"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="215" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A62BA4C3-41F1-E111-B9E0-00266CF33288.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="10037"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="216" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="15"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="217" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="415"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="218" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="815"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="219" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="1215"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="220" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="1615"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="221" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="2015"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="222" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="2415"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="223" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="2815"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="224" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="3215"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="225" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="3615"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="226" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="4015"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="227" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="4415"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="228" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="4815"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="229" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="5215"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="230" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="5615"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="231" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="6015"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="232" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="6415"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="233" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="6815"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="234" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="7215"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="235" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="7615"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="236" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="8015"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="237" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="8415"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="238" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="8815"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="239" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="9215"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="240" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="9615"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="241" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root"  SkipEvents="10015"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="242" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/CC2DFFC7-41F1-E111-AF4C-00266CF2D5C4.root,/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A6349ECF-41F1-E111-9563-0025904B12FE.root"  SkipEvents="10415"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="243" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A6349ECF-41F1-E111-9563-0025904B12FE.root"  SkipEvents="268"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="244" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A6349ECF-41F1-E111-9563-0025904B12FE.root"  SkipEvents="668"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="245" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A6349ECF-41F1-E111-9563-0025904B12FE.root"  SkipEvents="1068"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="246" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A6349ECF-41F1-E111-9563-0025904B12FE.root"  SkipEvents="1468"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="247" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A6349ECF-41F1-E111-9563-0025904B12FE.root"  SkipEvents="1868"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="248" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A6349ECF-41F1-E111-9563-0025904B12FE.root"  SkipEvents="2268"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="249" >
+  </Job>
+  <Job MaxEvents="400"  InputFiles="/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v2/0000/A6349ECF-41F1-E111-9563-0025904B12FE.root"  SkipEvents="2668"  InputBlocks="/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/Summer12_DR53X-PU_S10_START53_V7A-v2/AODSIM#424ca68a-f143-11e1-b87d-003048f02c8a"  JobID="250" >
+  </Job>
+</arguments>

@@ -1,0 +1,2 @@
+131205_122406: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_9_2/python/crab.py -create -submit all -cfg crab_firststep.cfg
+131205_194005: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_9_2/python/crab.py -status -c MLP_gitNewVars/

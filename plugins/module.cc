@@ -6,10 +6,6 @@
 #include "PhysicsTools/MVATrainer/interface/MVATrainerLooperImpl.h"
 #include "PhysicsTools/MVATrainer/interface/MVATrainerSaveImpl.h"
 #include "PhysicsTools/MVATrainer/interface/MVATrainerFileSaveImpl.h"
-#include "JetTagMVATrainer.h"
-
-// the main module
-DEFINE_FWK_MODULE(JetTagMVATrainer);
 
 // trainer helpers
 using namespace PhysicsTools;
