@@ -8,9 +8,9 @@ process.source = cms.Source("EmptySource")
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1) )
 
 process.calib = cms.ESSource("BTauGenericMVAJetTagComputerFileSource",
-	CombinedSVRecoVertex = cms.string('CombinedSVRecoVertex.mva'), 
-	CombinedSVPseudoVertex = cms.string('CombinedSVPseudoVertex.mva'), 
-	CombinedSVNoVertex = cms.string('CombinedSVNoVertex.mva'), 
+	CombinedSVV2RecoVertex = cms.string('CombinedSVRecoVertex.mva'), 
+	CombinedSVV2PseudoVertex = cms.string('CombinedSVPseudoVertex.mva'), 
+	CombinedSVV2NoVertex = cms.string('CombinedSVNoVertex.mva'), 
 )
 
 process.PoolDBOutputService = cms.Service("PoolDBOutputService",
@@ -27,9 +27,9 @@ process.PoolDBOutputService = cms.Service("PoolDBOutputService",
 process.jetTagMVATrainerSave = cms.EDAnalyzer("JetTagMVATrainerSave",
 	toPut = cms.vstring(),
 	toCopy = cms.vstring(
-		'CombinedSVRecoVertex', 
-		'CombinedSVPseudoVertex', 
-		'CombinedSVNoVertex', 
+		'CombinedSVV2RecoVertex', 
+		'CombinedSVV2PseudoVertex', 
+		'CombinedSVV2NoVertex', 
 	)
 )
 
