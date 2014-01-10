@@ -97,7 +97,7 @@ process.myak5JetTracksAssociatorAtVertex.jets = newjetID
 process.AK5byRef.jets                         = newjetID
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(10000)
+    input = cms.untracked.int32(101)
 )
 
 process.source = cms.Source("PoolSource",
@@ -147,7 +147,7 @@ process.combinedSVMVATrainer = cms.EDAnalyzer("JetTagMVAExtractor",
 	maximumPseudoRapidity = cms.double(2.5),
 	signalFlavours = cms.vint32(5, 7),
 	minimumPseudoRapidity = cms.double(0.0),
-	jetTagComputer = cms.string('combinedSecondaryVertex'),
+	jetTagComputer = cms.string('combinedSecondaryVertexV2'),
 	jetFlavourMatching = cms.InputTag("AK5byValAlgo"),
 	ignoreFlavours = cms.vint32(0)
 )
