@@ -6,8 +6,8 @@ void Filter() {
    
   gSystem->Load("$ROOTSYS/test/libEvent");
 
-	string filename[9]={"CombinedSVNoVertex_B.root","CombinedSVNoVertex_C.root","CombinedSVNoVertex_DUSG.root","CombinedSVPseudoVertex_B.root","CombinedSVPseudoVertex_C.root","CombinedSVPseudoVertex_DUSG.root","CombinedSVRecoVertex_B.root","CombinedSVRecoVertex_C.root","CombinedSVRecoVertex_DUSG.root"};
-	TString treename[9]={"CombinedSVNoVertex","CombinedSVNoVertex","CombinedSVNoVertex","CombinedSVPseudoVertex","CombinedSVPseudoVertex","CombinedSVPseudoVertex","CombinedSVRecoVertex","CombinedSVRecoVertex","CombinedSVRecoVertex"};
+	string filename[9]={"CombinedSVV2NoVertex_B.root","CombinedSVV2NoVertex_C.root","CombinedSVV2NoVertex_DUSG.root","CombinedSVV2PseudoVertex_B.root","CombinedSVV2PseudoVertex_C.root","CombinedSVV2PseudoVertex_DUSG.root","CombinedSVV2RecoVertex_B.root","CombinedSVV2RecoVertex_C.root","CombinedSVV2RecoVertex_DUSG.root"};
+	TString treename[9]={"CombinedSVV2NoVertex","CombinedSVV2NoVertex","CombinedSVV2NoVertex","CombinedSVV2PseudoVertex","CombinedSVV2PseudoVertex","CombinedSVV2PseudoVertex","CombinedSVV2RecoVertex","CombinedSVV2RecoVertex","CombinedSVV2RecoVertex"};
 
 	Int_t max_nb_ofjets	=20000;
 	Float_t ptbins[] = {15,40,60,90,150,400,600,10000};
@@ -18,7 +18,7 @@ void Filter() {
 		//Get old file, old tree and set top branch address
   	TString name = filename[k].c_str();
 		TFile *oldfile = new TFile(name);
-  	TTree *oldtree = (TTree*)oldfile->Get(treename[k]); //CombinedSVNoVertex, CombinedSVRecoVertex, CombinedSVPseudoVertex
+  	TTree *oldtree = (TTree*)oldfile->Get(treename[k]); //CombinedSVV2NoVertex, CombinedSVV2RecoVertex, CombinedSVV2PseudoVertex
   	Int_t nentries = (Int_t)oldtree->GetEntries();
 
 		cout << "There are " << nentries << " jets in the file " << filename[k] << " will select " << max_nb_ofjets << " in each pt/eta bin" << endl;

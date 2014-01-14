@@ -8,7 +8,7 @@ dirs_to_merge=(QCD_Pt-1000to1400_TuneZ2star_8TeV_pythia6_Summer12_DR53X-PU_S10_S
 
 homedirec=/user/pvmulder/NewEraOfDataAnalysis/BTagServiceWork/DEVELOPMENT/CMSSW_5_3_4_patch1/src/CrabJobs_modified1_tightTrackSel/RootFiles
 
-CAT=(CombinedSVRecoVertex CombinedSVPseudoVertex CombinedSVNoVertex)
+CAT=(CombinedSVV2RecoVertex CombinedSVV2PseudoVertex CombinedSVV2NoVertex)
 FLAV=(B C DUSG)
 
 mkdir $homedirec/QCD_training
@@ -20,7 +20,7 @@ do
 	do
 		for j in $( ls $maindirec/$l/${k}_B*); do printf "dcap://maite.iihe.ac.be/$j " >> ${k}Bfiles.txt; done
 		for j in $( ls $maindirec/$l/${k}_C*); do printf "dcap://maite.iihe.ac.be/$j " >> ${k}Cfiles.txt; done
-		if [ $k=="CombinedSVNoVertex" ]
+		if [ $k=="CombinedSVV2NoVertex" ]
 		then
 			let countfiles=0
 			for j in $( ls $maindirec/$l/${k}_D*); do
