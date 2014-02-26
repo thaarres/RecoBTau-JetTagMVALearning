@@ -44,7 +44,7 @@ process.combinedSecondaryVertexNN=process.combinedSecondaryVertexV2.clone(
 		'CombinedSVV2NoVertex'
 	)
 )
-process.combinedSecondaryVertexNNBJetTags = process.combinedSecondaryVertexBJetTagsV2.clone(
+process.combinedSecondaryVertexNNBJetTags = process.combinedSecondaryVertexV2BJetTags.clone(
 	jetTagComputer = cms.string('combinedSecondaryVertexNN')
 )
 

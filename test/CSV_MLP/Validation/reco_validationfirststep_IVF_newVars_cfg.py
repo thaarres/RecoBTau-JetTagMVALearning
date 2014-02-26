@@ -107,7 +107,7 @@ process.combinedSecondaryVertexNN=process.combinedSecondaryVertexV2.clone(
 		'CombinedSVV2NoVertex'
 	)
 )
-process.myIVFCombinedSecondaryVertexBJetTags = process.combinedSecondaryVertexBJetTagsV2.clone(
+process.myIVFCombinedSecondaryVertexBJetTags = process.combinedSecondaryVertexV2BJetTags.clone(
   jetTagComputer = cms.string('combinedSecondaryVertexNN'),
   tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
                            cms.InputTag("inclusiveSecondaryVertexFinderTagInfos"))
