@@ -21,7 +21,7 @@ process.combinedMVATrainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	bound = cms.double(50),
 
 	fileNames = cms.vstring(
-		"/afs/cern.ch/work/p/pvmulder/public/BTagging/FINAL_NOSPIKES/CMSSW_5_3_4_patch1/src/combinedMVA_C.root",
+		"/user/pvmulder/NewEraOfDataAnalysis/BTagServiceWork/DEVELOPMENT/SuperTaggerDev/CMSSW_5_3_14/src/CrabJobs/TTJets_inclusive_SC_CSVSL/TTJetsIncl/combinedMVA_C.root",
 	),
 	weightFile = cms.string("./weights/combinedMVA_C_histo.txt"),
 	biasFiles = cms.vstring(
