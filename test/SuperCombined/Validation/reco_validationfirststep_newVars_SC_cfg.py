@@ -36,6 +36,53 @@ process.BTauMVAJetTagComputerRecord = cms.ESSource("PoolDBESSource",
 )
 process.es_prefer_BTauMVAJetTagComputerRecord = cms.ESPrefer("PoolDBESSource","BTauMVAJetTagComputerRecord")
 
+# write DQM file
+process.DQMoutput = cms.OutputModule("PoolOutputModule",
+  splitLevel = cms.untracked.int32(0),
+  outputCommands = process.DQMEventContent.outputCommands,
+  fileName = cms.untracked.string('DQMfile.root'),
+  #fileName = cms.untracked.string('DQMfile.root'),
+  dataset = cms.untracked.PSet(
+    filterName = cms.untracked.string(''),
+    dataTier = cms.untracked.string('')
+  )
+)
+
+#define you jet ID
+jetID = cms.InputTag("ak5PFJets")
+
+#JTA for your jets
+from RecoJets.JetAssociationProducers.j2tParametersVX_cfi import *
+process.myak5JetTracksAssociatorAtVertex = cms.EDProducer("JetTracksAssociatorAtVertex",
+                                                  j2tParametersVX,
+                                                  jets = jetID
+                                                  )
+
+#new input for impactParameterTagInfos, softleptons
+from RecoBTag.Configuration.RecoBTag_cff import *
+process.btagging = cms.Sequence(
+impactParameterTagInfos * 
+secondaryVertexTagInfos *
+softPFElectronsTagInfos *
+softPFMuonsTagInfos
+)
+
+process.impactParameterTagInfos.jetTracks = cms.InputTag("myak5JetTracksAssociatorAtVertex")
+
+#select good primary vertex
+from PhysicsTools.SelectorUtils.pvSelector_cfi import pvSelector
+process.goodOfflinePrimaryVertices = cms.EDFilter(
+    "PrimaryVertexObjectFilter",
+    filterParams = pvSelector.clone( minNdof = cms.double(4.0), maxZ = cms.double(24.0) ),
+    src=cms.InputTag('offlinePrimaryVertices')
+    )
+
+#input for softLeptonTagInfos
+process.softPFElectronsTagInfos.primaryVertex = cms.InputTag('goodOfflinePrimaryVertices')
+process.softPFElectronsTagInfos.jets = jetID
+process.softPFMuonsTagInfos.primaryVertex = cms.InputTag('goodOfflinePrimaryVertices')
+process.softPFMuonsTagInfos.jets = jetID #we need to be absolutely sure that the CHS is applied... maybe we should get rid of PAT?
+
 
 process.load("RecoBTag.SecondaryVertex.combinedSecondaryVertexES_cfi")
 process.combinedSecondaryVertexV2.calibrationRecords = cms.vstring(
@@ -68,98 +115,14 @@ process.combinedMVA.jetTagComputers = cms.VPSet(
 		)
 )
 
-
-
-# write DQM file
-process.DQMoutput = cms.OutputModule("PoolOutputModule",
-  splitLevel = cms.untracked.int32(0),
-  outputCommands = process.DQMEventContent.outputCommands,
-  fileName = cms.untracked.string('DQMfile.root'),
-  #fileName = cms.untracked.string('DQMfile.root'),
-  dataset = cms.untracked.PSet(
-    filterName = cms.untracked.string(''),
-    dataTier = cms.untracked.string('')
-  )
-)
-
-
-
-
-#define you jet ID
-jetID = cms.InputTag("ak5PFJets")
-JetCut=cms.string("neutralHadronEnergyFraction < 0.99 && neutralEmEnergyFraction < 0.99 && nConstituents > 1 && chargedHadronEnergyFraction > 0.0 && chargedMultiplicity > 0.0 && chargedEmEnergyFraction < 0.99")
-
-#do the PFnoPU using PF2PAT
-process.out = cms.OutputModule("PoolOutputModule",
-                               outputCommands = cms.untracked.vstring('drop *'),
-                               fileName = cms.untracked.string('EmptyFile.root')
-                               )
-process.load("PhysicsTools.PatAlgos.patSequences_cff")
-from PhysicsTools.PatAlgos.tools.pfTools import *
-postfix="PF2PAT"
-usePF2PAT(process,runPF2PAT=True, jetAlgo="AK5", runOnMC=True, postfix=postfix, pvCollection=cms.InputTag('goodOfflinePrimaryVertices'), typeIMetCorrections=False
-#,jetCorrections=('AK5PFchs', ['L1FastJet','L2Relative','L3Absolute']), pvCollection=cms.InputTag('goodOfflinePrimaryVertices'), typeIMetCorrections=False, outputModules=['out']
-)
-process.patJetCorrFactorsPF2PAT.payload = 'AK5PFchs'
-process.patJetCorrFactorsPF2PAT.levels = cms.vstring(['L1FastJet', 'L2Relative', 'L3Absolute'])
-process.pfPileUpPF2PAT.checkClosestZVertex = False
-process.patJetsPF2PAT.discriminatorSources = cms.VInputTag(
-        cms.InputTag("trackCountingHighPurBJetTagsAODPF2PAT")
-)
-#process.btaggingJetTagsAODPF2PAT = cms.Sequence(getattr(process,"combinedSecondaryVertexBJetTagsAODPF2PAT") )
-# top projections in PF2PAT:
-getattr(process,"pfNoPileUp"+postfix).enable = True
-process.selectedPatJetsPF2PAT.cut = JetCut
-process.JECAlgo = cms.Sequence( getattr(process,"patPF2PATSequence"+postfix) )
-
-newjetID=cms.InputTag("selectedPatJetsPF2PAT")
-
-
-#JTA for your jets
-from RecoJets.JetAssociationProducers.j2tParametersVX_cfi import *
-process.myak5JetTracksAssociatorAtVertex = cms.EDProducer("JetTracksAssociatorAtVertex",
-                                                  j2tParametersVX,
-                                                  jets = jetID
-                                                  )
-
-#new input for impactParameterTagInfos, softleptons
-from RecoBTag.Configuration.RecoBTag_cff import *
-process.btagging = cms.Sequence(
-impactParameterTagInfos * 
-secondaryVertexTagInfos *
-softPFElectronsTagInfos *
-softPFMuonsTagInfos
-)
-
-process.impactParameterTagInfos.jetTracks = cms.InputTag("myak5JetTracksAssociatorAtVertex")
-
-#input for softLeptonTagInfos
-process.softPFElectronsTagInfos.primaryVertex = cms.InputTag('goodOfflinePrimaryVertices')
-process.softPFElectronsTagInfos.jets = newjetID
-process.softPFMuonsTagInfos.primaryVertex = cms.InputTag('goodOfflinePrimaryVertices')
-process.softPFMuonsTagInfos.jets = newjetID #we need to be absolutely sure that the CHS is applied... maybe we should get rid of PAT?
-
-
-
-process.load("PhysicsTools.JetMCAlgos.CaloJetsMCFlavour_cfi")  
-
 #do the matching
-process.flavourSeq = cms.Sequence(
-    process.myPartons *
-    process.AK5Flavour
-    )
+from PhysicsTools.JetMCAlgos.HadronAndPartonSelector_cfi import selectedHadronsAndPartons
+process.selectedHadronsAndPartons = selectedHadronsAndPartons.clone()
 
-#select good primary vertex
-from PhysicsTools.SelectorUtils.pvSelector_cfi import pvSelector
-process.goodOfflinePrimaryVertices = cms.EDFilter(
-    "PrimaryVertexObjectFilter",
-    filterParams = pvSelector.clone( minNdof = cms.double(4.0), maxZ = cms.double(24.0) ),
-    src=cms.InputTag('offlinePrimaryVertices')
-    )
+from PhysicsTools.JetMCAlgos.AK5PFJetsMCFlavourInfos_cfi import ak5JetFlavourInfos
+process.jetFlavourInfosAK5PFJets = ak5JetFlavourInfos.clone()
 
-process.myak5JetTracksAssociatorAtVertex.jets = newjetID
-process.AK5byRef.jets                         = newjetID
-
+#standard validation tools
 from DQMOffline.RecoB.bTagCommon_cff import*
 process.load("DQMOffline.RecoB.bTagCommon_cff")
 process.bTagCommonBlock.ptRecJetMin = cms.double(20.0)
@@ -168,7 +131,7 @@ process.bTagCommonBlock.etaRanges = cms.vdouble(0.0, 1.2, 2.1, 2.4)
 
 from Validation.RecoB.bTagAnalysis_cfi import *
 process.load("Validation.RecoB.bTagAnalysis_cfi")
-process.bTagValidation.jetMCSrc = 'AK5byValAlgo'
+process.bTagValidation.jetMCSrc = 'jetFlavourInfosAK5PFJets'
 process.bTagValidation.allHistograms = True 
 #process.bTagValidation.fastMC = True
 
@@ -209,13 +172,14 @@ process.source = cms.Source("PoolSource",
 
 process.btagDQM = cms.Path(
 process.goodOfflinePrimaryVertices * 
-process.JECAlgo * 
-process.flavourSeq * 
+process.selectedHadronsAndPartons *
+process.jetFlavourInfosAK5PFJets *
 process.myak5JetTracksAssociatorAtVertex
- * process.btagging
- * process.combinedSecondaryVertexV2BJetTags
- * process.combinedMVABJetTags
- * process.CustombTagValidation)
+process.btagging *
+process.combinedSecondaryVertexV2BJetTags *
+process.combinedMVABJetTags *
+process.CustombTagValidation
+)
 
 # Path and EndPath definitions
 process.endjob_step = cms.EndPath(process.endOfProcess)

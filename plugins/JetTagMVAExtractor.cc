@@ -21,7 +21,9 @@
 #include "FWCore/Framework/interface/ESHandle.h"
 #include "FWCore/Framework/interface/EDAnalyzer.h"
 
-#include "SimDataFormats/JetMatching/interface/JetFlavourMatching.h"
+//#include "SimDataFormats/JetMatching/interface/JetFlavourMatching.h"
+#include "SimDataFormats/JetMatching/interface/JetFlavourInfo.h"
+#include "SimDataFormats/JetMatching/interface/JetFlavourInfoMatching.h"
 
 #include "DataFormats/Common/interface/View.h"
 #include "DataFormats/BTauReco/interface/JetTagInfo.h"
@@ -404,14 +406,17 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 	}
 
 	// retrieve jet flavours;
-	edm::Handle<JetFlavourMatchingCollection> jetFlavourHandle;
+//	edm::Handle<JetFlavourMatchingCollection> jetFlavourHandle;
+	edm::Handle<JetFlavourInfoMatchingCollection> jetFlavourHandle;
 	event.getByLabel(jetFlavour, jetFlavourHandle);
 
-	for(JetFlavourMatchingCollection::const_iterator iter = jetFlavourHandle->begin(); iter != jetFlavourHandle->end(); iter++) {
+//	for(JetFlavourMatchingCollection::const_iterator iter = jetFlavourHandle->begin(); iter != jetFlavourHandle->end(); iter++) {
+	for(JetFlavourInfoMatchingCollection::const_iterator iter = jetFlavourHandle->begin(); iter != jetFlavourHandle->end(); iter++) {
 
 		JetInfoMap::iterator pos = jetInfos.find(iter->first);
 		if (pos != jetInfos.end())
-			pos->second.flavour = std::abs(iter->second.getFlavour());
+//			pos->second.flavour = std::abs(iter->second.getFlavour());
+			pos->second.flavour = std::abs(iter->second.getPartonFlavour());
 	}
 
 	// cached array containing MVAComputer value list
