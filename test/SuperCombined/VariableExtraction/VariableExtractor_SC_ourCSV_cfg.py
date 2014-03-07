@@ -64,14 +64,16 @@ process.combinedMVA.jetTagComputers = cms.VPSet(
 
 
 
-#define you jet ID
-jetID = cms.InputTag("ak5PFJets")
+from PhysicsTools.JetMCAlgos.AK5PFJetsMCPUJetID_cff import *
+process.selectedAK5PFGenJets = ak5GenJetsMCPUJetID.clone()
+process.matchedAK5PFGenJets = ak5PFJetsGenJetMatchMCPUJetID.clone()
+process.matchedAK5PFGenJets.matched = cms.InputTag("selectedAK5PFGenJets")
 
 #JTA for your jets
 from RecoJets.JetAssociationProducers.j2tParametersVX_cfi import *
 process.myak5JetTracksAssociatorAtVertex = cms.EDProducer("JetTracksAssociatorAtVertex",
                                                   j2tParametersVX,
-                                                  jets = newjetID 
+                                                  jets = cms.InputTag("ak5PFJets") 
                                                   )
 #new input for impactParameterTagInfos
 from RecoBTag.Configuration.RecoBTag_cff import *
@@ -95,7 +97,7 @@ process.selectedHadronsAndPartons = selectedHadronsAndPartons.clone()
 
 from PhysicsTools.JetMCAlgos.AK5PFJetsMCFlavourInfos_cfi import ak5JetFlavourInfos
 process.jetFlavourInfosAK5PFJets = ak5JetFlavourInfos.clone()
-#process.jetFlavourInfosAK5PFJets.jets = newjetID
+process.jetFlavourInfosAK5PFJets.jets = cms.InputTag("ak5PFJets")
 
 
 process.maxEvents = cms.untracked.PSet(
@@ -176,11 +178,14 @@ process.superCombinedTrainer = cms.EDAnalyzer("JetTagMVAExtractor",
 	signalFlavours = cms.vint32(5, 7),
 	jetTagComputer = cms.string('combinedMVA'),
 	jetFlavourMatching = cms.InputTag("jetFlavourInfosAK5PFJets"),
+	matchedGenJets = cms.InputTag("matchedAK5PFGenJets"),
 	ignoreFlavours = cms.vint32(0)
 )
 
 
 process.p = cms.Path(
+process.selectedAK5PFGenJets*
+process.matchedAK5PFGenJets *
 process.goodOfflinePrimaryVertices *
 process.myak5JetTracksAssociatorAtVertex *
 process.impactParameterTagInfos *

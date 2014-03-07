@@ -28,6 +28,7 @@
 #include "DataFormats/Common/interface/View.h"
 #include "DataFormats/BTauReco/interface/JetTagInfo.h"
 #include "DataFormats/BTauReco/interface/TaggingVariable.h"
+#include "DataFormats/JetReco/interface/GenJetCollection.h"
 
 #include "CondFormats/PhysicsToolsObjects/interface/MVAComputer.h"
 
@@ -142,6 +143,7 @@ class JetTagMVAExtractor : public edm::EDAnalyzer {
 	void process(Index index, const Values &values);
 
 	edm::InputTag					jetFlavour;
+	edm::InputTag					genJetsMatched;
 	std::auto_ptr<TagInfoMVACategorySelector>	categorySelector;
 
 	double						minPt;
@@ -265,6 +267,7 @@ static const Calibration::MVAComputer *dummyCalib()
 
 JetTagMVAExtractor::JetTagMVAExtractor(const edm::ParameterSet &params) :
 	jetFlavour(params.getParameter<edm::InputTag>("jetFlavourMatching")),
+	genJetsMatched(params.getParameter<edm::InputTag>("matchedGenJets")),
 	minPt(params.getParameter<double>("minimumTransverseMomentum")),
 	minEta(params.getParameter<double>("minimumPseudoRapidity")),
 	maxEta(params.getParameter<double>("maximumPseudoRapidity")),
@@ -405,6 +408,10 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 		}
 	}
 
+	//retrieve the gen jets
+	edm::Handle<edm::Association<reco::GenJetCollection> > genJetMatch;
+	event.getByLabel(genJetsMatched, genJetMatch);
+		
 	// retrieve jet flavours;
 //	edm::Handle<JetFlavourMatchingCollection> jetFlavourHandle;
 	edm::Handle<JetFlavourInfoMatchingCollection> jetFlavourHandle;
@@ -428,6 +435,11 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 	for(JetInfoMap::const_iterator iter = jetInfos.begin(); iter != jetInfos.end(); iter++) {
 		edm::RefToBase<Jet> jet = iter->first;
 		const JetInfo &info = iter->second;
+
+		reco::GenJetRef genjet = (*genJetMatch)[jet];
+		// reject jets if they do not have a genJetMatch -> handle to avoid jets from PU
+		if (!genjet.isNonnull() || !genjet.isAvailable())
+			continue;
 
 		// simple jet filter
 		if (jet->pt() < minPt || std::abs(jet->eta()) < minEta || std::abs(jet->eta()) > maxEta)

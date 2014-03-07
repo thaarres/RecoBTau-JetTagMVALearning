@@ -48,14 +48,17 @@ process.DQMoutput = cms.OutputModule("PoolOutputModule",
   )
 )
 
-#define you jet ID
-jetID = cms.InputTag("ak5PFJets")
+
+from PhysicsTools.JetMCAlgos.AK5PFJetsMCPUJetID_cff import *
+process.selectedAK5PFGenJets = ak5GenJetsMCPUJetID.clone()
+process.matchedAK5PFGenJets = ak5PFJetsGenJetMatchMCPUJetID.clone()
+process.matchedAK5PFGenJets.matched = cms.InputTag("selectedAK5PFGenJets")
 
 #JTA for your jets
 from RecoJets.JetAssociationProducers.j2tParametersVX_cfi import *
 process.myak5JetTracksAssociatorAtVertex = cms.EDProducer("JetTracksAssociatorAtVertex",
                                                   j2tParametersVX,
-                                                  jets = jetID
+                                                  jets = cms.InputTag("ak5PFJets")
                                                   )
 
 #new input for impactParameterTagInfos, softleptons
@@ -79,9 +82,9 @@ process.goodOfflinePrimaryVertices = cms.EDFilter(
 
 #input for softLeptonTagInfos
 process.softPFElectronsTagInfos.primaryVertex = cms.InputTag('goodOfflinePrimaryVertices')
-process.softPFElectronsTagInfos.jets = jetID
+process.softPFElectronsTagInfos.jets = cms.InputTag("ak5PFJets")
 process.softPFMuonsTagInfos.primaryVertex = cms.InputTag('goodOfflinePrimaryVertices')
-process.softPFMuonsTagInfos.jets = jetID #we need to be absolutely sure that the CHS is applied... maybe we should get rid of PAT?
+process.softPFMuonsTagInfos.jets = cms.InputTag("ak5PFJets") #we need to be absolutely sure that the CHS is applied... maybe we should get rid of PAT?
 
 
 process.load("RecoBTag.SecondaryVertex.combinedSecondaryVertexES_cfi")
@@ -121,6 +124,7 @@ process.selectedHadronsAndPartons = selectedHadronsAndPartons.clone()
 
 from PhysicsTools.JetMCAlgos.AK5PFJetsMCFlavourInfos_cfi import ak5JetFlavourInfos
 process.jetFlavourInfosAK5PFJets = ak5JetFlavourInfos.clone()
+process.jetFlavourInfosAK5PFJets.jets = cms.InputTag("ak5PFJets")
 
 #standard validation tools
 from DQMOffline.RecoB.bTagCommon_cff import*
@@ -132,6 +136,7 @@ process.bTagCommonBlock.etaRanges = cms.vdouble(0.0, 1.2, 2.1, 2.4)
 from Validation.RecoB.bTagAnalysis_cfi import *
 process.load("Validation.RecoB.bTagAnalysis_cfi")
 process.bTagValidation.jetMCSrc = 'jetFlavourInfosAK5PFJets'
+process.bTagValidation.matchedGenJets = 'matchedAK5PFGenJets'
 process.bTagValidation.allHistograms = True 
 #process.bTagValidation.fastMC = True
 
@@ -171,6 +176,8 @@ process.source = cms.Source("PoolSource",
 
 
 process.btagDQM = cms.Path(
+process.selectedAK5PFGenJets *
+process.matchedAK5PFGenJets *
 process.goodOfflinePrimaryVertices * 
 process.selectedHadronsAndPartons *
 process.jetFlavourInfosAK5PFJets *
