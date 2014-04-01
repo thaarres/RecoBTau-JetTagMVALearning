@@ -232,12 +232,14 @@ JetTagMVAExtractor::Label::Var::Var(const std::string &name) :
 	//numbering based on order in TaggingVariable.h!!!
 	multiple = ((int)tag >= (int)btau::trackMomentum &&
 	            (int)tag <= (int)btau::trackGhostTrackWeight) ||
-	           ((int)tag >= (int)btau::trackP0Par &&
+	           ((int)tag >= (int)btau::vertexMass &&
 	            (int)tag <= (int)btau::trackNPixelHits) ||
-							(int)tag == (int)btau::algoDiscriminator;
+	           ((int)tag >= (int)btau::massVertexEnergyFraction &&
+							(int)tag <= (int)btau::algoDiscriminator);
 
 	type = (tag == btau::jetNTracks ||
 	        tag == btau::vertexCategory ||
+	        tag == btau::vertexLeptonCategory ||
 	        tag == btau::jetNSecondaryVertices ||
 	        tag == btau::vertexNTracks ||
 	        tag == btau::trackNTotalHits ||
@@ -473,7 +475,7 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 		// compose full array of MVAComputer values
 		values.resize(2 + variables.size());
 
-		values[0].setName("jetPt");
+/* 		values[0].setName("jetPt");
 		values[0].setValue(jet->pt());
 		values[1].setName("jetEta");
 		values[1].setValue(jet->eta());
@@ -484,7 +486,12 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 			values[i].setName(TaggingVariableTokens[iter->first]);
 			values[i].setValue(iter->second);
 			i++;
-		}
+		} */
+                 std::vector<Variable::Value>::iterator insert = values.begin();
+ 
+                 (insert++)->setValue(jet->pt());
+								 (insert++)->setValue(jet->eta());
+                 std::copy(mvaComputer.iterator(variables.begin()),mvaComputer.iterator(variables.end()), insert);
 
 		process(Index(info.flavour, index), values);
 	}

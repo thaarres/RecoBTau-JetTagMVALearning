@@ -84,6 +84,7 @@ process.softPFMuonsTagInfos.primaryVertex = cms.InputTag("goodOfflinePrimaryVert
 process.softPFElectronsTagInfos.primaryVertex = cms.InputTag("goodOfflinePrimaryVertices")
 process.softPFMuonsTagInfos.jets = cms.InputTag("ak5PFJets")
 process.softPFElectronsTagInfos.jets = cms.InputTag("ak5PFJets") # we should apply CHS!!!
+process.combinedSecondaryVertexSoftLepton.trackMultiplicityMin = cms.uint32(2)
 
 #do the matching
 from PhysicsTools.JetMCAlgos.HadronAndPartonSelector_cfi import selectedHadronsAndPartons

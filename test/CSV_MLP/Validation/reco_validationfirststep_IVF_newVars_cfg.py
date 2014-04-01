@@ -87,6 +87,7 @@ process.combinedSecondaryVertexNN=process.combinedSecondaryVertexV2.clone(
 		'CombinedSVV2NoVertex'
 	)
 )
+process.combinedSecondaryVertexNN.trackMultiplicityMin = cms.uint32(2)
 process.myIVFCombinedSecondaryVertexBJetTags = process.combinedSecondaryVertexV2BJetTags.clone(
   jetTagComputer = cms.string('combinedSecondaryVertexNN'),
   tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),

@@ -110,6 +110,7 @@ process.combinedSecondaryVertexV2.calibrationRecords = cms.vstring(
 		'CombinedSVV2PseudoVertex',
 		'CombinedSVV2NoVertex'
 )
+process.combinedSecondaryVertexV2.trackMultiplicityMin = cms.uint32(2)
 
 # combined IP+SV or IP+SV+SL taggers
 process.Combinedbtaggers = cms.Sequence(
@@ -122,6 +123,7 @@ process.combinedSecondaryVertexIVFBJetTags = process.combinedSecondaryVertexBJet
 	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
 	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
 )
+
 # CSVIVFV1: LR-based
 process.combinedSecondaryVertexIVFV1=process.combinedSecondaryVertexV1.clone(
 	calibrationRecords = cms.vstring(
@@ -135,6 +137,7 @@ process.combinedSecondaryVertexIVFV1BJetTags = process.combinedSecondaryVertexV1
 	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
 	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
 )
+
 # CSVIVFV2: MLP-based
 process.combinedSecondaryVertexIVFV2=process.combinedSecondaryVertexV2.clone(
 	calibrationRecords = cms.vstring(
@@ -148,6 +151,8 @@ process.combinedSecondaryVertexIVFV2BJetTags = process.combinedSecondaryVertexV2
 	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
 	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
 )
+process.combinedSecondaryVertexIVFV2.trackMultiplicityMin = cms.uint32(2)
+
 # CSVSLIVF: CSVSL+IVF
 process.combinedSecondaryVertexSoftLeptonIVF=process.combinedSecondaryVertexSoftLepton.clone(
 	calibrationRecords = cms.vstring(
@@ -169,6 +174,8 @@ process.combinedSecondaryVertexSoftLeptonIVFBJetTags = process.combinedSecondary
 													 cms.InputTag("softPFMuonsTagInfos"),
 													 cms.InputTag("softPFElectronsTagInfos"))
 )
+process.combinedSecondaryVertexSoftLeptonIVF.trackMultiplicityMin = cms.uint32(2)
+
 
 # combined IP+IVF or IP+IVF+SL taggers
 process.CombinedIVFbtaggers = cms.Sequence(

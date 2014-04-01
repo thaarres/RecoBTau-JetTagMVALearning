@@ -46,7 +46,9 @@ process.goodOfflinePrimaryVertices = cms.EDFilter(
 #input for softLeptonTagInfos
 process.softPFElectronsTagInfos.primaryVertex = cms.InputTag('goodOfflinePrimaryVertices')
 process.softPFMuonsTagInfos.primaryVertex = cms.InputTag('goodOfflinePrimaryVertices')
+
 process.combinedSecondaryVertexSoftLepton.trackMultiplicityMin = cms.uint32(2)
+
 
 #for Inclusive Vertex Finder
 process.load('RecoVertex/AdaptiveVertexFinder/inclusiveVertexing_cff')
