@@ -104,6 +104,8 @@ process.combinedSecondaryVertexV1.calibrationRecords = cms.vstring(
 		'CombinedSVV1PseudoVertex',
 		'CombinedSVV1NoVertex'
 )
+process.combinedSecondaryVertexV1.trackMultiplicityMin = cms.uint32(2)
+
 # CSVV2: MLP-based
 process.combinedSecondaryVertexV2.calibrationRecords = cms.vstring(
 		'CombinedSVV2RecoVertex',
@@ -111,6 +113,8 @@ process.combinedSecondaryVertexV2.calibrationRecords = cms.vstring(
 		'CombinedSVV2NoVertex'
 )
 process.combinedSecondaryVertexV2.trackMultiplicityMin = cms.uint32(2)
+
+process.combinedSecondaryVertexSoftLepton.trackMultiplicityMin = cms.uint32(2)
 
 # combined IP+SV or IP+SV+SL taggers
 process.Combinedbtaggers = cms.Sequence(
@@ -127,9 +131,9 @@ process.combinedSecondaryVertexIVFBJetTags = process.combinedSecondaryVertexBJet
 # CSVIVFV1: LR-based
 process.combinedSecondaryVertexIVFV1=process.combinedSecondaryVertexV1.clone(
 	calibrationRecords = cms.vstring(
-		'CombinedSVV1RecoVertex', # later to be replaced with dedicated IVF training
-		'CombinedSVV1PseudoVertex',
-		'CombinedSVV1NoVertex'
+		'CombinedSVIVFV1RecoVertex', # later to be replaced with dedicated IVF training
+		'CombinedSVIVFV1PseudoVertex',
+		'CombinedSVIVFV1NoVertex'
 	)
 )
 process.combinedSecondaryVertexIVFV1BJetTags = process.combinedSecondaryVertexV1BJetTags.clone(
@@ -137,6 +141,7 @@ process.combinedSecondaryVertexIVFV1BJetTags = process.combinedSecondaryVertexV1
 	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
 	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
 )
+process.combinedSecondaryVertexIVFV1.trackMultiplicityMin = cms.uint32(2)
 
 # CSVIVFV2: MLP-based
 process.combinedSecondaryVertexIVFV2=process.combinedSecondaryVertexV2.clone(
