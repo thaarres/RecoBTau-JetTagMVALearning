@@ -21,11 +21,14 @@
 #include "FWCore/Framework/interface/ESHandle.h"
 #include "FWCore/Framework/interface/EDAnalyzer.h"
 
-#include "SimDataFormats/JetMatching/interface/JetFlavourMatching.h"
+//#include "SimDataFormats/JetMatching/interface/JetFlavourMatching.h"
+#include "SimDataFormats/JetMatching/interface/JetFlavourInfo.h"
+#include "SimDataFormats/JetMatching/interface/JetFlavourInfoMatching.h"
 
 #include "DataFormats/Common/interface/View.h"
 #include "DataFormats/BTauReco/interface/JetTagInfo.h"
 #include "DataFormats/BTauReco/interface/TaggingVariable.h"
+#include "DataFormats/JetReco/interface/GenJetCollection.h"
 
 #include "CondFormats/PhysicsToolsObjects/interface/MVAComputer.h"
 
@@ -140,6 +143,7 @@ class JetTagMVAExtractor : public edm::EDAnalyzer {
 	void process(Index index, const Values &values);
 
 	edm::InputTag					jetFlavour;
+	edm::InputTag					genJetsMatched;
 	std::auto_ptr<TagInfoMVACategorySelector>	categorySelector;
 
 	double						minPt;
@@ -228,12 +232,14 @@ JetTagMVAExtractor::Label::Var::Var(const std::string &name) :
 	//numbering based on order in TaggingVariable.h!!!
 	multiple = ((int)tag >= (int)btau::trackMomentum &&
 	            (int)tag <= (int)btau::trackGhostTrackWeight) ||
-	           ((int)tag >= (int)btau::trackP0Par &&
+	           ((int)tag >= (int)btau::vertexMass &&
 	            (int)tag <= (int)btau::trackNPixelHits) ||
-							(int)tag == (int)btau::algoDiscriminator;
+	           ((int)tag >= (int)btau::massVertexEnergyFraction &&
+							(int)tag <= (int)btau::algoDiscriminator);
 
 	type = (tag == btau::jetNTracks ||
 	        tag == btau::vertexCategory ||
+	        tag == btau::vertexLeptonCategory ||
 	        tag == btau::jetNSecondaryVertices ||
 	        tag == btau::vertexNTracks ||
 	        tag == btau::trackNTotalHits ||
@@ -263,6 +269,7 @@ static const Calibration::MVAComputer *dummyCalib()
 
 JetTagMVAExtractor::JetTagMVAExtractor(const edm::ParameterSet &params) :
 	jetFlavour(params.getParameter<edm::InputTag>("jetFlavourMatching")),
+	genJetsMatched(params.getParameter<edm::InputTag>("matchedGenJets")),
 	minPt(params.getParameter<double>("minimumTransverseMomentum")),
 	minEta(params.getParameter<double>("minimumPseudoRapidity")),
 	maxEta(params.getParameter<double>("maximumPseudoRapidity")),
@@ -403,15 +410,22 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 		}
 	}
 
+	//retrieve the gen jets
+	edm::Handle<edm::Association<reco::GenJetCollection> > genJetMatch;
+	event.getByLabel(genJetsMatched, genJetMatch);
+		
 	// retrieve jet flavours;
-	edm::Handle<JetFlavourMatchingCollection> jetFlavourHandle;
+//	edm::Handle<JetFlavourMatchingCollection> jetFlavourHandle;
+	edm::Handle<JetFlavourInfoMatchingCollection> jetFlavourHandle;
 	event.getByLabel(jetFlavour, jetFlavourHandle);
 
-	for(JetFlavourMatchingCollection::const_iterator iter = jetFlavourHandle->begin(); iter != jetFlavourHandle->end(); iter++) {
+//	for(JetFlavourMatchingCollection::const_iterator iter = jetFlavourHandle->begin(); iter != jetFlavourHandle->end(); iter++) {
+	for(JetFlavourInfoMatchingCollection::const_iterator iter = jetFlavourHandle->begin(); iter != jetFlavourHandle->end(); iter++) {
 
 		JetInfoMap::iterator pos = jetInfos.find(iter->first);
 		if (pos != jetInfos.end())
-			pos->second.flavour = std::abs(iter->second.getFlavour());
+//			pos->second.flavour = std::abs(iter->second.getFlavour());
+			pos->second.flavour = std::abs(iter->second.getPartonFlavour());
 	}
 
 	// cached array containing MVAComputer value list
@@ -423,6 +437,11 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 	for(JetInfoMap::const_iterator iter = jetInfos.begin(); iter != jetInfos.end(); iter++) {
 		edm::RefToBase<Jet> jet = iter->first;
 		const JetInfo &info = iter->second;
+
+		reco::GenJetRef genjet = (*genJetMatch)[jet];
+		// reject jets if they do not have a genJetMatch -> handle to avoid jets from PU
+		if (!genjet.isNonnull() || !genjet.isAvailable())
+			continue;
 
 		// simple jet filter
 		if (jet->pt() < minPt || std::abs(jet->eta()) < minEta || std::abs(jet->eta()) > maxEta)
@@ -456,7 +475,7 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 		// compose full array of MVAComputer values
 		values.resize(2 + variables.size());
 
-		values[0].setName("jetPt");
+/* 		values[0].setName("jetPt");
 		values[0].setValue(jet->pt());
 		values[1].setName("jetEta");
 		values[1].setValue(jet->eta());
@@ -467,7 +486,12 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 			values[i].setName(TaggingVariableTokens[iter->first]);
 			values[i].setValue(iter->second);
 			i++;
-		}
+		} */
+                 std::vector<Variable::Value>::iterator insert = values.begin();
+ 
+                 (insert++)->setValue(jet->pt());
+								 (insert++)->setValue(jet->eta());
+                 std::copy(mvaComputer.iterator(variables.begin()),mvaComputer.iterator(variables.end()), insert);
 
 		process(Index(info.flavour, index), values);
 	}

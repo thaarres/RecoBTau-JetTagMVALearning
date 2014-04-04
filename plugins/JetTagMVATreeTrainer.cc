@@ -233,6 +233,9 @@ JetTagMVATreeTrainer::JetTagMVATreeTrainer(const edm::ParameterSet &params) :
 	maxEvents(params.getUntrackedParameter<int>("maxEvents", -1)),
 	fileNames(params.getParameter<std::vector<std::string> >("fileNames"))
 {
+
+	std::cout << "JetTagMVATreeTrainer::JetTagMVATreeTrainer" << std::endl;
+	
 	std::sort(signalFlavours.begin(), signalFlavours.end());
 	std::sort(ignoreFlavours.begin(), ignoreFlavours.end());
 
@@ -275,6 +278,7 @@ JetTagMVATreeTrainer::JetTagMVATreeTrainer(const edm::ParameterSet &params) :
 	TFile* infile_B = 0;
 	TFile* infile_C = 0;
 	TFile* infile_DUSG = 0;
+/* 	
 	if(params.getParameter<std::string>("calibrationRecord") == "CombinedSVRecoVertex")
 	{
 	  infile_B = TFile::Open("CombinedSVRecoVertex_B_histo.root");
@@ -300,11 +304,25 @@ JetTagMVATreeTrainer::JetTagMVATreeTrainer(const edm::ParameterSet &params) :
 	  infile_C = TFile::Open("combinedMVA_C_histo.root");
 	  infile_DUSG = TFile::Open("combinedMVA_DUSG_histo.root");
 	}
-	else
-	{
-	   std::cout<<"WARNING: calibrationRecord not recognized!"<<std::endl;
+ */
+
+	std::string calibRecords[16] = {"CombinedSVRecoVertexNoSoftLepton","CombinedSVRecoVertexSoftElectron","CombinedSVRecoVertexSoftMuon","CombinedSVPseudoVertexNoSoftLepton","CombinedSVPseudoVertexSoftElectron","CombinedSVPseudoVertexSoftMuon","CombinedSVNoVertexNoSoftLepton","CombinedSVNoVertexSoftElectron","CombinedSVNoVertexSoftMuon", "CombinedSVNoVertex","CombinedSVPseudoVertex","CombinedSVRecoVertex", "CombinedSVV2NoVertex","CombinedSVV2PseudoVertex","CombinedSVV2RecoVertex", "combinedMVA"};
+	bool calibRecordFound = false;
+	for(int i=0; i<16; i++){ 
+//		std::cout << "calibrationRecord " << i << ": " << calibRecords[i] << " and we are looking for " << params.getParameter<std::string>("calibrationRecord")  << std::endl;
+		if(params.getParameter<std::string>("calibrationRecord") == calibRecords[i])
+		{
+		  calibRecordFound = true;
+			TString tmp = (TString) calibRecords[i] ;
+			infile_B = TFile::Open(tmp+"_B_histo.root");
+		  infile_C = TFile::Open(tmp+"_C_histo.root");
+		  infile_DUSG = TFile::Open(tmp+"_DUSG_histo.root");		
+		} 
+ 		else if(i==15 && calibRecordFound == false)
+		{
+	   	std::cout<<"JetTagMVATreeTrainer: calibrationRecord " << params.getParameter<std::string>("calibrationRecord") << " NOT FOUND!!!"<<std::endl;
+		}
 	}
-	
 	//flatten in linear scale of pt
 	histo_B_lin = (TH2D*) infile_B->Get("jets_lin");
 	histo_C_lin = (TH2D*) infile_C->Get("jets_lin");
@@ -558,13 +576,13 @@ void JetTagMVATreeTrainer::analyze(const edm::Event& event,
 				// composite full array of MVAComputer values
 				values.resize(2 + variables.size());
 
-//				std::vector<Variable::Value>::iterator insert = values.begin();
-//		                (insert++)->setValue(target);
-//		                (insert++)->setValue(weight);
+				std::vector<Variable::Value>::iterator insert = values.begin();
+		                (insert++)->setValue(target);
+		                (insert++)->setValue(weight);
 
-//				std::copy(mvaComputer->iterator(variables.begin()),  mvaComputer->iterator(variables.end()), insert);
+				std::copy(mvaComputer->iterator(variables.begin()),  mvaComputer->iterator(variables.end()), insert);
 
-
+/* 
 		values[0].setName("__TARGET__");
 		values[0].setValue(target);
 		values[1].setName("__WEIGHT__");
@@ -580,7 +598,7 @@ void JetTagMVATreeTrainer::analyze(const edm::Event& event,
 			//std::cout << "values name " << values[i].getName() << " has value " << values[i].getValue()  << std::endl;			
 			i++;
 		}
-
+ */
 
 
 				static_cast<MVAComputer*>(mvaComputer)->eval(values);

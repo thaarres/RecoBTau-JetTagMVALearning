@@ -33,73 +33,35 @@ process.GlobalTag.globaltag = cms.string("START53_V26::All")
 #)
 #process.es_prefer_BTauMVAJetTagComputerRecord = cms.ESPrefer("PoolDBESSource","BTauMVAJetTagComputerRecord")
 
-#for Inclusive Vertex Finder
-process.load('RecoVertex/AdaptiveVertexFinder/inclusiveVertexing_cff')
-process.load('RecoBTag/SecondaryVertex/inclusiveSecondaryVertexFinderTagInfos_cfi')
-
-#define you jet ID
-jetID = cms.InputTag("ak5PFJets")
-JetCut=cms.string("neutralHadronEnergyFraction < 0.99 && neutralEmEnergyFraction < 0.99 && nConstituents > 1 && chargedHadronEnergyFraction > 0.0 && chargedMultiplicity > 0.0 && chargedEmEnergyFraction < 0.99")
-
-
-#do the PFnoPU using PF2PAT
-process.out = cms.OutputModule("PoolOutputModule",
-                               outputCommands = cms.untracked.vstring('drop *'),
-                               fileName = cms.untracked.string('EmptyFile.root')
-                               )
-process.load("PhysicsTools.PatAlgos.patSequences_cff")
-from PhysicsTools.PatAlgos.tools.pfTools import *
-postfix="PF2PAT"
-usePF2PAT(process,runPF2PAT=True, jetAlgo="AK5", runOnMC=True, postfix=postfix, pvCollection=cms.InputTag('goodOfflinePrimaryVertices'), typeIMetCorrections=False
-)
-process.patJetCorrFactorsPF2PAT.payload = 'AK5PFchs'
-process.patJetCorrFactorsPF2PAT.levels = cms.vstring(['L1FastJet', 'L2Relative', 'L3Absolute'])
-process.pfPileUpPF2PAT.checkClosestZVertex = False
-process.patJetsPF2PAT.discriminatorSources = cms.VInputTag(
-        cms.InputTag("trackCountingHighEffBJetTagsAODPF2PAT")
-)
-process.btaggingJetTagsAODPF2PAT = cms.Sequence(getattr(process,"combinedSecondaryVertexBJetTagsAODPF2PAT") )
-# top projections in PF2PAT:
-getattr(process,"pfNoPileUp"+postfix).enable = True
-#applyPostfix(process,"patJetCorrFactors",postfix).payload = cms.string('AK5PFchs')
-#process.pfPileUpPF2PAT.Vertices = cms.InputTag('goodOfflinePrimaryVertices')
-#process.pfPileUpPF2PAT.checkClosestZVertex = cms.bool(False)
-process.selectedPatJetsPF2PAT.cut = JetCut
-process.JECAlgo = cms.Sequence( getattr(process,"patPF2PATSequence"+postfix) )
-
-newjetID=cms.InputTag("selectedPatJetsPF2PAT")
+from PhysicsTools.JetMCAlgos.AK5PFJetsMCPUJetID_cff import *
+process.selectedAK5PFGenJets = ak5GenJetsMCPUJetID.clone()
+process.matchedAK5PFGenJets = ak5PFJetsGenJetMatchMCPUJetID.clone()
+process.matchedAK5PFGenJets.matched = cms.InputTag("selectedAK5PFGenJets")
 
 #JTA for your jets
 from RecoJets.JetAssociationProducers.j2tParametersVX_cfi import *
 process.myak5JetTracksAssociatorAtVertex = cms.EDProducer("JetTracksAssociatorAtVertex",
                                                   j2tParametersVX,
-                                                  jets = jetID # replaced by newjetID later
+                                                  jets = cms.InputTag("ak5PFJets")
                                                   )
 
 #new input for impactParameterTagInfos
 from RecoBTag.Configuration.RecoBTag_cff import *
 process.impactParameterTagInfos.jetTracks = cms.InputTag("myak5JetTracksAssociatorAtVertex")
-
-process.load("PhysicsTools.JetMCAlgos.CaloJetsMCFlavour_cfi")  
-process.AK5byRef.jets = jetID # replaced by newjetID later
-
-#do the matching
-process.flavourSeq = cms.Sequence(
-    process.myPartons *
-    process.AK5Flavour
-    )
+process.combinedSecondaryVertexV2.trackMultiplicityMin = cms.uint32(2)
 
 
-#select good primary vertex
-from PhysicsTools.SelectorUtils.pvSelector_cfi import pvSelector
-process.goodOfflinePrimaryVertices = cms.EDFilter(
-    "PrimaryVertexObjectFilter",
-    filterParams = pvSelector.clone( minNdof = cms.double(4.0), maxZ = cms.double(24.0) ),
-    src=cms.InputTag('offlinePrimaryVertices')
-    )
+#for Inclusive Vertex Finder
+process.load('RecoVertex/AdaptiveVertexFinder/inclusiveVertexing_cff')
+process.load('RecoBTag/SecondaryVertex/inclusiveSecondaryVertexFinderTagInfos_cfi')
 
-process.myak5JetTracksAssociatorAtVertex.jets = newjetID
-process.AK5byRef.jets                         = newjetID
+#for the flavour matching
+from PhysicsTools.JetMCAlgos.HadronAndPartonSelector_cfi import selectedHadronsAndPartons
+process.selectedHadronsAndPartons = selectedHadronsAndPartons.clone()
+
+from PhysicsTools.JetMCAlgos.AK5PFJetsMCFlavourInfos_cfi import ak5JetFlavourInfos
+process.jetFlavourInfosAK5PFJets = ak5JetFlavourInfos.clone()
+process.jetFlavourInfosAK5PFJets.jets = cms.InputTag("ak5PFJets")
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(100)
@@ -127,14 +89,14 @@ process.source = cms.Source("PoolSource",
 process.combinedSVMVATrainer = cms.EDAnalyzer("JetTagMVAExtractor",
 	variables = cms.untracked.VPSet(
 		cms.untracked.PSet( label = cms.untracked.string("CombinedSVV2RecoVertex"),  variables=cms.untracked.vstring(
-"jetPt","jetEta","vertexCategory","trackSip2dSig","trackSip3dSig","trackSip2dVal","trackSip3dVal","trackPtRel","trackPPar","trackEtaRel","trackDeltaR","trackPtRatio","trackPParRatio","trackJetDist","trackDecayLenVal","vertexMass","vertexNTracks","vertexEnergyRatio","trackSip2dSigAboveCharm","trackSip3dSigAboveCharm","flightDistance2dSig","flightDistance3dSig","flightDistance2dVal","flightDistance3dVal","trackSumJetEtRatio","jetNSecondaryVertices","vertexJetDeltaR","trackSumJetDeltaR","jetNTracks","trackSip2dValAboveCharm","trackSip3dValAboveCharm","vertexFitProb","chargedHadronEnergyFraction","neutralHadronEnergyFraction","photonEnergyFraction","electronEnergyFraction","muonEnergyFraction","chargedHadronMultiplicity","neutralHadronMultiplicity","photonMultiplicity","electronMultiplicity","muonMultiplicity","hadronMultiplicity","hadronPhotonMultiplicity","totalMultiplicity","massVertexEnergyFraction","vertexBoostOverSqrtJetPt"
+"jetPt","trackJetPt","jetEta","vertexCategory","trackSip2dSig","trackSip3dSig","trackSip2dVal","trackSip3dVal","trackPtRel","trackPPar","trackEtaRel","trackDeltaR","trackPtRatio","trackPParRatio","trackJetDist","trackDecayLenVal","vertexMass","vertexNTracks","vertexEnergyRatio","trackSip2dSigAboveCharm","trackSip3dSigAboveCharm","flightDistance2dSig","flightDistance3dSig","flightDistance2dVal","flightDistance3dVal","trackSumJetEtRatio","jetNSecondaryVertices","vertexJetDeltaR","trackSumJetDeltaR","jetNTracks","trackSip2dValAboveCharm","trackSip3dValAboveCharm","vertexFitProb","chargedHadronEnergyFraction","neutralHadronEnergyFraction","photonEnergyFraction","electronEnergyFraction","muonEnergyFraction","chargedHadronMultiplicity","neutralHadronMultiplicity","photonMultiplicity","electronMultiplicity","muonMultiplicity","hadronMultiplicity","hadronPhotonMultiplicity","totalMultiplicity","massVertexEnergyFraction","vertexBoostOverSqrtJetPt"
 )),
 		cms.untracked.PSet( label = cms.untracked.string("CombinedSVV2PseudoVertex"),  variables=cms.untracked.vstring(
-"jetPt","jetEta","vertexCategory","trackSip2dSig","trackSip3dSig","trackSip2dVal","trackSip3dVal","trackPtRel","trackPPar","trackEtaRel","trackDeltaR","trackPtRatio","trackPParRatio","trackJetDist","trackDecayLenVal","vertexMass","vertexNTracks","vertexEnergyRatio","trackSip2dSigAboveCharm","trackSip3dSigAboveCharm","trackSumJetEtRatio","vertexJetDeltaR","trackSumJetDeltaR","jetNTracks","trackSip2dValAboveCharm","trackSip3dValAboveCharm","chargedHadronEnergyFraction","neutralHadronEnergyFraction","photonEnergyFraction","electronEnergyFraction","muonEnergyFraction","chargedHadronMultiplicity","neutralHadronMultiplicity","photonMultiplicity","electronMultiplicity","muonMultiplicity","hadronMultiplicity","hadronPhotonMultiplicity","totalMultiplicity","massVertexEnergyFraction","vertexBoostOverSqrtJetPt"
+"jetPt","trackJetPt","jetEta","vertexCategory","trackSip2dSig","trackSip3dSig","trackSip2dVal","trackSip3dVal","trackPtRel","trackPPar","trackEtaRel","trackDeltaR","trackPtRatio","trackPParRatio","trackJetDist","trackDecayLenVal","vertexMass","vertexNTracks","vertexEnergyRatio","trackSip2dSigAboveCharm","trackSip3dSigAboveCharm","trackSumJetEtRatio","vertexJetDeltaR","trackSumJetDeltaR","jetNTracks","trackSip2dValAboveCharm","trackSip3dValAboveCharm","chargedHadronEnergyFraction","neutralHadronEnergyFraction","photonEnergyFraction","electronEnergyFraction","muonEnergyFraction","chargedHadronMultiplicity","neutralHadronMultiplicity","photonMultiplicity","electronMultiplicity","muonMultiplicity","hadronMultiplicity","hadronPhotonMultiplicity","totalMultiplicity","massVertexEnergyFraction","vertexBoostOverSqrtJetPt"
 )),
 
 		cms.untracked.PSet( label = cms.untracked.string("CombinedSVV2NoVertex"),  variables=cms.untracked.vstring(
-"jetPt","jetEta","vertexCategory","trackSip2dSig","trackSip3dSig","trackSip2dVal","trackSip3dVal","trackPtRel","trackPPar","trackDeltaR","trackPtRatio","trackPParRatio","trackJetDist","trackDecayLenVal","trackSip2dSigAboveCharm","trackSip3dSigAboveCharm","trackSumJetEtRatio","trackSumJetDeltaR","jetNTracks","trackSip2dValAboveCharm","trackSip3dValAboveCharm","chargedHadronEnergyFraction","neutralHadronEnergyFraction","photonEnergyFraction","electronEnergyFraction","muonEnergyFraction","chargedHadronMultiplicity","neutralHadronMultiplicity","photonMultiplicity","electronMultiplicity","muonMultiplicity","hadronMultiplicity","hadronPhotonMultiplicity","totalMultiplicity"
+"jetPt","trackJetPt","jetEta","vertexCategory","trackSip2dSig","trackSip3dSig","trackSip2dVal","trackSip3dVal","trackPtRel","trackPPar","trackDeltaR","trackPtRatio","trackPParRatio","trackJetDist","trackDecayLenVal","trackSip2dSigAboveCharm","trackSip3dSigAboveCharm","trackSumJetEtRatio","trackSumJetDeltaR","jetNTracks","trackSip2dValAboveCharm","trackSip3dValAboveCharm","chargedHadronEnergyFraction","neutralHadronEnergyFraction","photonEnergyFraction","electronEnergyFraction","muonEnergyFraction","chargedHadronMultiplicity","neutralHadronMultiplicity","photonMultiplicity","electronMultiplicity","muonMultiplicity","hadronMultiplicity","hadronPhotonMultiplicity","totalMultiplicity"
 )) # no trackEtaRel!!!???!!!
 
 	),
@@ -154,20 +116,22 @@ process.combinedSVMVATrainer = cms.EDAnalyzer("JetTagMVAExtractor",
 	signalFlavours = cms.vint32(5, 7),
 	minimumPseudoRapidity = cms.double(0.0),
 	jetTagComputer = cms.string('combinedSecondaryVertexV2'),
-	jetFlavourMatching = cms.InputTag("AK5byValAlgo"),
+	jetFlavourMatching = cms.InputTag("jetFlavourInfosAK5PFJets"),
+	matchedGenJets = cms.InputTag("matchedAK5PFGenJets"),
 	ignoreFlavours = cms.vint32(0)
 )
 
 process.p = cms.Path(
-process.goodOfflinePrimaryVertices * 
-process.JECAlgo * 
+process.selectedAK5PFGenJets*
+process.matchedAK5PFGenJets *
 process.inclusiveVertexing * 
 #process.inclusiveMergedVerticesFiltered * 
 #process.bToCharmDecayVertexMerged * 
 process.myak5JetTracksAssociatorAtVertex * 
 process.impactParameterTagInfos * 
 process.inclusiveSecondaryVertexFinderTagInfos *
-process.flavourSeq * 
+process.selectedHadronsAndPartons *
+process.jetFlavourInfosAK5PFJets *
 process.combinedSVMVATrainer 
 )
 
