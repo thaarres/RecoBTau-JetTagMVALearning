@@ -78,6 +78,8 @@ process.load('RecoVertex/AdaptiveVertexFinder/inclusiveVertexing_cff')
 #new input for impactParameterTagInfos, softleptons, IVF
 process.impactParameterTagInfos.jetTracks = cms.InputTag("myak5JetTracksAssociatorAtVertex")
 process.impactParameterTagInfos.primaryVertex = cms.InputTag("goodOfflinePrimaryVertices")
+process.secondaryVertexTagInfos.trackSelection = cms.string('any')
+process.inclusiveSecondaryVertexFinderTagInfos.trackSelection = cms.string('any')
 process.inclusiveVertexFinder.primaryVertices = cms.InputTag("goodOfflinePrimaryVertices")
 process.trackVertexArbitrator.primaryVertices = cms.InputTag("goodOfflinePrimaryVertices")
 process.softPFMuonsTagInfos.primaryVertex = cms.InputTag("goodOfflinePrimaryVertices")
@@ -108,6 +110,8 @@ process.SVbtaggers = cms.Sequence(
 simpleSecondaryVertexHighEffBJetTags * simpleSecondaryVertexHighPurBJetTags
 )
 
+process.combinedSecondaryVertex.trackSelection = cms.string('any')
+process.combinedSecondaryVertex.pseudoTrackSelection = cms.string('any')
 process.combinedSecondaryVertex.trackMultiplicityMin = cms.uint32(2)
 
 # CSVV1: LR-based
@@ -116,6 +120,8 @@ process.combinedSecondaryVertexV1.calibrationRecords = cms.vstring(
 		'CombinedSVV1PseudoVertex',
 		'CombinedSVV1NoVertex'
 )
+process.combinedSecondaryVertexV1.trackSelection = cms.string('any')
+process.combinedSecondaryVertexV1.pseudoTrackSelection = cms.string('any')
 process.combinedSecondaryVertexV1.trackMultiplicityMin = cms.uint32(2)
 
 # CSVV2: MLP-based
@@ -124,8 +130,12 @@ process.combinedSecondaryVertexV2.calibrationRecords = cms.vstring(
 		'CombinedSVV2PseudoVertex',
 		'CombinedSVV2NoVertex'
 )
+process.combinedSecondaryVertexV2.trackSelection = cms.string('any')
+process.combinedSecondaryVertexV2.pseudoTrackSelection = cms.string('any')
 process.combinedSecondaryVertexV2.trackMultiplicityMin = cms.uint32(2)
 
+process.combinedSecondaryVertexSoftLepton.trackSelection = cms.string('any')
+process.combinedSecondaryVertexSoftLepton.pseudoTrackSelection = cms.string('any')
 process.combinedSecondaryVertexSoftLepton.trackMultiplicityMin = cms.uint32(2)
 
 # combined IP+SV or IP+SV+SL taggers
@@ -146,6 +156,8 @@ process.combinedSecondaryVertexIVFBJetTags = process.combinedSecondaryVertexBJet
 	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
 	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
 )
+process.combinedSecondaryVertexIVF.trackSelection = cms.string('any')
+process.combinedSecondaryVertexIVF.pseudoTrackSelection = cms.string('any')
 process.combinedSecondaryVertexIVF.trackMultiplicityMin = cms.uint32(2)
 
 # CSVIVFV1: LR-based
@@ -161,6 +173,8 @@ process.combinedSecondaryVertexIVFV1BJetTags = process.combinedSecondaryVertexV1
 	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
 	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
 )
+process.combinedSecondaryVertexIVFV1.trackSelection = cms.string('any')
+process.combinedSecondaryVertexIVFV1.pseudoTrackSelection = cms.string('any')
 process.combinedSecondaryVertexIVFV1.trackMultiplicityMin = cms.uint32(2)
 
 # CSVIVFV2: MLP-based
@@ -176,6 +190,8 @@ process.combinedSecondaryVertexIVFV2BJetTags = process.combinedSecondaryVertexV2
 	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
 	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
 )
+process.combinedSecondaryVertexIVFV2.trackSelection = cms.string('any')
+process.combinedSecondaryVertexIVFV2.pseudoTrackSelection = cms.string('any')
 process.combinedSecondaryVertexIVFV2.trackMultiplicityMin = cms.uint32(2)
 
 # CSVSLIVF: CSVSL+IVF
@@ -199,6 +215,8 @@ process.combinedSecondaryVertexSoftLeptonIVFBJetTags = process.combinedSecondary
 													 cms.InputTag("softPFMuonsTagInfos"),
 													 cms.InputTag("softPFElectronsTagInfos"))
 )
+process.combinedSecondaryVertexSoftLeptonIVF.trackSelection = cms.string('any')
+process.combinedSecondaryVertexSoftLeptonIVF.pseudoTrackSelection = cms.string('any')
 process.combinedSecondaryVertexSoftLeptonIVF.trackMultiplicityMin = cms.uint32(2)
 
 
