@@ -13,6 +13,7 @@
 	</general>
 	<input id="input">
 		<var name="jetPt" multiple="false" optional="false"/>
+		<var name="trackJetPt" multiple="false" optional="false"/>
 		<var name="jetEta" multiple="false" optional="false"/>
 		<var name="vertexCategory" multiple="false" optional="false"/>
 		<var name="trackSip2dSig" multiple="true" optional="true"/>
@@ -102,6 +103,7 @@
 	<processor id="save" name="TreeSaver">
 		<input>
 			<var source="input" name="jetPt"/>
+			<var source="input" name="trackJetPt"/>
 			<var source="input" name="jetEta"/>
 			<var source="input" name="trackSip2dSig"/>
 			<var source="input" name="trackSip3dSig"/>
