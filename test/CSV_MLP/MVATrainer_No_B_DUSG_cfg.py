@@ -8,9 +8,9 @@ process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1))
 
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
-process.combinedSVTrainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
+process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	useCategories		= cms.bool(False),
-	calibrationRecord	= cms.string("CombinedSVNoVertex"),
+	calibrationRecord	= cms.string("CombinedSVV2NoVertex"),
 	ignoreFlavours		= cms.vint32(0, 4),
 	signalFlavours		= cms.vint32(5, 7),
 	minimumTransverseMomentum = cms.double(15.0),
@@ -22,21 +22,21 @@ process.combinedSVTrainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	#weightThreshold = cms.untracked.double(0.1),
 
 	fileNames = cms.vstring(
-		" /afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVNoVertex_B.root",
-		" /afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVNoVertex_DUSG.root"
+		" /afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_B.root",
+		" /afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_DUSG.root"
 	),
-	weightFile = cms.string("weights/CombinedSVNoVertex_BDUSG_histo.txt"),
+	weightFile = cms.string("weights/CombinedSVV2NoVertex_BDUSG_histo.txt"),
 	biasFiles = cms.vstring(
 		"*",
 		"-",
-		"weights/CombinedSVNoVertex_B_DUSG_ratio.txt"
+		"weights/CombinedSVV2NoVertex_B_DUSG_ratio.txt"
 	)
 )
 
 process.looper = cms.Looper("JetTagMVATrainerLooper",
 	trainers = cms.VPSet(
 		cms.PSet(
-			calibrationRecord = cms.string("CombinedSVNoVertex"),
+			calibrationRecord = cms.string("CombinedSVV2NoVertex"),
 			trainDescription = cms.untracked.string("Save_No_B_DUSG.xml"),
 			loadState = cms.untracked.bool(False),
 			saveState = cms.untracked.bool(False)
@@ -44,4 +44,4 @@ process.looper = cms.Looper("JetTagMVATrainerLooper",
 	)
 )
 
-process.p = cms.Path(process.combinedSVTrainer)
+process.p = cms.Path(process.CombinedSVV2Trainer)
