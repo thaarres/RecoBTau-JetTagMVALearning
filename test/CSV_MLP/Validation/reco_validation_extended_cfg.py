@@ -126,9 +126,9 @@ process.combinedSecondaryVertexV1.calibrationRecords = cms.vstring(
 
 # CSVV2: MLP-based
 process.combinedSecondaryVertexV2.calibrationRecords = cms.vstring(
-		'CombinedSVV2RecoVertex', # make sure that these records are obtained with a training with trackJetPt as taggingvariable!
-		'CombinedSVV2PseudoVertex',
-		'CombinedSVV2NoVertex'
+		'CombinedSVIVFV2RecoVertex', # make sure that these records are obtained with a training with trackJetPt as taggingvariable! For now using IVF training, because no CSVV2 training exists with trackJetPt
+		'CombinedSVIVFV2PseudoVertex',
+		'CombinedSVIVFV2NoVertex'
 )
 #process.combinedSecondaryVertexV2.trackSelection.qualityClass = cms.string('any')
 #process.combinedSecondaryVertexV2.trackPseudoSelection.qualityClass = cms.string('any')
@@ -137,7 +137,7 @@ process.combinedSecondaryVertexV2.calibrationRecords = cms.vstring(
 
 # combined IP+SV or IP+SV+SL taggers
 process.Combinedbtaggers = cms.Sequence(
-process.combinedSecondaryVertexBJetTags * process.combinedSecondaryVertexV1BJetTags #* process.combinedSecondaryVertexV2BJetTags
+process.combinedSecondaryVertexBJetTags * process.combinedSecondaryVertexV1BJetTags * process.combinedSecondaryVertexV2BJetTags
 )
 
 # CSVIVF
@@ -177,9 +177,9 @@ process.combinedSecondaryVertexIVFV1BJetTags = process.combinedSecondaryVertexV1
 # CSVIVFV2: MLP-based
 process.combinedSecondaryVertexIVFV2=process.combinedSecondaryVertexV2.clone(
 	calibrationRecords = cms.vstring(# make sure that these records are obtained with a training with trackJetPt as taggingvariable!
-		'CombinedSVV2RecoVertex', # later to be replaced with dedicated IVF training
-		'CombinedSVV2PseudoVertex',
-		'CombinedSVV2NoVertex'
+		'CombinedSVIVFV2RecoVertex',
+		'CombinedSVIVFV2PseudoVertex',
+		'CombinedSVIVFV2NoVertex'
 	)
 )
 process.combinedSecondaryVertexIVFV2BJetTags = process.combinedSecondaryVertexV2BJetTags.clone(

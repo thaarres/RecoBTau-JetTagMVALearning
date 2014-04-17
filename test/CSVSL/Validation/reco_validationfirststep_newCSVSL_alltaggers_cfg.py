@@ -120,17 +120,17 @@ process.combinedSecondaryVertexV1.trackMultiplicityMin = cms.uint32(2)
 
 # CSVV2: MLP-based
 process.combinedSecondaryVertexV2.calibrationRecords = cms.vstring(
-		'CombinedSVV2RecoVertex',
-		'CombinedSVV2PseudoVertex',
-		'CombinedSVV2NoVertex'
+		'CombinedSVIVFV2RecoVertex', # To be replaced with dedicated CSVV2 training (including trackJetPt variable)
+		'CombinedSVIVFV2PseudoVertex',
+		'CombinedSVIVFV2NoVertex'
 )
 process.combinedSecondaryVertexV2.trackMultiplicityMin = cms.uint32(2)
 
-process.combinedSecondaryVertexSoftLepton.trackMultiplicityMin = cms.uint32(2)
+#process.combinedSecondaryVertexSoftLepton.trackMultiplicityMin = cms.uint32(2)
 
 # combined IP+SV or IP+SV+SL taggers
 process.Combinedbtaggers = cms.Sequence(
-process.combinedSecondaryVertexBJetTags * process.combinedSecondaryVertexV1BJetTags * process.combinedSecondaryVertexV2BJetTags * process.combinedSecondaryVertexSoftLeptonBJetTags
+process.combinedSecondaryVertexBJetTags * process.combinedSecondaryVertexV1BJetTags * process.combinedSecondaryVertexV2BJetTags #* process.combinedSecondaryVertexSoftLeptonBJetTags
 )
 
 # CSVIVF
@@ -166,9 +166,9 @@ process.combinedSecondaryVertexIVFV1.trackMultiplicityMin = cms.uint32(2)
 # CSVIVFV2: MLP-based
 process.combinedSecondaryVertexIVFV2=process.combinedSecondaryVertexV2.clone(
 	calibrationRecords = cms.vstring(
-		'CombinedSVV2RecoVertex', # later to be replaced with dedicated IVF training
-		'CombinedSVV2PseudoVertex',
-		'CombinedSVV2NoVertex'
+		'CombinedSVIVFV2RecoVertex',
+		'CombinedSVIVFV2PseudoVertex',
+		'CombinedSVIVFV2NoVertex'
 	)
 )
 process.combinedSecondaryVertexIVFV2BJetTags = process.combinedSecondaryVertexV2BJetTags.clone(
@@ -178,33 +178,33 @@ process.combinedSecondaryVertexIVFV2BJetTags = process.combinedSecondaryVertexV2
 )
 process.combinedSecondaryVertexIVFV2.trackMultiplicityMin = cms.uint32(2)
 
-# CSVSLIVF: CSVSL+IVF
-process.combinedSecondaryVertexSoftLeptonIVF=process.combinedSecondaryVertexSoftLepton.clone(
-	calibrationRecords = cms.vstring(
-		'CombinedSVRecoVertexNoSoftLepton',  # later to be replaced with dedicated IVF training
-		'CombinedSVPseudoVertexNoSoftLepton', 
-		'CombinedSVNoVertexNoSoftLepton',
-		'CombinedSVRecoVertexSoftMuon', 
-		'CombinedSVPseudoVertexSoftMuon', 
-		'CombinedSVNoVertexSoftMuon',
-		'CombinedSVRecoVertexSoftElectron', 
-		'CombinedSVPseudoVertexSoftElectron', 
-		'CombinedSVNoVertexSoftElectron'
-	)
-)
-process.combinedSecondaryVertexSoftLeptonIVFBJetTags = process.combinedSecondaryVertexSoftLeptonBJetTags.clone(
-	jetTagComputer = cms.string('combinedSecondaryVertexSoftLeptonIVF'),
-	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
-	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos"),#inclusiveSecondaryVertexFinderFilteredTagInfos
-													 cms.InputTag("softPFMuonsTagInfos"),
-													 cms.InputTag("softPFElectronsTagInfos"))
-)
-process.combinedSecondaryVertexSoftLeptonIVF.trackMultiplicityMin = cms.uint32(2)
+## CSVSLIVF: CSVSL+IVF
+#process.combinedSecondaryVertexSoftLeptonIVF=process.combinedSecondaryVertexSoftLepton.clone(
+#	calibrationRecords = cms.vstring(
+#		'CombinedSVRecoVertexNoSoftLepton',  # later to be replaced with dedicated IVF training
+#		'CombinedSVPseudoVertexNoSoftLepton', 
+#		'CombinedSVNoVertexNoSoftLepton',
+#		'CombinedSVRecoVertexSoftMuon', 
+#		'CombinedSVPseudoVertexSoftMuon', 
+#		'CombinedSVNoVertexSoftMuon',
+#		'CombinedSVRecoVertexSoftElectron', 
+#		'CombinedSVPseudoVertexSoftElectron', 
+#		'CombinedSVNoVertexSoftElectron'
+#	)
+#)
+#process.combinedSecondaryVertexSoftLeptonIVFBJetTags = process.combinedSecondaryVertexSoftLeptonBJetTags.clone(
+#	jetTagComputer = cms.string('combinedSecondaryVertexSoftLeptonIVF'),
+#	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
+#	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos"),#inclusiveSecondaryVertexFinderFilteredTagInfos
+#													 cms.InputTag("softPFMuonsTagInfos"),
+#													 cms.InputTag("softPFElectronsTagInfos"))
+#)
+#process.combinedSecondaryVertexSoftLeptonIVF.trackMultiplicityMin = cms.uint32(2)
 
 
 # combined IP+IVF or IP+IVF+SL taggers
 process.CombinedIVFbtaggers = cms.Sequence(
-process.combinedSecondaryVertexIVFBJetTags * process.combinedSecondaryVertexIVFV1BJetTags * process.combinedSecondaryVertexIVFV2BJetTags * process.combinedSecondaryVertexSoftLeptonIVFBJetTags
+process.combinedSecondaryVertexIVFBJetTags * process.combinedSecondaryVertexIVFV1BJetTags * process.combinedSecondaryVertexIVFV2BJetTags #* process.combinedSecondaryVertexSoftLeptonIVFBJetTags
 )
 
 #do the matching
@@ -300,19 +300,19 @@ process.CustombTagValidation = process.bTagValidation.clone(
             label = cms.InputTag("combinedSecondaryVertexV2BJetTags"),
             folder = cms.string("CSVV2") # MLP-based CSV
         ),
-				cms.PSet(
-				    parameters = cms.PSet(
-        			discriminatorStart = cms.double(-0.1),
-        			discriminatorEnd = cms.double(1.05),
-        			nBinEffPur = cms.int32(200),
-        			# the constant b-efficiency for the differential plots versus pt and eta
-        			effBConst = cms.double(0.5),
-        			endEffPur = cms.double(1.005),
-        			startEffPur = cms.double(-0.005)
-    				),
-            label = cms.InputTag("combinedSecondaryVertexSoftLeptonBJetTags"),
-            folder = cms.string("CSVSL") # CSVSL
-        ), 
+#				cms.PSet(
+#				    parameters = cms.PSet(
+#        			discriminatorStart = cms.double(-0.1),
+#        			discriminatorEnd = cms.double(1.05),
+#        			nBinEffPur = cms.int32(200),
+#        			# the constant b-efficiency for the differential plots versus pt and eta
+#        			effBConst = cms.double(0.5),
+#        			endEffPur = cms.double(1.005),
+#        			startEffPur = cms.double(-0.005)
+#    				),
+#            label = cms.InputTag("combinedSecondaryVertexSoftLeptonBJetTags"),
+#            folder = cms.string("CSVSL") # CSVSL
+#        ), 
         cms.PSet(
 				    parameters = cms.PSet(
         			discriminatorStart = cms.double(-0.1),
@@ -352,19 +352,19 @@ process.CustombTagValidation = process.bTagValidation.clone(
             label = cms.InputTag("combinedSecondaryVertexIVFV2BJetTags"),
             folder = cms.string("CSVIVFV2") # MLP+IVF-based CSV
         ),
-				cms.PSet(
-				    parameters = cms.PSet(
-        			discriminatorStart = cms.double(-0.1),
-        			discriminatorEnd = cms.double(1.05),
-        			nBinEffPur = cms.int32(200),
-        			# the constant b-efficiency for the differential plots versus pt and eta
-        			effBConst = cms.double(0.5),
-        			endEffPur = cms.double(1.005),
-        			startEffPur = cms.double(-0.005)
-    				),
-            label = cms.InputTag("combinedSecondaryVertexSoftLeptonIVFBJetTags"),
-            folder = cms.string("CSVIVFSL") # IVF-based CSVSL
-        ) 
+#				cms.PSet(
+#				    parameters = cms.PSet(
+#        			discriminatorStart = cms.double(-0.1),
+#        			discriminatorEnd = cms.double(1.05),
+#        			nBinEffPur = cms.int32(200),
+#        			# the constant b-efficiency for the differential plots versus pt and eta
+#        			effBConst = cms.double(0.5),
+#        			endEffPur = cms.double(1.005),
+#        			startEffPur = cms.double(-0.005)
+#    				),
+#            label = cms.InputTag("combinedSecondaryVertexSoftLeptonIVFBJetTags"),
+#            folder = cms.string("CSVIVFSL") # IVF-based CSVSL
+#        ) 
 			),
       finalizePlots = False,
       finalizeOnly = False

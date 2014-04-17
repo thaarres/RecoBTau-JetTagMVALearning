@@ -82,9 +82,9 @@ process.trackVertexArbitrator.primaryVertices = cms.InputTag("goodOfflinePrimary
 #added this block for IVF...
 process.combinedSecondaryVertexNN=process.combinedSecondaryVertexV2.clone(
 	calibrationRecords = cms.vstring(
-		'CombinedSVV2RecoVertex',
-		'CombinedSVV2PseudoVertex',
-		'CombinedSVV2NoVertex'
+		'CombinedSVIVFV2RecoVertex',
+		'CombinedSVIVFV2PseudoVertex',
+		'CombinedSVIVFV2NoVertex'
 	)
 )
 process.combinedSecondaryVertexNN.trackMultiplicityMin = cms.uint32(2)
