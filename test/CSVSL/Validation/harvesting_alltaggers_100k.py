@@ -119,19 +119,19 @@ process.CustombTagValidation = process.bTagValidation.clone(
             label = cms.InputTag("combinedSecondaryVertexV2BJetTags"),
             folder = cms.string("CSVV2") # MLP-based CSV
         ),
-				cms.PSet(
-				    parameters = cms.PSet(
-        			discriminatorStart = cms.double(-0.1),
-        			discriminatorEnd = cms.double(1.05),
-        			nBinEffPur = cms.int32(200),
-        			# the constant b-efficiency for the differential plots versus pt and eta
-        			effBConst = cms.double(0.5),
-        			endEffPur = cms.double(1.005),
-        			startEffPur = cms.double(-0.005)
-    				),
-            label = cms.InputTag("combinedSecondaryVertexSoftLeptonBJetTags"),
-            folder = cms.string("CSVSL") # CSVSL
-        ), 
+#				cms.PSet(
+#				    parameters = cms.PSet(
+#        			discriminatorStart = cms.double(-0.1),
+#        			discriminatorEnd = cms.double(1.05),
+#        			nBinEffPur = cms.int32(200),
+#        			# the constant b-efficiency for the differential plots versus pt and eta
+#        			effBConst = cms.double(0.5),
+#        			endEffPur = cms.double(1.005),
+#        			startEffPur = cms.double(-0.005)
+#    				),
+#            label = cms.InputTag("combinedSecondaryVertexSoftLeptonBJetTags"),
+#            folder = cms.string("CSVSL") # CSVSL
+#        ), 
         cms.PSet(
 				    parameters = cms.PSet(
         			discriminatorStart = cms.double(-0.1),
@@ -170,20 +170,20 @@ process.CustombTagValidation = process.bTagValidation.clone(
     				),
             label = cms.InputTag("combinedSecondaryVertexIVFV2BJetTags"),
             folder = cms.string("CSVIVFV2") # MLP+IVF-based CSV
-        ),
-				cms.PSet(
-				    parameters = cms.PSet(
-        			discriminatorStart = cms.double(-0.1),
-        			discriminatorEnd = cms.double(1.05),
-        			nBinEffPur = cms.int32(200),
-        			# the constant b-efficiency for the differential plots versus pt and eta
-        			effBConst = cms.double(0.5),
-        			endEffPur = cms.double(1.005),
-        			startEffPur = cms.double(-0.005)
-    				),
-            label = cms.InputTag("combinedSecondaryVertexSoftLeptonIVFBJetTags"),
-            folder = cms.string("CSVIVFSL") # IVF-based CSVSL
-        ) 
+        )#,
+#				cms.PSet(
+#				    parameters = cms.PSet(
+#        			discriminatorStart = cms.double(-0.1),
+#        			discriminatorEnd = cms.double(1.05),
+#        			nBinEffPur = cms.int32(200),
+#        			# the constant b-efficiency for the differential plots versus pt and eta
+#        			effBConst = cms.double(0.5),
+#        			endEffPur = cms.double(1.005),
+#        			startEffPur = cms.double(-0.005)
+#    				),
+#            label = cms.InputTag("combinedSecondaryVertexSoftLeptonIVFBJetTags"),
+#            folder = cms.string("CSVIVFSL") # IVF-based CSVSL
+#        ) 
 			)
 )
 
