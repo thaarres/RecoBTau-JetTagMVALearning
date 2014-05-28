@@ -82,7 +82,6 @@
 			<var source="input" name="trackSip2dSig"/>
 		</input>
 		<config>
-                       <select first="3"/>
 		</config>
 		<output>
 			<var name="var1"/>
@@ -106,18 +105,18 @@
 			<var source="proc2" name="var1"/>
 		</input>
 		<config>
-                        <pdf/>
-                        <pdf/>
-                        <pdf smooth="3" size="500"/>
-                        <pdf smooth="3" size="500"/>
-                        <pdf smooth="3" size="500"/>
-                        <pdf smooth="3" size="500"/>
-                        <pdf smooth="3" size="500"/>
-                        <pdf smooth="3" size="500"/>
-                        <pdf smooth="3" size="500"/>
-                        <pdf smooth="3" size="500"/>
-                        <pdf smooth="3" size="100"/>
-                        <pdf smooth="0" size="100"/>
+			<pdf/> <!-- jetPt -->
+			<pdf/> <!-- jetEta -->
+			<pdf smooth="3" size="500" lower="-80" upper="150"/> <!-- trackSip3dSig -->
+			<pdf smooth="3" size="500" lower="0" upper="10"/> <!-- trackPtRel -->
+			<pdf smooth="3" size="500" lower="0" upper="0.5"/> <!-- trackDeltaR -->
+			<pdf smooth="3" size="500" lower="0" upper="0.3"/> <!-- trackPtRatio -->
+			<pdf smooth="3" size="500" lower="-0.07" upper="0"/> <!-- trackJetDist -->
+			<pdf smooth="3" size="500" lower="0" upper="40"/> <!-- trackDecayLenVal -->
+			<pdf smooth="3" size="500" lower="-50" upper="80"/> <!-- trackSip2dSigAboveCharm -->
+			<pdf smooth="3" size="500" lower="0" upper="6"/> <!-- trackSumJetEtRatio -->
+			<pdf smooth="3" size="100" lower="0" upper="4"/> <!-- trackSumJetDeltaR -->
+			<pdf smooth="0" size="100" lower="0" upper="30"/> <!-- count_var1 -->
 		</config>
 		<output>
 			<var name="var1"/>

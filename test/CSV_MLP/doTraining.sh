@@ -4,6 +4,7 @@ echo "https://twiki.cern.ch/twiki/bin/view/CMS/BTagSoftwareMVATrainer"
 #read -p "PARALLEL PROCESSING: how many cores can you afford? " answer
 
 echo "ADAPT BIASES IF NECESSARY!!!"
+echo ">>>> IF YOU DON'T KNOW WHAT IS MEANT: ASK SOMEONE ;-)"
 
 #echo "Calculating the bias: ARE YOU SURE THAT YOU HAVE ENOUGH STATISTICS TO DETERMINE THE BIAS ACCURATELY?"
 #g++ biasForXml.cpp `root-config --cflags --glibs` -o bias
@@ -15,7 +16,7 @@ answer=6
 path_to_rootfiles=/afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/
 Combinations="NoVertex_B_DUSG NoVertex_B_C PseudoVertex_B_DUSG PseudoVertex_B_C RecoVertex_B_DUSG RecoVertex_B_C"
 CAT="Reco Pseudo No"
-prefix="CombinedSV"
+prefix="CombinedSVV2"
 
 echo "Filling the 2D pt/eta histograms" 
 
@@ -40,8 +41,10 @@ echo ${files[l]}
 	wait
 done
 
-
-echo "If you want to do the actual training: by default the Train*xml files are used, however the latest greatest are CSVMVA*xml. First chose which ones you want to use and then uncomment the following lines in the doTraining.sh script."
+echo ">>>> CHECK THAT THE train*_save.root FILES ARE CORRECTLY PRODUCED! OPEN A FILE AND CHECK THAT THE WEIGHT BRANCH IS NOT EMPTY...."
+echo " "
+echo " "
+echo "If you want to do the actual training: by default the Train*xml files are used, for detailed studies one could use CSVMVA*xml. First chose which ones you want to use and then uncomment the following lines in the doTraining.sh script."
 
 #CombinationsArray=("NoVertex_B_DUSG" "NoVertex_B_C" "PseudoVertex_B_DUSG" "PseudoVertex_B_C" "RecoVertex_B_DUSG" "RecoVertex_B_C")
 #l=0
