@@ -48,6 +48,7 @@ process.DQMoutput = cms.OutputModule("PoolOutputModule",
   )
 )
 
+
 from PhysicsTools.JetMCAlgos.AK5PFJetsMCPUJetID_cff import *
 process.selectedAK5PFGenJets = ak5GenJetsMCPUJetID.clone()
 process.matchedAK5PFGenJets = ak5PFJetsGenJetMatchMCPUJetID.clone()
@@ -60,21 +61,114 @@ process.myak5JetTracksAssociatorAtVertex = cms.EDProducer("JetTracksAssociatorAt
                                                   jets = cms.InputTag("ak5PFJets")
                                                   )
 
+#select good primary vertex
+from PhysicsTools.SelectorUtils.pvSelector_cfi import pvSelector
+process.goodOfflinePrimaryVertices = cms.EDFilter(
+    "PrimaryVertexObjectFilter",
+    filterParams = pvSelector.clone( minNdof = cms.double(4.0), maxZ = cms.double(24.0) ),
+    src=cms.InputTag('offlinePrimaryVertices')
+    )
+
+
 from RecoBTag.Configuration.RecoBTag_cff import *
-process.combinedSecondaryVertexNN=process.combinedSecondaryVertexV2.clone(
+
+#for Inclusive Vertex Finder
+process.load('RecoVertex/AdaptiveVertexFinder/inclusiveVertexing_cff')
+
+#new input for impactParameterTagInfos, softleptons, IVF
+process.impactParameterTagInfos.jetTracks = cms.InputTag("myak5JetTracksAssociatorAtVertex")
+process.impactParameterTagInfos.primaryVertex = cms.InputTag("goodOfflinePrimaryVertices")
+process.secondaryVertexTagInfos.trackSelection.qualityClass = cms.string('any')
+process.inclusiveSecondaryVertexFinderTagInfos.trackSelection.qualityClass = cms.string('any')
+process.inclusiveVertexFinder.primaryVertices = cms.InputTag("goodOfflinePrimaryVertices")
+process.trackVertexArbitrator.primaryVertices = cms.InputTag("goodOfflinePrimaryVertices")
+process.softPFMuonsTagInfos.primaryVertex = cms.InputTag("goodOfflinePrimaryVertices")
+process.softPFElectronsTagInfos.primaryVertex = cms.InputTag("goodOfflinePrimaryVertices")
+process.softPFMuonsTagInfos.jets = cms.InputTag("ak5PFJets")
+process.softPFElectronsTagInfos.jets = cms.InputTag("ak5PFJets") 
+
+# taginfos
+process.taginfos = cms.Sequence(
+process.impactParameterTagInfos *
+process.secondaryVertexTagInfos * 
+process.inclusiveVertexing * 
+###process.inclusiveMergedVerticesFiltered *   
+###process.bToCharmDecayVertexMerged *  
+process.inclusiveSecondaryVertexFinderTagInfos * # IVF
+#inclusiveSecondaryVertexFinderFilteredTagInfos * # IVF with B->D merging 
+process.softPFMuonsTagInfos *
+process.softPFElectronsTagInfos 
+)
+
+# IP-based taggers
+process.IPbtaggers = cms.Sequence(
+trackCountingHighEffBJetTags * trackCountingHighPurBJetTags * jetProbabilityBJetTags * jetBProbabilityBJetTags
+)
+
+# SV-based taggers
+process.SVbtaggers = cms.Sequence(
+simpleSecondaryVertexHighEffBJetTags * simpleSecondaryVertexHighPurBJetTags
+)
+
+process.combinedSecondaryVertex.trackSelection.qualityClass = cms.string('any')
+process.combinedSecondaryVertex.trackPseudoSelection.qualityClass = cms.string('any')
+process.combinedSecondaryVertex.trackMultiplicityMin = cms.uint32(2)
+
+# CSVV2: MLP-based
+process.combinedSecondaryVertexV2.calibrationRecords = cms.vstring(
+		'CombinedSVIVFV2RecoVertex',   # To be replaced with dedicated CSVV2 training (including trackJetPt variable)
+		'CombinedSVIVFV2PseudoVertex',
+		'CombinedSVIVFV2NoVertex'
+)
+process.combinedSecondaryVertexV2.trackSelection.qualityClass = cms.string('any')
+process.combinedSecondaryVertexV2.trackPseudoSelection.qualityClass = cms.string('any')
+process.combinedSecondaryVertexV2.trackMultiplicityMin = cms.uint32(2)
+
+
+# combined IP+SV or IP+SV+SL taggers
+process.Combinedbtaggers = cms.Sequence(
+process.combinedSecondaryVertexBJetTags * process.combinedSecondaryVertexV2BJetTags 
+)
+
+# CSVIVF
+process.combinedSecondaryVertexIVF=process.combinedSecondaryVertex.clone(
 	calibrationRecords = cms.vstring(
-		'CombinedSVV2RecoVertex',
-		'CombinedSVV2PseudoVertex',
-		'CombinedSVV2NoVertex'
+		'CombinedRecoVertex', # no dedicated IVF training exists
+		'CombinedPseudoVertex',
+		'CombinedNoVertex'
 	)
 )
-process.combinedSecondaryVertexNN.trackMultiplicityMin = cms.uint32(2)
-process.combinedSecondaryVertexNNBJetTags = process.combinedSecondaryVertexV2BJetTags.clone(
-	jetTagComputer = cms.string('combinedSecondaryVertexNN')
+process.combinedSecondaryVertexIVFBJetTags = process.combinedSecondaryVertexBJetTags.clone(
+	jetTagComputer = cms.string('combinedSecondaryVertex'),
+	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
+	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
 )
+process.combinedSecondaryVertexIVF.trackSelection.qualityClass = cms.string('any')
+process.combinedSecondaryVertexIVF.trackPseudoSelection.qualityClass = cms.string('any')
+process.combinedSecondaryVertexIVF.trackMultiplicityMin = cms.uint32(2)
+
+# CSVIVFV2: MLP-based
+process.combinedSecondaryVertexIVFV2=process.combinedSecondaryVertexV2.clone(
+	calibrationRecords = cms.vstring(
+		'CombinedSVIVFV2RecoVertex', 
+		'CombinedSVIVFV2PseudoVertex',
+		'CombinedSVIVFV2NoVertex'
+	)
+)
+process.combinedSecondaryVertexIVFV2BJetTags = process.combinedSecondaryVertexV2BJetTags.clone(
+	jetTagComputer = cms.string('combinedSecondaryVertexIVFV2'),
+	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
+	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
+)
+process.combinedSecondaryVertexIVFV2.trackSelection.qualityClass = cms.string('any')
+process.combinedSecondaryVertexIVFV2.trackPseudoSelection.qualityClass = cms.string('any')
+process.combinedSecondaryVertexIVFV2.trackMultiplicityMin = cms.uint32(2)
 
 
-process.impactParameterTagInfos.jetTracks = cms.InputTag("myak5JetTracksAssociatorAtVertex")
+# combined IP+IVF or IP+IVF+SL taggers
+process.CombinedIVFbtaggers = cms.Sequence(
+process.combinedSecondaryVertexIVFBJetTags * process.combinedSecondaryVertexIVFV2BJetTags 
+)
 
 #do the matching
 from PhysicsTools.JetMCAlgos.HadronAndPartonSelector_cfi import selectedHadronsAndPartons
@@ -100,6 +194,36 @@ process.bTagValidation.allHistograms = True
 
 process.CustombTagValidation = process.bTagValidation.clone(
     tagConfig = cms.VPSet(
+				cms.PSet(
+            bTagTrackCountingAnalysisBlock,
+            label = cms.InputTag("trackCountingHighEffBJetTags"),
+            folder = cms.string("TCHE")
+        ), 
+        cms.PSet(
+            bTagTrackCountingAnalysisBlock,
+            label = cms.InputTag("trackCountingHighPurBJetTags"),
+            folder = cms.string("TCHP")
+        ), 
+        cms.PSet(
+            bTagProbabilityAnalysisBlock,
+            label = cms.InputTag("jetProbabilityBJetTags"),
+            folder = cms.string("JP")
+        ), 
+        cms.PSet(
+            bTagBProbabilityAnalysisBlock,
+            label = cms.InputTag("jetBProbabilityBJetTags"),
+            folder = cms.string("JBP")
+        ), 
+        cms.PSet(
+            bTagSimpleSVAnalysisBlock,
+            label = cms.InputTag("simpleSecondaryVertexHighEffBJetTags"),
+            folder = cms.string("SSVHE")
+        ), 
+        cms.PSet(
+            bTagSimpleSVAnalysisBlock,
+            label = cms.InputTag("simpleSecondaryVertexHighPurBJetTags"),
+            folder = cms.string("SSVHP")
+        ), 
         cms.PSet(
 				    parameters = cms.PSet(
         			discriminatorStart = cms.double(-0.1),
@@ -110,9 +234,48 @@ process.CustombTagValidation = process.bTagValidation.clone(
         			endEffPur = cms.double(1.005),
         			startEffPur = cms.double(-0.005)
     				),
-            label = cms.InputTag("combinedSecondaryVertexNNBJetTags"),
-            folder = cms.string("CSV")
-        ) 
+            label = cms.InputTag("combinedSecondaryVertexBJetTags"),
+            folder = cms.string("oldCSV") # standard CSV for 7 TeV data taking
+        ), 
+        cms.PSet(
+				    parameters = cms.PSet(
+        			discriminatorStart = cms.double(-0.1),
+        			discriminatorEnd = cms.double(1.05),
+        			nBinEffPur = cms.int32(200),
+        			# the constant b-efficiency for the differential plots versus pt and eta
+        			effBConst = cms.double(0.5),
+        			endEffPur = cms.double(1.005),
+        			startEffPur = cms.double(-0.005)
+    				),
+            label = cms.InputTag("combinedSecondaryVertexV2BJetTags"),
+            folder = cms.string("CSVV2") # MLP-based CSV
+        ),
+        cms.PSet(
+				    parameters = cms.PSet(
+        			discriminatorStart = cms.double(-0.1),
+        			discriminatorEnd = cms.double(1.05),
+        			nBinEffPur = cms.int32(200),
+        			# the constant b-efficiency for the differential plots versus pt and eta
+        			effBConst = cms.double(0.5),
+        			endEffPur = cms.double(1.005),
+        			startEffPur = cms.double(-0.005)
+    				),
+            label = cms.InputTag("combinedSecondaryVertexIVFBJetTags"),
+            folder = cms.string("oldCSVIVF") # standard CSV+IVF for 7 TeV data taking
+        ), 
+        cms.PSet(
+				    parameters = cms.PSet(
+        			discriminatorStart = cms.double(-0.1),
+        			discriminatorEnd = cms.double(1.05),
+        			nBinEffPur = cms.int32(200),
+        			# the constant b-efficiency for the differential plots versus pt and eta
+        			effBConst = cms.double(0.5),
+        			endEffPur = cms.double(1.005),
+        			startEffPur = cms.double(-0.005)
+    				),
+            label = cms.InputTag("combinedSecondaryVertexIVFV2BJetTags"),
+            folder = cms.string("CSVIVFV2") # MLP+IVF-based CSV
+        ),
 			),
       finalizePlots = False,
       finalizeOnly = False
@@ -131,12 +294,15 @@ process.source = cms.Source("PoolSource",
 process.btagDQM = cms.Path(
 process.selectedAK5PFGenJets *
 process.matchedAK5PFGenJets *
+process.goodOfflinePrimaryVertices * 
 process.selectedHadronsAndPartons *
 process.jetFlavourInfosAK5PFJets *
-process.myak5JetTracksAssociatorAtVertex * 
-process.impactParameterTagInfos * 
-process.secondaryVertexTagInfos *
-process.combinedSecondaryVertexNNBJetTags *
+process.myak5JetTracksAssociatorAtVertex *
+process.taginfos *
+process.IPbtaggers *
+process.SVbtaggers *
+process.Combinedbtaggers * 
+process.CombinedIVFbtaggers *
 process.CustombTagValidation
 )
 
