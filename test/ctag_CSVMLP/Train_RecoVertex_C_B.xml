@@ -328,26 +328,25 @@
         	              <category count="19"/>
 	     <sigbkg size="500"/>
        <bias_table><!--C_B-->
-<bias>3.54908</bias>
-<bias>3.96524</bias>
-<bias>4.05405</bias>
-<bias>3.14922</bias>
-<bias>3.43942</bias>
-<bias>3.61338</bias>
-<bias>2.96939</bias>
-<bias>3.19214</bias>
-<bias>3.37679</bias>
-<bias>2.85962</bias>
-<bias>2.96425</bias>
-<bias>3.07407</bias>
-<bias>2.86782</bias>
-<bias>2.82837</bias>
-<bias>2.95484</bias>
-<bias>2.84215</bias>
-<bias>2.40304</bias>
-<bias>2.59101</bias>
-<bias>2.85577</bias>
-
+<bias>0.332302</bias>
+<bias>0.336811</bias>
+<bias>0.367951</bias>
+<bias>0.419127</bias>
+<bias>0.420101</bias>
+<bias>0.439355</bias>
+<bias>0.472028</bias>
+<bias>0.467255</bias>
+<bias>0.48514</bias>
+<bias>0.515311</bias>
+<bias>0.514901</bias>
+<bias>0.5256</bias>
+<bias>0.550038</bias>
+<bias>0.552432</bias>
+<bias>0.579912</bias>
+<bias>0.628595</bias>
+<bias>0.613295</bias>
+<bias>0.71668</bias>
+<bias>0.78487</bias>
        </bias_table><!--C_B-->
 
 		</config>

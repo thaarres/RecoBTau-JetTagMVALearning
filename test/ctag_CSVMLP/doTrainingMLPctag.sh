@@ -67,7 +67,7 @@ echo ">>>> CHECK THAT THE train*_save.root FILES ARE CORRECTLY PRODUCED! OPEN A 
 
 
 #echo "Calculating the bias: ARE YOU SURE THAT YOU HAVE ENOUGH STATISTICS TO DETERMINE THE BIAS ACCURATELY?"
-#g++ ../biasForXml.cpp `root-config --cflags --glibs` -o bias
+#g++ biasForXml.cpp `root-config --cflags --glibs` -o bias
 #./bias $path_to_rootfiles $prefix
 #echo "ARE YOU SURE THAT YOU HAVE ENOUGH STATISTICS TO DETERMINE THE BIAS ACCURATELY?"
 #

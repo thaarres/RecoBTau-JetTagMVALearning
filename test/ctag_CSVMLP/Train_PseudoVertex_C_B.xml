@@ -314,27 +314,26 @@
         	              <category count="19"/>
 	                      <sigbkg size="500"/>
                         <bias_table><!--C_B-->
-<bias>2.09442</bias>
-<bias>2.70306</bias>
-<bias>3.10447</bias>
-<bias>1.45801</bias>
-<bias>1.82994</bias>
-<bias>2.00104</bias>
-<bias>1.23248</bias>
-<bias>1.49997</bias>
-<bias>1.69172</bias>
-<bias>1.20876</bias>
-<bias>1.29101</bias>
-<bias>1.3102</bias>
-<bias>1.2501</bias>
-<bias>1.19195</bias>
-<bias>1.20769</bias>
-<bias>1.24498</bias>
-<bias>1.0806</bias>
-<bias>1.08517</bias>
-<bias>1.31154</bias>
-
-                       </bias_table><!--C_B-->
+<bias>0.477234</bias>
+<bias>0.3174</bias>
+<bias>0.221561</bias>
+<bias>0.585133</bias>
+<bias>0.428848</bias>
+<bias>0.295147</bias>
+<bias>0.69063</bias>
+<bias>0.548861</bias>
+<bias>0.424374</bias>
+<bias>0.70287</bias>
+<bias>0.669467</bias>
+<bias>0.59542</bias>
+<bias>0.698511</bias>
+<bias>0.808092</bias>
+<bias>0.727283</bias>
+<bias>0.912221</bias>
+<bias>0.883591</bias>
+<bias>1.16283</bias>
+<bias>1.02469</bias>
+                     </bias_table><!--C_B-->
 		</config>
 		<output>
 			<var name="var1"/>
