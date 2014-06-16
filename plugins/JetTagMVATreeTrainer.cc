@@ -123,12 +123,12 @@ class Var {
 			tree->SetBranchAddress(name, &I);
 			break;
 		    case 'd':
-			indirect = &d;
-			tree->SetBranchAddress(name, &indirect);
+			indirectd = &d;
+			tree->SetBranchAddress(name, &indirectd);
 			break;
 		    case 'i':
-			indirect = &i;
-			tree->SetBranchAddress(name, &indirect);
+			indirecti = &i;
+			tree->SetBranchAddress(name, &indirecti);
 			break;
 		}
 	}
@@ -166,7 +166,8 @@ class Var {
 	int			I;
 	std::vector<double>	d;
 	std::vector<int>	i;
-	void			*indirect;
+	std::vector<double>*	indirectd;
+	std::vector<int>*	indirecti;
 };
 
 class JetTagMVATreeTrainer : public edm::EDAnalyzer {
