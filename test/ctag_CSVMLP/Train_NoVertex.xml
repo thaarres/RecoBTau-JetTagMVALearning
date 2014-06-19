@@ -509,7 +509,7 @@
 			<var source="proc16" name="var1"/>
 		</input>
 		<config>
-									<coefficients offset="0.0" coeff1="1,0" coeff2="0.0"/> 
+									<coefficients offset="0.0" coeff1="1.0" coeff2="0.0"/> 
 		</config>
 		<output>
 			<var name="var1"/>
