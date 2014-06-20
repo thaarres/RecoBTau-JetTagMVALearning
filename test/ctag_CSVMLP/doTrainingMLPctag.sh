@@ -128,7 +128,7 @@ do
 	while [[ $jobsrunning -lt $answer  && $jobsrunning -lt 3 ]] 
 	do
 		echo tmp${VertexCategory[l]}_C_*/*.xml
-		cp tmp${VertexCategory[l]}_B_*/*.xml .
+		cp tmp${VertexCategory[l]}_C_*/*.xml .
  		nohup mvaTreeTrainer -l Train_${VertexCategory[l]}.xml ${prefix}${VertexCategory[l]}.mva train_${VertexCategory[l]}_C_DUSG_save.root train_${VertexCategory[l]}_C_B_save.root &
 		let jobsrunning=$jobsrunning+1
 		let l=$l+1
