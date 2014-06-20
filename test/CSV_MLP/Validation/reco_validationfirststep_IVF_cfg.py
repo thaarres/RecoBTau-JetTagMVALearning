@@ -30,7 +30,7 @@ process.BTauMVAJetTagComputerRecord = cms.ESSource("PoolDBESSource",
 		record = cms.string('BTauGenericMVAJetTagComputerRcd'),
                 tag = cms.string('MVAJetTags')
 	)),
-	connect = cms.string("sqlite_file:MVAJetTags.db"),
+	connect = cms.string("sqlite_file:/afs/cern.ch/user/t/thaarres/removeMe/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/MVAJetTags.db"),
 	#connect = cms.string('frontier://FrontierDev/CMS_COND_BTAU'),
 	BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService')
 )
@@ -164,10 +164,40 @@ process.combinedSecondaryVertexIVFV2.trackSelection.qualityClass = cms.string('a
 process.combinedSecondaryVertexIVFV2.trackPseudoSelection.qualityClass = cms.string('any')
 process.combinedSecondaryVertexIVFV2.trackMultiplicityMin = cms.uint32(2)
 
+# CSVIVFV2: MLP-based
+process.combinedSecondaryVertexIVFV2NEW=process.combinedSecondaryVertexIVFV2.clone(
+     calibrationRecords = cms.vstring(
+         'NEWCombinedSVIVFV2RecoVertex',
+         'NEWCombinedSVIVFV2PseudoVertex',
+         'NEWCombinedSVIVFV2NoVertex'
+     )
+)
+     
+process.combinedSecondaryVertexIVFV2NEWBJetTags =
+process.combinedSecondaryVertexIVFV2BJetTags.clone(
+     jetTagComputer = cms.string('combinedSecondaryVertexIVFV2NEW'),
+     tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
+cms.InputTag("inclusiveSecondaryVertexFinderTagInfos"))
+     
+#inclusiveSecondaryVertexFinderFilteredTagInfos
+)
+process.combinedSecondaryVertexIVFV2NEW.trackSelection.qualityClass =
+cms.string('any')
+process.combinedSecondaryVertexIVFV2NEW.trackPseudoSelection.qualityClass =
+cms.string('any')
+process.combinedSecondaryVertexIVFV2NEW.trackMultiplicityMin = cms.uint32(2)
+
+
+## combined IP+IVF or IP+IVF+SL taggers
+#process.CombinedIVFbtaggers = cms.Sequence(
+#process.combinedSecondaryVertexIVFBJetTags * process.combinedSecondaryVertexIVFV2BJetTags 
+#)
 
 # combined IP+IVF or IP+IVF+SL taggers
 process.CombinedIVFbtaggers = cms.Sequence(
-process.combinedSecondaryVertexIVFBJetTags * process.combinedSecondaryVertexIVFV2BJetTags 
+process.combinedSecondaryVertexIVFBJetTags *
+process.combinedSecondaryVertexIVFV2BJetTags *
+process.combinedSecondaryVertexIVFV2NEWBJetTags
 )
 
 #do the matching
@@ -276,6 +306,19 @@ process.CustombTagValidation = process.bTagValidation.clone(
             label = cms.InputTag("combinedSecondaryVertexIVFV2BJetTags"),
             folder = cms.string("CSVIVFV2") # MLP+IVF-based CSV
         ),
+	cms.PSet(
+				  parameters = cms.PSet(
+				discriminatorStart = cms.double(-0.1),
+				discriminatorEnd = cms.double(1.05),
+				nBinEffPur = cms.int32(200),
+				# the constant b-efficiency for the differential plots versus pt and eta
+				effBConst = cms.double(0.5),
+				endEffPur = cms.double(1.005),
+				startEffPur = cms.double(-0.005)
+				),
+             label = cms.InputTag("combinedSecondaryVertexIVFV2NEWBJetTags"),
+             folder = cms.string("CSVIVFV2NEW") # Version 2 MLP+IVF-based CSVIVFV2NEW
+         ),
 			),
       finalizePlots = False,
       finalizeOnly = False

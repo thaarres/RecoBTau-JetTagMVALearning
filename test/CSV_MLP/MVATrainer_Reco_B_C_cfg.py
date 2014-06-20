@@ -21,8 +21,8 @@ process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	bound = cms.double(50),
 
 	fileNames = cms.vstring(
-		"/afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_B.root",
-		"/afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_C.root"
+		"/afs/cern.ch/user/t/thaarres/removeMe/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/CSV_MLP/VariableExtraction/rootfiles/QCD_all/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_B.root",
+		"/afs/cern.ch/user/t/thaarres/removeMe/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/CSV_MLP/VariableExtraction/rootfiles/QCD_all/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_C.root"
 	),
 	weightFile = cms.string("weights/CombinedSVV2RecoVertex_BC_histo.txt"),
 	biasFiles = cms.vstring(

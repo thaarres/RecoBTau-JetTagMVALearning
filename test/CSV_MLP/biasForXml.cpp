@@ -19,8 +19,8 @@ void calcEntries(string  flavour, string category, vector<float> & entries, stri
 
 int main(int argc, char **argv){
 
-	string dir = "/afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/TT_biases";
-	string fix = "CombinedSV";
+	string dir = "/afs/cern.ch/user/t/thaarres/removeMe/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/CSV_MLP/VariableExtraction/rootfiles/TTbar";
+	string fix = "CombinedSVV2";
 
 	if(argc == 2 || argc == 3) dir = argv[1];
 	if(argc == 3) fix = argv[2];
