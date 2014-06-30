@@ -138,13 +138,13 @@ process.combinedSecondaryVertexBJetTags * process.combinedSecondaryVertexV2BJetT
 # CSVIVF
 process.combinedSecondaryVertexIVF=process.combinedSecondaryVertex.clone(
 	calibrationRecords = cms.vstring(
-		'CombinedRecoVertex', # no dedicated IVF training exists
-		'CombinedPseudoVertex',
-		'CombinedNoVertex'
+		'CombinedSVRecoVertex', # no dedicated IVF training exists
+		'CombinedSVPseudoVertex',
+		'CombinedSVNoVertex'
 	)
 )
 process.combinedSecondaryVertexIVFBJetTags = process.combinedSecondaryVertexBJetTags.clone(
-	jetTagComputer = cms.string('combinedSecondaryVertex'),
+	jetTagComputer = cms.string('combinedSecondaryVertexIVF'),
 	tagInfos = cms.VInputTag(cms.InputTag("impactParameterTagInfos"),
 	                         cms.InputTag("inclusiveSecondaryVertexFinderTagInfos")) #inclusiveSecondaryVertexFinderFilteredTagInfos
 )
