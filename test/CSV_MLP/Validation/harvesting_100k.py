@@ -50,25 +50,36 @@ process.load("Validation.RecoB.bTagAnalysis_cfi")
 
 process.CustombTagValidation = process.bTagValidation.clone(
     tagConfig = cms.VPSet(
-#		    cms.PSet(
-#            bTagTrackIPAnalysisBlock,
-#            type = cms.string('TrackIP'),
-#            label = cms.InputTag("impactParameterTagInfos"),
-#            folder = cms.string("IPTag")
-#        ),  
-#        cms.PSet(
-#				    parameters = cms.PSet(
-#        			discriminatorStart = cms.double(-0.05),
-#        			discriminatorEnd = cms.double(1.05),
-#        			nBinEffPur = cms.int32(200),
-#        			# the constant b-efficiency for the differential plots versus pt and eta
-#        			effBConst = cms.double(0.5),
-#        			endEffPur = cms.double(1.005),
-#        			startEffPur = cms.double(-0.005)
-#    				),
-#            label = cms.InputTag("combinedSecondaryVertexBJetTags"),
-#            folder = cms.string("CSV")
-#        ), 
+				cms.PSet(
+            bTagTrackCountingAnalysisBlock,
+            label = cms.InputTag("trackCountingHighEffBJetTags"),
+            folder = cms.string("TCHE")
+        ), 
+        cms.PSet(
+            bTagTrackCountingAnalysisBlock,
+            label = cms.InputTag("trackCountingHighPurBJetTags"),
+            folder = cms.string("TCHP")
+        ), 
+        cms.PSet(
+            bTagProbabilityAnalysisBlock,
+            label = cms.InputTag("jetProbabilityBJetTags"),
+            folder = cms.string("JP")
+        ), 
+        cms.PSet(
+            bTagBProbabilityAnalysisBlock,
+            label = cms.InputTag("jetBProbabilityBJetTags"),
+            folder = cms.string("JBP")
+        ), 
+        cms.PSet(
+            bTagSimpleSVAnalysisBlock,
+            label = cms.InputTag("simpleSecondaryVertexHighEffBJetTags"),
+            folder = cms.string("SSVHE")
+        ), 
+        cms.PSet(
+            bTagSimpleSVAnalysisBlock,
+            label = cms.InputTag("simpleSecondaryVertexHighPurBJetTags"),
+            folder = cms.string("SSVHP")
+        ), 
         cms.PSet(
 				    parameters = cms.PSet(
         			discriminatorStart = cms.double(-0.1),
@@ -79,15 +90,52 @@ process.CustombTagValidation = process.bTagValidation.clone(
         			endEffPur = cms.double(1.005),
         			startEffPur = cms.double(-0.005)
     				),
-            label = cms.InputTag("combinedSecondaryVertexNNBJetTags"), ## RECPLACE
-            folder = cms.string("CSV")
-        ) 
-			)
+            label = cms.InputTag("combinedSecondaryVertexBJetTags"),
+            folder = cms.string("oldCSV") # standard CSV for 7 TeV data taking
+        ), 
+        cms.PSet(
+				    parameters = cms.PSet(
+        			discriminatorStart = cms.double(-0.1),
+        			discriminatorEnd = cms.double(1.05),
+        			nBinEffPur = cms.int32(200),
+        			# the constant b-efficiency for the differential plots versus pt and eta
+        			effBConst = cms.double(0.5),
+        			endEffPur = cms.double(1.005),
+        			startEffPur = cms.double(-0.005)
+    				),
+            label = cms.InputTag("combinedSecondaryVertexV2BJetTags"),
+            folder = cms.string("CSVV2") # MLP-based CSV
+        ),
+        cms.PSet(
+				    parameters = cms.PSet(
+        			discriminatorStart = cms.double(-0.1),
+        			discriminatorEnd = cms.double(1.05),
+        			nBinEffPur = cms.int32(200),
+        			# the constant b-efficiency for the differential plots versus pt and eta
+        			effBConst = cms.double(0.5),
+        			endEffPur = cms.double(1.005),
+        			startEffPur = cms.double(-0.005)
+    				),
+            label = cms.InputTag("combinedSecondaryVertexIVFBJetTags"),
+            folder = cms.string("oldCSVIVF") # standard CSV+IVF for 7 TeV data taking
+        ), 
+        cms.PSet(
+				    parameters = cms.PSet(
+        			discriminatorStart = cms.double(-0.1),
+        			discriminatorEnd = cms.double(1.05),
+        			nBinEffPur = cms.int32(200),
+        			# the constant b-efficiency for the differential plots versus pt and eta
+        			effBConst = cms.double(0.5),
+        			endEffPur = cms.double(1.005),
+        			startEffPur = cms.double(-0.005)
+    				),
+            label = cms.InputTag("combinedSecondaryVertexIVFV2BJetTags"),
+            folder = cms.string("CSVIVFV2") # MLP+IVF-based CSV
+        )
 )
 
 process.dqmEnv.subSystemFolder = 'BTAG'
 process.dqmSaver.producer = 'DQM'
-#process.dqmSaver.workflow = '/POG/BTAG/BJETtrained20k_eachptetabin_NewTrackSelection_modified16_tighttracksel'
 process.dqmSaver.workflow = '/POG/BTAG/CSVV2'
 process.dqmSaver.convention = 'Offline'
 process.dqmSaver.saveByRun = cms.untracked.int32(-1)
