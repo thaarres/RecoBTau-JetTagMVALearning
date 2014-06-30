@@ -16,19 +16,9 @@ process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
-
-	factor = cms.double(1),
-	bound = cms.double(50),
-
 	fileNames = cms.vstring(
-		" /afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_B.root",
-		" /afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_DUSG.root"
-	),
-	weightFile = cms.string("weights/CombinedSVV2RecoVertex_BDUSG_histo.txt"),
-	biasFiles = cms.vstring(
-		"*",
-		"-",
-		"weights/CombinedSVV2RecoVertex_B_DUSG_ratio.txt"
+		" /user/sabuzeid/B_tagging/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/CSV_MLP/NewTraining/VariableExtraction/TreesToTrain/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_B.root",
+		" /user/sabuzeid/B_tagging/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/CSV_MLP/NewTraining/VariableExtraction/TreesToTrain/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_DUSG.root"
 	)
 )
 

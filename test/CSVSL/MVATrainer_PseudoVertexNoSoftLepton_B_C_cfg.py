@@ -16,19 +16,9 @@ process.combinedSVTrainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
-
-	factor = cms.double(1),
-	bound = cms.double(50),
-
 	fileNames = cms.vstring(
 		"/user/pvmulder/NewEraOfDataAnalysis/BTagServiceWork/DEVELOPMENT/SuperTaggerDev/CMSSW_5_3_14/src/RootFiles/SkimmedRootFiles/skimmed_max20k_eachptetabin_CombinedSVPseudoVertexNoSoftLepton_B.root",
 		"/user/pvmulder/NewEraOfDataAnalysis/BTagServiceWork/DEVELOPMENT/SuperTaggerDev/CMSSW_5_3_14/src/RootFiles/SkimmedRootFiles/skimmed_max20k_eachptetabin_CombinedSVPseudoVertexNoSoftLepton_C.root"
-	),
-	weightFile = cms.string("weights/CombinedSVPseudoVertexNoSoftLepton_BC_histo.txt"),
-	biasFiles = cms.vstring(
-		"*",
-		"-",
-		"weights/CombinedSVPseudoVertexNoSoftLepton_B_C_ratio.txt"
 	)
 )
 

@@ -62,8 +62,6 @@ int main(int argc, char **argv)
   types.push_back("DUSG");
   types.push_back("C");
   types.push_back("B");
-  types.push_back("C_DUSG");
-  types.push_back("C_B");
   for(size_t i=0;i< cat.size(); i++){
    for(size_t j=0;j< types.size(); j++){
 	  paint(dir,cat[i],types[j]);

@@ -16,20 +16,9 @@ process.combinedMVATrainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
-
-	factor = cms.double(50),
-	bound = cms.double(50),
-
 	fileNames = cms.vstring(
 		"/user/pvmulder/NewEraOfDataAnalysis/BTagServiceWork/DEVELOPMENT/SuperTaggerDev/CMSSW_5_3_14/src/CrabJobs/TTJets_inclusive_SC_CSVSL/TTJetsIncl/combinedMVA_DUSG.root",
-	),
-	weightFile = cms.string("./weights/combinedMVA_DUSG_histo.txt"),
-	biasFiles = cms.vstring(
-		"*",
-		"-",
-		"-"
-	),
-	#maxEvents=cms.untracked.int32(10)
+	)	
 )
 
 process.looper = cms.Looper("JetTagMVATrainerLooper",

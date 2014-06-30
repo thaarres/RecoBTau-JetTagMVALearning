@@ -52,64 +52,6 @@
 using namespace reco;
 using namespace PhysicsTools;
 
-class Fit {
-    public:
-	Fit() : isFixed(true), fixedValue(0) {}
-	Fit(double value) : isFixed(true), fixedValue(value) {}
-	Fit(const std::string &fileName) : isFixed(false)
-	{
-		std::ifstream f(fileName.c_str());
-		for(int i = 0; i < 7; i++)
-			for(int j = 0; j < 6; j++)
-				f >> params[i][j];
-	}
-
-	operator bool() const { return !isFixed || fixedValue > 0.0; }
-
-	double operator () (double pt, double eta, bool isRev = false) const
-	{
-		if (isFixed)
-			return fixedValue;
-
-		double x = std::min(std::max(-1.0, eta / 2.5), 1.0);
-		double y = std::min(std::max(0.0, (std::log(pt + 50.0) - 4.17438727) * 40.0 / 2.1 + 0.5), 36.0); //4.0943445622221004 -> 10 GeV, 4.17438727 -> 15 GeV
-		//double y = std::log(pt + 50.0); //4.0943445622221004 -> 10 GeV, 4.17438727 -> 15 GeV
-
-
-		double facs[7];
-		for(int i = 0; i < 7; i++) {
-			const double *v = params[i];
-			facs[i] = v[0] + y * (v[1] + y * (v[2] + y * (v[3] + y * (v[4] + y * v[5]))));
-		}
-
-		double xs[6];
-		xs[0] = x * x;
-		xs[1] = xs[0] * xs[0];
-		xs[2] = xs[1] * xs[0];
-		xs[3] = xs[1] * xs[1];
-		xs[4] = xs[2] * xs[1];
-		xs[5] = xs[2] * xs[2];
-
-		double val =
-		       facs[0] +
-		       facs[1] * (2 * xs[0] - 1) +
-		       facs[2] * (8 * xs[1] - 8 * xs[0] + 1) +
-		       facs[3] * (32 * xs[2] - 48 * xs[1] + 18 * xs[0] - 1) +
-		       facs[4] * (128 * xs[3] - 256 * xs[2] + 160 * xs[1] - 32 * xs[0] + 1) +
-		       facs[5] * (512 * xs[4] - 1280 * xs[3] + 1120 * xs[2] - 400 * xs[1] + 50 * xs[0] - 1) +
-		       facs[6] * (2048 * xs[5] - 6144 * xs[4] + 6912 * xs[3] - 3584 * xs[2] + 840 * xs[1] - 72 * xs[0] + 1);
-		if (isRev)
-			return 1.0 / val;
-		else
-			return val;
-	}
-
-    private:
-	bool	isFixed;
-	double	fixedValue;
-	double	params[7][6];
-};
-
 class Var {
     public:
 	Var(char type, TTree *tree, const char *name) :
@@ -191,16 +133,10 @@ class JetTagMVATreeTrainer : public edm::EDAnalyzer {
 	double						minPt;
 	double						minEta;
 	double						maxEta;
-	double						factor;
-	double						bound;
-	double						signalFactor;
 
     private:
 	std::vector<int>				signalFlavours;
 	std::vector<int>				ignoreFlavours;
-	Fit						weights;
-	std::vector<Fit>				bias;
-	double						limiter;
 	int						maxEvents;
 	TRandom						rand;
 
@@ -225,12 +161,8 @@ JetTagMVATreeTrainer::JetTagMVATreeTrainer(const edm::ParameterSet &params) :
 	minPt(params.getParameter<double>("minimumTransverseMomentum")),
 	minEta(params.getParameter<double>("minimumPseudoRapidity")),
 	maxEta(params.getParameter<double>("maximumPseudoRapidity")),
-	factor(params.getParameter<double>("factor")),
-	bound(params.getParameter<double>("bound")),
-	signalFactor(params.getUntrackedParameter<double>("signalFactor", 1.0)),
 	signalFlavours(params.getParameter<std::vector<int> >("signalFlavours")),
 	ignoreFlavours(params.getParameter<std::vector<int> >("ignoreFlavours")),
-	limiter(params.getUntrackedParameter<double>("weightThreshold", 0.0)),
 	maxEvents(params.getUntrackedParameter<int>("maxEvents", -1)),
 	fileNames(params.getParameter<std::vector<std::string> >("fileNames"))
 {
@@ -255,19 +187,6 @@ JetTagMVATreeTrainer::JetTagMVATreeTrainer(const edm::ParameterSet &params) :
 
 	computerCache = std::auto_ptr<GenericMVAComputerCache>(
 			new GenericMVAComputerCache(calibrationLabels));
-
-	weights = Fit(params.getParameter<std::string>("weightFile"));
-
-	std::vector<std::string> biasFiles = params.getParameter<std::vector<std::string> >("biasFiles");
-	for(std::vector<std::string>::const_iterator iter = biasFiles.begin();
-	    iter != biasFiles.end(); iter++) {
-		if (*iter == "*")
-			bias.push_back(Fit(1.0));
-		else if (*iter == "-")
-			bias.push_back(Fit(0.0));
-		else
-			bias.push_back(Fit(*iter));
-	}
 	
   //TESTING
 //	h_JetPt = new TH1F("h_JetPt","h_JetPt",200,0,1200);
@@ -506,40 +425,7 @@ void JetTagMVATreeTrainer::analyze(const edm::Event& event,
 				{
 				  std::cout<<"  mvaComputer declaration problem "<<std::endl;
 					continue;					
-				}
-/*
-				int idx = 0;
-				if (flavour == 4)
-					idx = 1;
-				else if (flavour == 5 || flavour == 7)
-					idx = 2;
-				double pBias[3];
-				for(int i = 0; i < 3; i++)
-					pBias[i] = bias[i](jetPt, jetEta, i < 2);
-				double weight;
-				if (bias[0] && bias[1])
-					weight = (idx == 0) ? 0.75 :
-					         (idx == 1) ? 0.25 : 1.0;
-				else
-					weight = 1.0;
-				
-				weight /= weights(jetPt, jetEta);
-				weight *= pBias[0] + pBias[1] + pBias[2];
-				weight /= pBias[idx];
-				
-				weight *= factor;
-				if (weight > bound)
-					weight = bound;
-
-				if (idx == 2)
-					weight *= signalFactor;
-
-				if (weight < limiter) {
-					if (rand.Uniform(limiter) > weight)
-						continue;
-					weight = limiter;
-				}
-*/				
+				}			
 				
 //				h_JetPt->Fill(jetPt);
 //				h_JetEta->Fill(jetEta);
