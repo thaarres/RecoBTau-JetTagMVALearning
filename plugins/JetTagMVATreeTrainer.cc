@@ -419,13 +419,13 @@ void JetTagMVATreeTrainer::analyze(const edm::Event& event,
 					}
 				}
 
-				GenericMVAComputer *mvaComputer =
+				GenericMVAComputer const* mvaComputer =
 					computerCache->getComputer(index);
 				if (!mvaComputer)
 				{
 				  std::cout<<"  mvaComputer declaration problem "<<std::endl;
 					continue;					
-				}			
+				}
 				
 //				h_JetPt->Fill(jetPt);
 //				h_JetEta->Fill(jetEta);
@@ -469,26 +469,7 @@ void JetTagMVATreeTrainer::analyze(const edm::Event& event,
 
 				std::copy(mvaComputer->iterator(variables.begin()),  mvaComputer->iterator(variables.end()), insert);
 
-/* 
-		values[0].setName("__TARGET__");
-		values[0].setValue(target);
-		values[1].setName("__WEIGHT__");
-		values[1].setValue(weight);
-		
-		int i = 2;
-		for(TaggingVariableList::const_iterator iter = variables.begin(); iter != variables.end(); iter++) 	
-		{
-			
-			values[i].setName(TaggingVariableTokens[iter->first]);
-			values[i].setValue(iter->second);
-		
-			//std::cout << "values name " << values[i].getName() << " has value " << values[i].getValue()  << std::endl;			
-			i++;
-		}
- */
-
-
-				static_cast<MVAComputer*>(mvaComputer)->eval(values);
+				static_cast<MVAComputer const*>(mvaComputer)->eval(values);
 
 				nEvents++;
 			}
