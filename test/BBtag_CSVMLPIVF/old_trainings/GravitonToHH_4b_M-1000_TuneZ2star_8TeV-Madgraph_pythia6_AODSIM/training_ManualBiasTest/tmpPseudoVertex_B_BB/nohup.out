@@ -1,0 +1,11 @@
+Training with 4770 events. (weighted 1070)
+Training MLP epoch 1, rel chi^2: 0.0290462
+Training MLP epoch 11, rel chi^2: 0.0209642
+Training MLP epoch 21, rel chi^2: 0.0198485
+Training MLP epoch 31, rel chi^2: 0.0191167
+Training MLP epoch 41, rel chi^2: 0.0184965
+Training MLP epoch 51, rel chi^2: 0.0179487
+Training MLP epoch 61, rel chi^2: 0.0170645
+Training MLP epoch 71, rel chi^2: 0.0165585
+Training MLP epoch 81, rel chi^2: 0.0161372
+Training MLP epoch 91, rel chi^2: 0.0155847
