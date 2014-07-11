@@ -214,10 +214,10 @@ class JetTagMVATreeTrainer : public edm::EDAnalyzer {
 	
 	TH2D* histo_B_lin; 
 	TH2D* histo_C_lin;
-	TH2D* histo_DUSG_lin;	
+	TH2D* histo_BB_lin;	
 //	TH2D* histo2D_B_reweighted_lin;
 //	TH2D* histo2D_C_reweighted_lin;
-//	TH2D* histo2D_DUSG_reweighted_lin;
+//	TH2D* histo2D_BB_reweighted_lin;
 	
 };
 
@@ -278,38 +278,38 @@ JetTagMVATreeTrainer::JetTagMVATreeTrainer(const edm::ParameterSet &params) :
 	//for non-fit reweighting
 	TFile* infile_B = 0;
 	TFile* infile_C = 0;
-	TFile* infile_DUSG = 0;
+	TFile* infile_BB = 0;
 /* 	
 	if(params.getParameter<std::string>("calibrationRecord") == "CombinedSVRecoVertex")
 	{
 	  infile_B = TFile::Open("CombinedSVRecoVertex_B_histo.root");
 	  infile_C = TFile::Open("CombinedSVRecoVertex_C_histo.root");
-	  infile_DUSG = TFile::Open("CombinedSVRecoVertex_DUSG_histo.root");		
+	  infile_BB = TFile::Open("CombinedSVRecoVertex_BB_histo.root");		
 	}
 	else if(params.getParameter<std::string>("calibrationRecord") == "CombinedSVPseudoVertex")
 	{
 	  infile_B = TFile::Open("CombinedSVPseudoVertex_B_histo.root");
 	  infile_C = TFile::Open("CombinedSVPseudoVertex_C_histo.root");
-	  infile_DUSG = TFile::Open("CombinedSVPseudoVertex_DUSG_histo.root");
+	  infile_BB = TFile::Open("CombinedSVPseudoVertex_BB_histo.root");
 	}
 	else if(params.getParameter<std::string>("calibrationRecord") == "CombinedSVNoVertex")
 	{
 	  infile_B = TFile::Open("CombinedSVNoVertex_B_histo.root");
 	  infile_C = TFile::Open("CombinedSVNoVertex_C_histo.root");
-	  infile_DUSG = TFile::Open("CombinedSVNoVertex_DUSG_histo.root");
+	  infile_BB = TFile::Open("CombinedSVNoVertex_BB_histo.root");
 	}
 	else if(params.getParameter<std::string>("calibrationRecord") == "combinedMVA")
 	{
 	  //std::cout << "TEST" << std::endl;
 		infile_B = TFile::Open("combinedMVA_B_histo.root");
 	  infile_C = TFile::Open("combinedMVA_C_histo.root");
-	  infile_DUSG = TFile::Open("combinedMVA_DUSG_histo.root");
+	  infile_BB = TFile::Open("combinedMVA_BB_histo.root");
 	}
  */
 
-	std::string calibRecords[16] = {"CombinedSVRecoVertexNoSoftLepton","CombinedSVRecoVertexSoftElectron","CombinedSVRecoVertexSoftMuon","CombinedSVPseudoVertexNoSoftLepton","CombinedSVPseudoVertexSoftElectron","CombinedSVPseudoVertexSoftMuon","CombinedSVNoVertexNoSoftLepton","CombinedSVNoVertexSoftElectron","CombinedSVNoVertexSoftMuon", "CombinedSVNoVertex","CombinedSVPseudoVertex","CombinedSVRecoVertex", "CombinedSVV2NoVertex","CombinedSVV2PseudoVertex","CombinedSVV2RecoVertex", "combinedMVA"};
+	std::string calibRecords[17] = {"CombinedSVRecoVertexNoSoftLepton","CombinedSVRecoVertexSoftElectron","CombinedSVRecoVertexSoftMuon","CombinedSVPseudoVertexNoSoftLepton","CombinedSVPseudoVertexSoftElectron","CombinedSVPseudoVertexSoftMuon","CombinedSVNoVertexNoSoftLepton","CombinedSVNoVertexSoftElectron","CombinedSVNoVertexSoftMuon", "CombinedSVNoVertex","CombinedSVPseudoVertex","CombinedSVRecoVertex", "CombinedSVV2NoVertex","CombinedSVV2PseudoVertex","CombinedSVV2RecoVertex","CombinedSVV2RecoRecoVertex", "combinedMVA"};
 	bool calibRecordFound = false;
-	for(int i=0; i<16; i++){ 
+	for(int i=0; i<17; i++){ 
 //		std::cout << "calibrationRecord " << i << ": " << calibRecords[i] << " and we are looking for " << params.getParameter<std::string>("calibrationRecord")  << std::endl;
 		if(params.getParameter<std::string>("calibrationRecord") == calibRecords[i])
 		{
@@ -317,9 +317,9 @@ JetTagMVATreeTrainer::JetTagMVATreeTrainer(const edm::ParameterSet &params) :
 			TString tmp = (TString) calibRecords[i] ;
 			infile_B = TFile::Open(tmp+"_B_histo.root");
 		  infile_C = TFile::Open(tmp+"_C_histo.root");
-		  infile_DUSG = TFile::Open(tmp+"_DUSG_histo.root");		
+		  infile_BB = TFile::Open(tmp+"_BB_histo.root");		
 		} 
- 		else if(i==15 && calibRecordFound == false)
+ 		else if(i==16 && calibRecordFound == false)
 		{
 	   	std::cout<<"JetTagMVATreeTrainer: calibrationRecord " << params.getParameter<std::string>("calibrationRecord") << " NOT FOUND!!!"<<std::endl;
 		}
@@ -327,10 +327,10 @@ JetTagMVATreeTrainer::JetTagMVATreeTrainer(const edm::ParameterSet &params) :
 	//flatten in linear scale of pt
 	histo_B_lin = (TH2D*) infile_B->Get("jets_lin");
 	histo_C_lin = (TH2D*) infile_C->Get("jets_lin");
-	histo_DUSG_lin = (TH2D*) infile_DUSG->Get("jets_lin");	
+	histo_BB_lin = (TH2D*) infile_BB->Get("jets_lin");	
 //	histo2D_B_reweighted_lin = new TH2D("h_2D_B_reweighted_lin","h_2D_B_reweighted_lin",50, -2.5, 2.5, 40, 15., 1000.);
 //	histo2D_C_reweighted_lin = new TH2D("h_2D_C_reweighted_lin","h_2D_C_reweighted_lin",50, -2.5, 2.5, 40, 15., 1000.);
-//	histo2D_DUSG_reweighted_lin = new TH2D("h_2D_DUSG_reweighted_lin","h_2D_DUSG_reweighted_lin",50, -2.5, 2.5, 40, 15., 1000.);
+//	histo2D_BB_reweighted_lin = new TH2D("h_2D_BB_reweighted_lin","h_2D_BB_reweighted_lin",50, -2.5, 2.5, 40, 15., 1000.);
 	
 }
 
@@ -343,7 +343,7 @@ JetTagMVATreeTrainer::~JetTagMVATreeTrainer()
 	
 	histo2D_B_reweighted_lin->Write();
 	histo2D_C_reweighted_lin->Write();
-	histo2D_DUSG_reweighted_lin->Write();
+	histo2D_BB_reweighted_lin->Write();
 	
 	std::cout<<"Done."<<std::endl;
 	outfile->Close(); */
@@ -548,10 +548,10 @@ void JetTagMVATreeTrainer::analyze(const edm::Event& event,
 	      double weight = 1;
 				float bincontent_B_lin = 0;
 				float bincontent_C_lin = 0;
-				float bincontent_DUSG_lin = 0;
+				float bincontent_BB_lin = 0;
 				bincontent_B_lin = histo_B_lin->GetBinContent( histo_B_lin->FindBin(jetEta,jetPt) );
 				bincontent_C_lin = histo_C_lin->GetBinContent( histo_C_lin->FindBin(jetEta,jetPt) );
-				bincontent_DUSG_lin = histo_DUSG_lin->GetBinContent( histo_DUSG_lin->FindBin(jetEta,jetPt) );
+				bincontent_BB_lin = histo_BB_lin->GetBinContent( histo_BB_lin->FindBin(jetEta,jetPt) );
 				
 				if(flavour == 5){
 					 weight = 1./bincontent_B_lin;
@@ -565,10 +565,11 @@ void JetTagMVATreeTrainer::analyze(const edm::Event& event,
 					//std::cout << "bincontent C: " << bincontent_C_lin << " so that weight is: " << weight << std::endl;
 					}
 				else
+				  if(flavour == 9)
 				{				   
-					 weight = 1./bincontent_DUSG_lin;
-//					 histo2D_DUSG_reweighted_lin->Fill(jetEta,jetPt,weight);
-					//std::cout << "bincontent DUSG: " << bincontent_DUSG_lin << " so that weight is: " << weight << std::endl;
+					 weight = 1./bincontent_BB_lin;
+//					 histo2D_BB_reweighted_lin->Fill(jetEta,jetPt,weight);
+					//std::cout << "bincontent BB: " << bincontent_BB_lin << " so that weight is: " << weight << std::endl;
 				}
 				
 				// if weights are too small this might be suboptimal for the training

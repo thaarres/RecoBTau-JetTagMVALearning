@@ -165,18 +165,33 @@ class JetTagMVAExtractor : public edm::EDAnalyzer {
 JetTagMVAExtractor::Tree::Tree(const JetTagMVAExtractor &main, Index index) :
 	flavour(index.flavour)
 {
-	static const char flavourMap[] = " DUSCBTB             G";
+	//	static const char flavourMap[] = " DUSCBTB X           G";
+	std::map<int, std::string> flavourMap;
+	flavourMap[1] = "D";
+	flavourMap[2] = "U";
+	flavourMap[3] = "S";
+	flavourMap[4] = "C";
+	flavourMap[5] = "B";
+	flavourMap[6] = "T";
+	flavourMap[7] = "B";
+	// in case more than one hadron of that type in jet:
+	flavourMap[9] = "BB";
+	flavourMap[21] = "G";
 
+	
 	if (index.index < 0 || index.index >= (int)main.calibrationLabels.size())
-		return;
-
+	  return;
+	
 	ROOTContextSentinel ctx;
-
+	
 	Label label = main.calibrationLabels[index.index];
 	if (index.flavour > 21) std::cout << index.flavour << std::endl;
-	std::string flavour = std::string("") + flavourMap[index.flavour];
+	//      std::string flavour = std::string("") + flavourMap[index.flavour];
+	std::string flavour = flavourMap[index.flavour];
+	
 	file.reset(new TFile((label.label + "_" + flavour + ".root").c_str(), "RECREATE"));
 	file->cd();
+
 
 	tree = new TTree(label.label.c_str(), (label.label + "_" + flavour).c_str());
 
@@ -425,8 +440,14 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 		JetInfoMap::iterator pos = jetInfos.find(iter->first);
 		if (pos != jetInfos.end())
 //			pos->second.flavour = std::abs(iter->second.getFlavour());
+//			pos->second.flavour = std::abs(iter->second.getHadronFlavour());
 			pos->second.flavour = std::abs(iter->second.getPartonFlavour());
-	}
+
+			
+// ////////////OOBS, remove!/////////////////
+// 			if(pos->second.flavour !=0)std::cout<<"Hadron Flavour="<<pos->second.flavour<<std::endl;
+// /////////////////////////////////////////
+ 	}
 
 	// cached array containing MVAComputer value list
 	std::vector<Variable::Value> values;
@@ -436,8 +457,14 @@ void JetTagMVAExtractor::analyze(const edm::Event& event, const edm::EventSetup&
 	// now loop over the map and compute all JetTags
 	for(JetInfoMap::const_iterator iter = jetInfos.begin(); iter != jetInfos.end(); iter++) {
 		edm::RefToBase<Jet> jet = iter->first;
+		
+		//Get the jets containing two B hadrons
+		//const reco::JetFlavourInfo & flavorInfo = (*jetFlavourHandle)[jet];
+		//bool isBB = (flavorInfo.getbHadrons().size()>=2);
+		//if(isBB)std::cout<<"Nr B hadrons="<<flavorInfo.getbHadrons().size()<<std::endl;
+		
 		const JetInfo &info = iter->second;
-
+		
 		reco::GenJetRef genjet = (*genJetMatch)[jet];
 		// reject jets if they do not have a genJetMatch -> handle to avoid jets from PU
 		if (!genjet.isNonnull() || !genjet.isAvailable())
