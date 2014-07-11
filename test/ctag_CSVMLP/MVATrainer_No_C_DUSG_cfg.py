@@ -16,20 +16,9 @@ process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
-
-	factor = cms.double(1),
-	bound = cms.double(50),
-	#weightThreshold = cms.untracked.double(0.1),
-
 	fileNames = cms.vstring(
 		" /afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_C.root",
 		" /afs/cern.ch/work/p/pvmulder/public/BTagging/GIT_SETUP/TEST_RECIPE/CMSSW_5_3_13_patch3/src/RootFiles_CMSSW5313_gitrecipe/QCD/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_DUSG.root"
-	),
-	weightFile = cms.string("weights/CombinedSVV2NoVertex_CDUSG_histo.txt"),
-	biasFiles = cms.vstring(
-		"*",
-		"-",
-		"weights/CombinedSVV2NoVertex_C_DUSG_ratio.txt"
 	)
 )
 

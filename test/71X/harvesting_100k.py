@@ -40,13 +40,13 @@ process.options = cms.untracked.PSet(
 from DQMOffline.RecoB.bTagCommon_cff import*
 process.load("DQMOffline.RecoB.bTagCommon_cff")
 #process.bTagCommonBlock.ptRecJetMin = cms.double(600.0)
-process.bTagCommonBlock.ptRanges = cms.vdouble(0.0,40.0,60.0,90.0, 150.0,400.0,600.0,3000.0)
-process.bTagCommonBlock.etaRanges = cms.vdouble(0.0, 1.2, 2.1, 2.4)
 
 ###############################################################################################
 
 from Validation.RecoB.bTagAnalysis_cfi import *
 process.load("Validation.RecoB.bTagAnalysis_cfi")
+process.bTagValidation.ptRanges = cms.vdouble(0.0,40.0,60.0,90.0, 150.0,400.0,600.0,3000.0)
+process.bTagValidation.etaRanges = cms.vdouble(0.0, 1.2, 2.1, 2.4)
 
 process.CustombTagValidation = process.bTagValidation.clone(
     tagConfig = cms.VPSet(
@@ -131,7 +131,10 @@ process.CustombTagValidation = process.bTagValidation.clone(
     				),
             label = cms.InputTag("combinedSecondaryVertexIVFV2BJetTags"),
             folder = cms.string("CSVIVFV2") # MLP+IVF-based CSV
-        )
+        ),
+	finalizePlots = True,
+	finalizeOnly = True
+
 )
 
 process.dqmEnv.subSystemFolder = 'BTAG'
