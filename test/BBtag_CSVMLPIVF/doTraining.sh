@@ -9,7 +9,7 @@
 # echo "Calculating the bias: ARE YOU SURE THAT YOU HAVE ENOUGH STATISTICS TO DETERMINE THE BIAS ACCURATELY?"
 # g++ bb_biasForXml.cpp `root-config --cflags --glibs` -o bias
 # ./bias $path_to_rootfiles $prefix
-echo "ARE YOU SURE THAT YOU HAVE ENOUGH STATISTICS TO DETERMINE THE BIAS ACCURATELY?"
+# echo "ARE YOU SURE THAT YOU HAVE ENOUGH STATISTICS TO DETERMINE THE BIAS ACCURATELY?"
 
 answer=4
 #answer=1
@@ -20,29 +20,29 @@ Combinations="NoVertex_B_BB  PseudoVertex_B_BB RecoVertex_B_BB RecoRecoVertex_B_
 CAT="Reco Pseudo No RecoReco"
 prefix="CombinedSVV2"
 
-echo "Filling the 2D pt/eta histograms" 
+# echo "Filling the 2D pt/eta histograms" 
+# 
+# g++ ./bb_histoJetEtaPt.cpp `root-config --cflags --glibs` -o histos
+# ./histos $path_to_rootfiles $prefix
 
-g++ ./bb_histoJetEtaPt.cpp `root-config --cflags --glibs` -o histos
-./histos $path_to_rootfiles $prefix
+# echo "Reweighting the trees according to the pt/eta weights and saving the relevant variables " 
+# 
+#files=("MVATrainer_No_B_BB_cfg.py" "MVATrainer_No_B_C_cfg.py" "MVATrainer_Pseudo_B_BB_cfg.py" "MVATrainer_Pseudo_B_C_cfg.py" "MVATrainer_Reco_B_BB_cfg.py" "MVATrainer_Reco_B_C_cfg.py" "MVATrainer_RecoReco_B_BB_cfg.py" "MVATrainer_RecoReco_B_C_cfg.py")
+files=("MVATrainer_No_B_BB_cfg.py" "MVATrainer_Pseudo_B_BB_cfg.py" "MVATrainer_Reco_B_BB_cfg.py" "MVATrainer_RecoReco_B_BB_cfg.py")
 
-# # echo "Reweighting the trees according to the pt/eta weights and saving the relevant variables " 
-# # 
-# #files=("MVATrainer_No_B_BB_cfg.py" "MVATrainer_No_B_C_cfg.py" "MVATrainer_Pseudo_B_BB_cfg.py" "MVATrainer_Pseudo_B_C_cfg.py" "MVATrainer_Reco_B_BB_cfg.py" "MVATrainer_Reco_B_C_cfg.py" "MVATrainer_RecoReco_B_BB_cfg.py" "MVATrainer_RecoReco_B_C_cfg.py")
-# files=("MVATrainer_No_B_BB_cfg.py" "MVATrainer_Pseudo_B_BB_cfg.py" "MVATrainer_Reco_B_BB_cfg.py" "MVATrainer_RecoReco_B_BB_cfg.py")
-
-# l=0
-# while [ $l -lt 4  ]
-# do
-# 	jobsrunning=0
-# 	while [ $jobsrunning -lt $answer ]
-# 	do
-# echo ${files[l]}
-# 		nohup cmsRun ${files[l]} &
-# 		let jobsrunning=$jobsrunning+1
-# 		let l=$l+1
-# 	done
-# 	wait
-# done
+l=0
+while [ $l -lt 4  ]
+do
+	jobsrunning=0
+	while [ $jobsrunning -lt $answer ]
+	do
+echo ${files[l]}
+		nohup cmsRun ${files[l]} &
+		let jobsrunning=$jobsrunning+1
+		let l=$l+1
+	done
+	wait
+done
 
 # echo ">>>> CHECK THAT THE train*_save.root FILES ARE CORRECTLY PRODUCED! OPEN A FILE AND CHECK THAT THE WEIGHT BRANCH IS NOT EMPTY...."
 # echo " "
