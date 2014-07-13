@@ -272,6 +272,7 @@
 	    <sigbkg size="500"/>
                         <bias_table><!--B_BB-->
 
+<!-- 
 <bias>0.494679</bias>
 <bias>0.603949</bias>
 <bias>0.72725</bias>
@@ -291,8 +292,26 @@
 <bias>0.470504</bias>
 <bias>0.458261</bias>
 <bias>0.52488</bias>
-
-
+ -->
+<bias>0.864764</bias>
+<bias>1.00761</bias>
+<bias>1.04936</bias>
+<bias>0.758777</bias>
+<bias>0.883237</bias>
+<bias>1.18967</bias>
+<bias>0.8825</bias>
+<bias>1.19389</bias>
+<bias>1.202</bias>
+<bias>0.676321</bias>
+<bias>0.739042</bias>
+<bias>1.11481</bias>
+<bias>0.698787</bias>
+<bias>0.583182</bias>
+<bias>0.626819</bias>
+<bias>0.550522</bias>
+<bias>0.53928</bias>
+<bias>0.405047</bias>
+<bias>0.55</bias>
                        </bias_table><!--B_BB-->
 		</config>
 		<output>

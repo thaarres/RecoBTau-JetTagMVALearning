@@ -326,7 +326,8 @@
 			 <general strict="true"/>
         	              <category count="19"/>
 	     <sigbkg size="500"/>			 
-       <bias_table><!--B_DUSG-->
+       <bias_table><!--B_BB-->
+<!-- 
 <bias>58.0902</bias>
 <bias>41.6971</bias>
 <bias>28.3985</bias>
@@ -346,7 +347,27 @@
 <bias>6.82707</bias>
 <bias>7.75588</bias>
 <bias>4.73601</bias>
-       </bias_table><!--B_DUSG-->
+ -->
+<bias>1.02554</bias>
+<bias>0.842369</bias>
+<bias>1.03986</bias>
+<bias>1.01464</bias>
+<bias>0.991559</bias>
+<bias>0.722658</bias>
+<bias>0.951354</bias>
+<bias>0.69397</bias>
+<bias>0.87418</bias>
+<bias>0.80404</bias>
+<bias>0.919705</bias>
+<bias>0.790996</bias>
+<bias>0.809741</bias>
+<bias>0.892219</bias>
+<bias>1.19937</bias>
+<bias>0.871217</bias>
+<bias>1.02705</bias>
+<bias>0.810526</bias>
+<bias>0.869136</bias>
+       </bias_table><!--B_BB-->
 		</config>
 		<output>
 			<var name="var1"/>
