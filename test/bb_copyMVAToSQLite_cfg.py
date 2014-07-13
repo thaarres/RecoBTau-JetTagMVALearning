@@ -32,7 +32,7 @@ process.PoolDBOutputService = cms.Service("PoolDBOutputService",
 	BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
 	DBParameters = cms.PSet( messageLevel = cms.untracked.int32(0) ),
 	timetype = cms.untracked.string('runnumber'),
-	connect = cms.string('sqlite_file:MVAJetTags_ManualBiasTest_100714.db'),
+	connect = cms.string('sqlite_file:MVAJetTags_Radion_V1.db'),
 	toPut = cms.VPSet(cms.PSet(
 		record = cms.string('BTauGenericMVAJetTagComputerRcd'),
 		tag = cms.string('MVAJetTags')
