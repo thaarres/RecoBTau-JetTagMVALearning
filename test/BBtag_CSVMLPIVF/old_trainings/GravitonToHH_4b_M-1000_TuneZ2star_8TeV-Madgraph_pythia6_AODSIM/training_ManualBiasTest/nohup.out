@@ -1,157 +1,0 @@
-JetTagMVATreeTrainer::JetTagMVATreeTrainer
-Begin processing the 1st record. Run 1, Event 1, LumiSection 1 at 09-Jul-2014 23:36:59.310 CEST
-Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2NoVertex_B.root
-Tree CombinedSVV2NoVertex
-Entries 15161
-Event     0 ( 0%), ETA ##:##Event  8685 (57%), ETA  0:00                            Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2NoVertex_BB.root
-Tree CombinedSVV2NoVertex
-Entries 1149
-Event    0 ( 0%), ETA ##:##                            Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 09-Jul-2014 23:37:00.563 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
-JetTagMVATreeTrainer::JetTagMVATreeTrainer
-Begin processing the 1st record. Run 1, Event 1, LumiSection 1 at 09-Jul-2014 23:37:23.040 CEST
-Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2PseudoVertex_B.root
-Tree CombinedSVV2PseudoVertex
-Entries 4332
-Event    0 ( 0%), ETA ##:##                            Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2PseudoVertex_BB.root
-Tree CombinedSVV2PseudoVertex
-Entries 438
-Event   0 ( 0%), ETA ##:##                            Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 09-Jul-2014 23:37:23.861 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
-JetTagMVATreeTrainer::JetTagMVATreeTrainer
-JetTagMVATreeTrainer::JetTagMVATreeTrainer
-JetTagMVATreeTrainer::JetTagMVATreeTrainer
-JetTagMVATreeTrainer::JetTagMVATreeTrainer
-JetTagMVATreeTrainer::JetTagMVATreeTrainer
-Begin processing the Begin processing the 1st1 record. Run 1st, Event  record. Run 11, LumiSection , Event 11, LumiSection  at 110-Jul-2014 16:59:54.254 CEST at 
-10-Jul-2014 16:59:54.254 CEST
-Begin processing the 1st record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:54.264 CEST
-Begin processing the 1st record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:54.266 CEST
-Begin processing the Begin processing the 1st1 record. Run st1 record. Run , Event 11, LumiSection 1 at , Event 1, LumiSection 110-Jul-2014 16:59:54.275 CEST at 
-10-Jul-2014 16:59:54.275 CEST
-Begin processing the 1st record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:54.276 CEST
-Begin processing the 1st record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:54.279 CEST
-Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2PseudoVertex_B.root
-Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2PseudoVertex_B.root
-Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2NoVertex_B.root
-Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2NoVertex_B.root
-Tree CombinedSVV2PseudoVertex
-Tree CombinedSVV2PseudoVertex
-Entries 4332
-Event    0 ( 0%), ETA ##:##Entries 4332
-Event    0 ( 0%), ETA ##:##Tree CombinedSVV2NoVertex
-Entries 15161
-Event     0 ( 0%), ETA ##:##Tree CombinedSVV2NoVertex
-Entries 15161
-Event     0 ( 0%), ETA ##:##Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoVertex_B.root
-Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoRecoVertex_B.root
-Opened /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoRecoVertex_B.root
-Opened /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoVertex_B.root
-Tree CombinedSVV2RecoVertex
-Entries 33620
-Event     0 ( 0%), ETA ##:##Tree CombinedSVV2RecoRecoVertex
-Entries 8670
-Event    0 ( 0%), ETA ##:##Tree CombinedSVV2RecoRecoVertex
-Entries 8670
-Event    0 ( 0%), ETA ##:##Tree CombinedSVV2RecoVertex
-Entries 33620
-Event     0 ( 0%), ETA ##:##                                                        Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2PseudoVertex_BB.root
-Tree CombinedSVV2PseudoVertex
-Entries 438
-Event   0 ( 0%), ETA ##:##Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2PseudoVertex_C.root
-Tree CombinedSVV2PseudoVertex
-Entries 29
-Event  0 ( 0%), ETA ##:##                                                        Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:54.670 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
-Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:54.718 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
-Event  9822 (29%), ETA  0:02Event 7970 (91%), ETA  0:00Event  9291 (61%), ETA  0:00Event 5290 (61%), ETA  0:00Event  9291 (61%), ETA  0:00Event  7235 (21%), ETA  0:03                            Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoRecoVertex_BB.root
-Tree CombinedSVV2RecoRecoVertex
-Entries 2831
-Event    0 ( 0%), ETA ##:##                            Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2NoVertex_C.root
-Tree CombinedSVV2NoVertex
-                            Entries 1471
-Event    0 ( 0%), ETA ##:##Opened /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoRecoVertex_C.root
-Tree CombinedSVV2RecoRecoVertex
-Entries 44
-Event  0 ( 0%), ETA ##:##                                                                                    Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2NoVertex_BB.root
-Tree CombinedSVV2NoVertex
-Entries 1149
-Event    0 ( 0%), ETA ##:##                                                        Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:55.765 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
-Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:55.829 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
-Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:55.836 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
-Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:55.839 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
-Event 18432 (54%), ETA  0:01Event 19940 (59%), ETA  0:01                            Opened  /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoVertex_BB.root
-Tree CombinedSVV2RecoVertex
-Entries 2919
-Event    0 ( 0%), ETA ##:##Event 33111 (98%), ETA  0:00Event    3 ( 0%), ETA ##:##                            Opened /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoVertex_C.root
-Tree CombinedSVV2RecoVertex
-Entries 387
-Event   0 ( 0%), ETA ##:##                            Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:57.235 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
-                            Begin processing the 2nd record. Run 1, Event 1, LumiSection 1 at 10-Jul-2014 16:59:57.345 CEST
-
-=============================================
-
-MessageLogger Summary
-
-Severity    # Occurrences   Total Occurrences
---------    -------------   -----------------
