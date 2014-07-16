@@ -170,7 +170,30 @@ process.schedule = cms.Schedule(
   process.bTagValidation_step,
   process.dqmsave_step
 )
-process.PoolSource.fileNames = ['file:/afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/BBtag_CSVMLPIVF/Validation/DQMfile_ManualBiasTest_100714.root']
+# process.PoolSource.fileNames = ['file:/afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/BBtag_CSVMLPIVF/Validation/DQMfile_ManualBiasTest_100714.root']
+process.PoolSource.fileNames = [
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_7_1_ww9.root',
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_9_1_EzA.root',
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_3_1_beB.root',
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_2_1_BYR.root',
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_4_1_Z7O.root',
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_1_1_uCL.root',
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_5_1_Wwu.root',
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_8_1_oYa.root',
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_10_1_Yqu.root',
+#'/store/user/thaarres/DQMfiles_Radion_V2/AfterValidation_Radion_V1_6_1_duJ.root'
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_6_2_9V3.root',
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_10_2_hsX.root',
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_1_2_UMS.root',
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_2_2_5WP.root',
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_3_2_cNx.root',
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_8_2_PWC.root',
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_9_2_5Wv.root',
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_7_2_12i.root',
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_4_2_u3a.root',
+'/store/user/thaarres/DQMfiles_Radion_RecoOnly_V1/AfterValidation_Radion_RecoOnly_V1_5_2_xqb.root'
+ ]
+
 #process.PoolSource.fileNames = ['/store/user/thaarres/DQMfiles_AllwBias020714/DQMfile_AllwBias020714_10_1_aGD.root',
 #'/store/user/thaarres/DQMfiles_AllwBias020714/DQMfile_AllwBias020714_29_1_yvs.root',
 #'/store/user/thaarres/DQMfiles_AllwBias020714/DQMfile_AllwBias020714_2_1_XXr.root',

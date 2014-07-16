@@ -30,7 +30,7 @@ process.BTauMVAJetTagComputerRecord = cms.ESSource("PoolDBESSource",
 		record = cms.string('BTauGenericMVAJetTagComputerRcd'),
                 tag = cms.string('MVAJetTags')
 	)),
-	connect = cms.string("sqlite_file:/afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/MVAJetTags_ManualBiasTest_100714.db"),
+	connect = cms.string("sqlite_file:MVAJetTags_Radion_V1.db"),
 	#connect = cms.string('frontier://FrontierDev/CMS_COND_BTAU'),
 	BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService')
 )
@@ -40,7 +40,7 @@ process.es_prefer_BTauMVAJetTagComputerRecord = cms.ESPrefer("PoolDBESSource","B
 process.DQMoutput = cms.OutputModule("PoolOutputModule",
   splitLevel = cms.untracked.int32(0),
   outputCommands = process.DQMEventContent.outputCommands,
-  fileName = cms.untracked.string('DQMfile_ManualBiasTest_100714.root'),
+  fileName = cms.untracked.string('AfterValidation_Radion_V1.root'),
   #fileName = cms.untracked.string('DQMfile.root'),
   dataset = cms.untracked.PSet(
     filterName = cms.untracked.string(''),
@@ -167,9 +167,10 @@ process.combinedSecondaryVertexIVFV2.trackMultiplicityMin = cms.uint32(2)
 #Use this if you want to add new tagger and compare with old CSVIVFV2!!! CSVIVFV2: MLP-based (add my CSV)
 process.combinedSecondaryVertexIVFV2NEW=process.combinedSecondaryVertexIVFV2.clone(
      calibrationRecords = cms.vstring(
-         'NEWCombinedSVIVFV2RecoVertex'
-         #'NEWCombinedSVIVFV2PseudoVertex',
-         #'NEWCombinedSVIVFV2NoVertex'
+         'NEWCombinedSVIVFV2RecoVertex',
+         'NEWCombinedSVIVFV2PseudoVertex',
+         'NEWCombinedSVIVFV2NoVertex',
+         'NEWCombinedSVIVFV2RecoRecoVertex'
      )
 )
      
@@ -388,8 +389,18 @@ process.PoolSource.fileNames = [
        #'/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v1/0000/5AF14FE2-F8E1-E111-8EC9-003048C6903E.root',
        #'/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v1/0000/AEBB6623-65E1-E111-9F35-0025904B12FC.root',
        #'/store/mc/Summer12_DR53X/TTJets_MassiveBinDECAY_TuneZ2star_8TeV-madgraph-tauola/AODSIM/PU_S10_START53_V7A-v1/0000/02F5A838-8FE1-E111-B0C8-00266CFFA654.root',
-	'/store/mc/Summer12_DR53X/GravitonToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V7C-v1/10000/06688145-E89E-E211-9845-002590593876.root',
-	'/store/mc/Summer12_DR53X/GravitonToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V7C-v1/10000/4CA7717D-DB9E-E211-943E-0025905964BA.root',
-	'/store/mc/Summer12_DR53X/GravitonToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V7C-v1/10000/5AA2B0E1-DE9E-E211-B84D-002590596498.root',
-	'/store/mc/Summer12_DR53X/GravitonToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V7C-v1/10000/82971E2B-C99E-E211-94A0-002590593902.root'
+	# '/store/mc/Summer12_DR53X/GravitonToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V7C-v1/10000/06688145-E89E-E211-9845-002590593876.root',
+# 	'/store/mc/Summer12_DR53X/GravitonToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V7C-v1/10000/4CA7717D-DB9E-E211-943E-0025905964BA.root',
+# 	'/store/mc/Summer12_DR53X/GravitonToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V7C-v1/10000/5AA2B0E1-DE9E-E211-B84D-002590596498.root',
+# 	'/store/mc/Summer12_DR53X/GravitonToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V7C-v1/10000/82971E2B-C99E-E211-94A0-002590593902.root'
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/0E14124B-D912-E311-9D53-003048679076.root',
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/1A6A1A10-BE12-E311-AEC6-003048678B8E.root',
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/1AEA85EC-C312-E311-B5E0-003048679188.root',
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/1C9EB183-A012-E311-A20C-0026189438B5.root',
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/1EFF13FC-C612-E311-B33E-00261894397A.root',
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/3A284FC6-C212-E311-B858-0026189438D6.root',
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/40D18E41-CC12-E311-99F9-003048FF9AA6.root',
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/42692558-A812-E311-A4A3-0025905964C2.root',
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/48E87132-C012-E311-8451-003048FFD752.root',
+'/store/mc/Summer12_DR53X/RadionToHH_4b_M-1000_TuneZ2star_8TeV-Madgraph_pythia6/AODSIM/PU_S10_START53_V19-v1/20000/6A779686-E612-E311-897F-002618943874.root'
 			 ]
