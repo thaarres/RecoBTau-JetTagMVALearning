@@ -48,7 +48,8 @@ JetTagMVATrainer::JetTagMVATrainer(const edm::ParameterSet &params) :
 	jetTagComputer(params.getParameter<std::string>("jetTagComputer")),
 	tagInfos(params.getParameter< std::vector<edm::InputTag> >("tagInfos")),
 	signalFlavours(params.getParameter<std::vector<int> >("signalFlavours")),
-	ignoreFlavours(params.getParameter<std::vector<int> >("ignoreFlavours"))
+	ignoreFlavours(params.getParameter<std::vector<int> >("ignoreFlavours")),
+	useBBvsB(params.getParameter<bool>("useBBvsB"))
 {
 	std::sort(signalFlavours.begin(), signalFlavours.end());
 	std::sort(ignoreFlavours.begin(), ignoreFlavours.end());

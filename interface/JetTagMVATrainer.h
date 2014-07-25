@@ -53,6 +53,7 @@ class JetTagMVATrainer : public edm::EDAnalyzer {
 
 	std::vector<int>				signalFlavours;
 	std::vector<int>				ignoreFlavours;
+	bool						useBBvsB;
 };
 
 #endif // RecoBTau_JetTagMVALearning_JetTagMVATrainer_h
