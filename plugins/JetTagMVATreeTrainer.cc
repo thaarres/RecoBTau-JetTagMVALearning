@@ -150,12 +150,12 @@ private:
   //	TFile* outfile;	
   
   TH2D* histo_B_lin; 
-  TH2D* histo_C_lin;
-  TH2D* histo_DUSG_lin;
+//  TH2D* histo_C_lin;
+  TH2D* histo_CDUSG_lin;
   TH2D* histo_BB_lin;
   //	TH2D* histo2D_B_reweighted_lin;
   //	TH2D* histo2D_C_reweighted_lin;
-  //	TH2D* histo2D_DUSG_reweighted_lin;
+  //	TH2D* histo2D_CDUSG_reweighted_lin;
   
 };
 
@@ -199,34 +199,34 @@ fileNames(params.getParameter<std::vector<std::string> >("fileNames"))
   
   //for non-fit reweighting
   TFile* infile_B = 0;
-  TFile* infile_C = 0;
-  TFile* infile_DUSG = 0;
+//  TFile* infile_C = 0;
+  TFile* infile_CDUSG = 0;
   TFile* infile_BB = 0;
   /* 	
    *	if(params.getParameter<std::string>("calibrationRecord") == "CombinedSVRecoVertex")
    *	{
    *	  infile_B = TFile::Open("CombinedSVRecoVertex_B_histo.root");
    *	  infile_C = TFile::Open("CombinedSVRecoVertex_C_histo.root");
-   *	  infile_DUSG = TFile::Open("CombinedSVRecoVertex_DUSG_histo.root");		
+   *	  infile_CDUSG = TFile::Open("CombinedSVRecoVertex_CDUSG_histo.root");		
 }
 else if(params.getParameter<std::string>("calibrationRecord") == "CombinedSVPseudoVertex")
 {
   infile_B = TFile::Open("CombinedSVPseudoVertex_B_histo.root");
   infile_C = TFile::Open("CombinedSVPseudoVertex_C_histo.root");
-  infile_DUSG = TFile::Open("CombinedSVPseudoVertex_DUSG_histo.root");
+  infile_CDUSG = TFile::Open("CombinedSVPseudoVertex_CDUSG_histo.root");
 }
 else if(params.getParameter<std::string>("calibrationRecord") == "CombinedSVNoVertex")
 {
   infile_B = TFile::Open("CombinedSVNoVertex_B_histo.root");
   infile_C = TFile::Open("CombinedSVNoVertex_C_histo.root");
-  infile_DUSG = TFile::Open("CombinedSVNoVertex_DUSG_histo.root");
+  infile_CDUSG = TFile::Open("CombinedSVNoVertex_CDUSG_histo.root");
 }
 else if(params.getParameter<std::string>("calibrationRecord") == "combinedMVA")
 {
   //std::cout << "TEST" << std::endl;
   infile_B = TFile::Open("combinedMVA_B_histo.root");
   infile_C = TFile::Open("combinedMVA_C_histo.root");
-  infile_DUSG = TFile::Open("combinedMVA_DUSG_histo.root");
+  infile_CDUSG = TFile::Open("combinedMVA_CDUSG_histo.root");
 }
 */
   
@@ -240,14 +240,14 @@ else if(params.getParameter<std::string>("calibrationRecord") == "combinedMVA")
       calibRecordFound = true;
       TString tmp = (TString) calibRecords[i] ;
       infile_B = TFile::Open(tmp+"_B_histo.root");
-      if(useBBvsB){
-	infile_BB = TFile::Open(tmp+"_BB_histo.root");
-      }
-      else
-      {
-	infile_C = TFile::Open(tmp+"_C_histo.root");
-	infile_DUSG = TFile::Open(tmp+"_DUSG_histo.root");
-      }
+//       if(useBBvsB){
+      infile_BB = TFile::Open(tmp+"_BB_histo.root");
+//       }
+//       else
+//       {
+//	infile_C = TFile::Open(tmp+"_C_histo.root");
+      infile_CDUSG = TFile::Open(tmp+"_CDUSG_histo.root");
+//       }
     } 
     else if(i==nCalibRecords-1 && calibRecordFound == false)
     {
@@ -256,17 +256,17 @@ else if(params.getParameter<std::string>("calibrationRecord") == "combinedMVA")
   }
   //flatten in linear scale of pt
   histo_B_lin = (TH2D*) infile_B->Get("jets_lin");
-  if(useBBvsB){
-    histo_BB_lin = (TH2D*) infile_BB->Get("jets_lin");
-  }
-  else
-  {
-    histo_C_lin = (TH2D*) infile_C->Get("jets_lin");
-    histo_DUSG_lin = (TH2D*) infile_DUSG->Get("jets_lin");
-  }
+//   if(useBBvsB){
+  histo_BB_lin = (TH2D*) infile_BB->Get("jets_lin");
+//   }
+//   else
+//   {
+//    histo_C_lin = (TH2D*) infile_C->Get("jets_lin");
+  histo_CDUSG_lin = (TH2D*) infile_CDUSG->Get("jets_lin");
+//  }
   //	histo2D_B_reweighted_lin = new TH2D("h_2D_B_reweighted_lin","h_2D_B_reweighted_lin",50, -2.5, 2.5, 40, 15., 1000.);
   //	histo2D_C_reweighted_lin = new TH2D("h_2D_C_reweighted_lin","h_2D_C_reweighted_lin",50, -2.5, 2.5, 40, 15., 1000.);
-  //	histo2D_DUSG_reweighted_lin = new TH2D("h_2D_DUSG_reweighted_lin","h_2D_DUSG_reweighted_lin",50, -2.5, 2.5, 40, 15., 1000.);
+  //	histo2D_CDUSG_reweighted_lin = new TH2D("h_2D_CDUSG_reweighted_lin","h_2D_CDUSG_reweighted_lin",50, -2.5, 2.5, 40, 15., 1000.);
   
 }
 
@@ -279,7 +279,7 @@ JetTagMVATreeTrainer::~JetTagMVATreeTrainer()
    *	
    *	histo2D_B_reweighted_lin->Write();
    *	histo2D_C_reweighted_lin->Write();
-   *	histo2D_DUSG_reweighted_lin->Write();
+   *	histo2D_CDUSG_reweighted_lin->Write();
    *	
    *	std::cout<<"Done."<<std::endl;
    *	outfile->Close(); */
@@ -450,37 +450,36 @@ void JetTagMVATreeTrainer::analyze(const edm::Event& event,
       //non-fit reweighting: jet weight is inverse of bin content of the bin in which the jet resides in the 2D pt,eta histogram
       double weight = 1;
       float bincontent_B_lin = 0;
-      float bincontent_C_lin = 0;
-      float bincontent_DUSG_lin = 0;
+//      float bincontent_C_lin = 0;
+      float bincontent_CDUSG_lin = 0;
       float bincontent_BB_lin = 0;
       bincontent_B_lin = histo_B_lin->GetBinContent( histo_B_lin->FindBin(jetEta,jetPt) );
-      if(useBBvsB){
-	bincontent_BB_lin = histo_BB_lin->GetBinContent( histo_BB_lin->FindBin(jetEta,jetPt) );
-      }
-      else
-      {
-	bincontent_C_lin = histo_C_lin->GetBinContent( histo_C_lin->FindBin(jetEta,jetPt) );
-	bincontent_DUSG_lin = histo_DUSG_lin->GetBinContent( histo_DUSG_lin->FindBin(jetEta,jetPt) );
-      }
+//       if(useBBvsB){
+      bincontent_BB_lin = histo_BB_lin->GetBinContent( histo_BB_lin->FindBin(jetEta,jetPt) );
+//       }
+//       else
+//       {
+//	bincontent_C_lin = histo_C_lin->GetBinContent( histo_C_lin->FindBin(jetEta,jetPt) );
+      bincontent_CDUSG_lin = histo_CDUSG_lin->GetBinContent( histo_CDUSG_lin->FindBin(jetEta,jetPt) );
+//       }
       
       if(flavour == 5){
 	weight = 1./bincontent_B_lin;
       }
-      else if(useBBvsB)
-      {
-		if(flavour == 9)weight = 1./bincontent_BB_lin;
+      else if(flavour == 9){
+	weight = 1./bincontent_BB_lin;
       }
 	
-      else if(flavour == 4)
-      {
-	weight = 1./bincontent_C_lin;
-      }
+//       else if(flavour == 4)
+//       {
+// 	weight = 1./bincontent_C_lin;
+//       }
       
       else
       {				
-	weight = 1./bincontent_DUSG_lin;
-	//					 histo2D_DUSG_reweighted_lin->Fill(jetEta,jetPt,weight);
-	//std::cout << "bincontent DUSG: " << bincontent_DUSG_lin << " so that weight is: " << weight << std::endl;
+	weight = 1./bincontent_CDUSG_lin;
+	//					 histo2D_CDUSG_reweighted_lin->Fill(jetEta,jetPt,weight);
+	//std::cout << "bincontent CDUSG: " << bincontent_CDUSG_lin << " so that weight is: " << weight << std::endl;
       }
 
       // composite full array of MVAComputer values

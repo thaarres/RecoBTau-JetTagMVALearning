@@ -16,27 +16,18 @@ process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
-
-	factor = cms.double(1),
-	bound = cms.double(50),
-
+	useBBvsB 		= cms.bool(False),
 	fileNames = cms.vstring(
-		" /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoVertex_B.root",
-		" /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2RecoVertex_BB.root"
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_B.root",
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2RecoVertex_DUSG.root"
 	),
-	weightFile = cms.string("weights/CombinedSVV2RecoVertex_BBB_histo.txt"),
-	biasFiles = cms.vstring(
-		"*",
-		"-",
-		"weights/CombinedSVV2RecoVertex_B_BB_ratio.txt"
-	)
 )
 
 process.looper = cms.Looper("JetTagMVATrainerLooper",
 	trainers = cms.VPSet(
 		cms.PSet(
 			calibrationRecord = cms.string("CombinedSVV2RecoVertex"),
-			trainDescription = cms.untracked.string("Save_Reco_B_BB.xml"),
+			trainDescription = cms.untracked.string("Save_Reco_B_DUSG.xml"),
 			loadState = cms.untracked.bool(False),
 			saveState = cms.untracked.bool(False)
 		)

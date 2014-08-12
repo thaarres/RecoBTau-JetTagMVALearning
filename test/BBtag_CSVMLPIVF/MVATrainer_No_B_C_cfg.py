@@ -16,19 +16,10 @@ process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
-
-	factor = cms.double(1),
-	bound = cms.double(50),
-
+	useBBvsB 		= cms.bool(False),
 	fileNames = cms.vstring(
-		" /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2NoVertex_B.root",
-		" /afs/cern.ch/user/t/thaarres/CSVTraining/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/rootfiles/Graviton_BvsBB/CombinedSVV2NoVertex_C.root"
-	),
-	weightFile = cms.string("weights/CombinedSVV2NoVertex_BC_histo.txt"),
-	biasFiles = cms.vstring(
-		"-",
-		"*",
-		"weights/CombinedSVV2NoVertex_B_C_ratio.txt"
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_B.root",
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_C.root"
 	)
 )
 

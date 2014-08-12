@@ -11,15 +11,15 @@ process.load("FWCore.MessageLogger.MessageLogger_cfi")
 process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	useCategories		= cms.bool(False),
 	calibrationRecord	= cms.string("CombinedSVV2RecoRecoVertex"),
-	ignoreFlavours		= cms.vint32(0, 1, 2, 3, 21),
+	ignoreFlavours		= cms.vint32(0, 4),
 	signalFlavours		= cms.vint32(5, 7),
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
 	useBBvsB 		= cms.bool(False),
 	fileNames = cms.vstring(
-		"/shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2RecoRecoVertex_B.root",
-		"/shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2RecoRecoVertex_C.root"
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2RecoRecoVertex_B.root",
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2RecoRecoVertex_DUSG.root"
 	),
 )
 
@@ -27,7 +27,7 @@ process.looper = cms.Looper("JetTagMVATrainerLooper",
 	trainers = cms.VPSet(
 		cms.PSet(
 			calibrationRecord = cms.string("CombinedSVV2RecoRecoVertex"),
-			trainDescription = cms.untracked.string("Save_RecoReco_B_C.xml"),
+			trainDescription = cms.untracked.string("Save_RecoReco_B_DUSG.xml"),
 			loadState = cms.untracked.bool(False),
 			saveState = cms.untracked.bool(False)
 		)

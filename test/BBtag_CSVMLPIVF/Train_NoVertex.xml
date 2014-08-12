@@ -266,30 +266,27 @@
 			<general strict="true"/>
         	              <category count="19"/>
 	    <sigbkg size="500"/>
-                        <bias_table><!--B_DUSG-->
-
-<bias>0.494679</bias>
-<bias>0.603949</bias>
-<bias>0.72725</bias>
-<bias>0.309296</bias>
-<bias>0.407488</bias>
-<bias>0.552474</bias>
-<bias>0.245273</bias>
-<bias>0.332774</bias>
-<bias>0.482552</bias>
-<bias>0.216049</bias>
-<bias>0.298596</bias>
-<bias>0.454424</bias>
-<bias>0.237576</bias>
-<bias>0.32552</bias>
-<bias>0.466442</bias>
-<bias>0.392945</bias>
-<bias>0.470504</bias>
-<bias>0.458261</bias>
-<bias>0.52488</bias>
-
-
-                        </bias_table><!--B_DUSG-->
+                        <bias_table><!--BB_CDUSG-->
+<bias>0.448561</bias>
+<bias>0.611651</bias>
+<bias>0.943531</bias>
+<bias>0.235791</bias>
+<bias>0.289579</bias>
+<bias>0.455358</bias>
+<bias>0.159</bias>
+<bias>0.257831</bias>
+<bias>0.280117</bias>
+<bias>0.12025</bias>
+<bias>0.161473</bias>
+<bias>0.231464</bias>
+<bias>0.0518289</bias>
+<bias>0.073121</bias>
+<bias>0.164972</bias>
+<bias>0.0540862</bias>
+<bias>0.0808679</bias>
+<bias>0.0819152</bias>
+<bias>0.130702</bias>
+                     </bias_table><!--BB_CDUSG-->
 		</config>
 		<output>
 			<var name="var1"/>
@@ -477,30 +474,27 @@
 								        <general strict="true"/>
         	              <category count="19"/>
 	                      <sigbkg size="500"/>
-                        <bias_table><!--B_C-->
-
-
-<bias>0.576543</bias>
-<bias>0.667669</bias>
-<bias>0.774572</bias>
-<bias>0.39703</bias>
-<bias>0.488367</bias>
-<bias>0.622579</bias>
-<bias>0.330996</bias>
-<bias>0.416634</bias>
-<bias>0.559358</bias>
-<bias>0.300747</bias>
-<bias>0.387464</bias>
-<bias>0.539248</bias>
-<bias>0.328385</bias>
-<bias>0.422979</bias>
-<bias>0.551453</bias>
-<bias>0.508926</bias>
-<bias>0.615143</bias>
-<bias>0.610848</bias>
-<bias>0.625801</bias>
-
-                     </bias_table><!--B_C-->
+                        <bias_table><!--BB_B-->
+<bias>0.935339</bias>
+<bias>1.11887</bias>
+<bias>1.50646</bias>
+<bias>0.84405</bias>
+<bias>0.834257</bias>
+<bias>0.947106</bias>
+<bias>0.719197</bias>
+<bias>0.903811</bias>
+<bias>0.677434</bias>
+<bias>0.600178</bias>
+<bias>0.615851</bias>
+<bias>0.606416</bias>
+<bias>0.193064</bias>
+<bias>0.237314</bias>
+<bias>0.409214</bias>
+<bias>0.153168</bias>
+<bias>0.202404</bias>
+<bias>0.21004</bias>
+<bias>1.03158</bias>
+ </bias_table><!--BB_B-->
 		</config>
 		<output>
 			<var name="var1"/>
@@ -515,7 +509,7 @@
 			<var source="proc16" name="var1"/>
 		</input>
 		<config>
-									<coefficients offset="0.0" coeff1="0.75" coeff2="0.25"/> 
+									<coefficients offset="0.0" coeff1="0.70" coeff2="0.30"/> 
 		</config>
 		<output>
 			<var name="var1"/>

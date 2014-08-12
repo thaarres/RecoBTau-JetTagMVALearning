@@ -272,25 +272,25 @@
 	    <sigbkg size="500"/>
                         <bias_table><!--B_DUSG-->
 
-<bias>0.494679</bias>
-<bias>0.603949</bias>
-<bias>0.72725</bias>
-<bias>0.309296</bias>
-<bias>0.407488</bias>
-<bias>0.552474</bias>
-<bias>0.245273</bias>
-<bias>0.332774</bias>
-<bias>0.482552</bias>
-<bias>0.216049</bias>
-<bias>0.298596</bias>
-<bias>0.454424</bias>
-<bias>0.237576</bias>
-<bias>0.32552</bias>
-<bias>0.466442</bias>
-<bias>0.392945</bias>
-<bias>0.470504</bias>
-<bias>0.458261</bias>
-<bias>0.52488</bias>
+<bias>0.441508</bias>
+<bias>0.520559</bias>
+<bias>0.649011</bias>
+<bias>0.268522</bias>
+<bias>0.348567</bias>
+<bias>0.491499</bias>
+<bias>0.201822</bias>
+<bias>0.278024</bias>
+<bias>0.418522</bias>
+<bias>0.171732</bias>
+<bias>0.248857</bias>
+<bias>0.39086</bias>
+<bias>0.191369</bias>
+<bias>0.28046</bias>
+<bias>0.416312</bias>
+<bias>0.341263</bias>
+<bias>0.433803</bias>
+<bias>0.410653</bias>
+<bias>0.515622</bias>
 
 
                        </bias_table><!--B_DUSG-->

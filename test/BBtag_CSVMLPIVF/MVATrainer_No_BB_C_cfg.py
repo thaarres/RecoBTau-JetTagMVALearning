@@ -10,24 +10,24 @@ process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
 process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	useCategories		= cms.bool(False),
-	calibrationRecord	= cms.string("CombinedSVV2RecoRecoVertex"),
+	calibrationRecord	= cms.string("CombinedSVV2NoVertex"),
 	ignoreFlavours		= cms.vint32(0, 1, 2, 3, 21),
-	signalFlavours		= cms.vint32(5, 7),
+	signalFlavours		= cms.vint32(9),
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
-	useBBvsB 		= cms.bool(False),
+	useBBvsB 		= cms.bool(True),
 	fileNames = cms.vstring(
-		"/shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2RecoRecoVertex_B.root",
-		"/shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2RecoRecoVertex_C.root"
-	),
+		" /shome/thaarres/BBRetraining_SignalRadion_BackgroundQCD/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_BB.root",
+		" /shome/thaarres/BBRetraining_SignalRadion_BackgroundQCD/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_C.root"
+	)
 )
 
 process.looper = cms.Looper("JetTagMVATrainerLooper",
 	trainers = cms.VPSet(
 		cms.PSet(
-			calibrationRecord = cms.string("CombinedSVV2RecoRecoVertex"),
-			trainDescription = cms.untracked.string("Save_RecoReco_B_C.xml"),
+			calibrationRecord = cms.string("CombinedSVV2NoVertex"),
+			trainDescription = cms.untracked.string("Save_No_BB_C.xml"),
 			loadState = cms.untracked.bool(False),
 			saveState = cms.untracked.bool(False)
 		)

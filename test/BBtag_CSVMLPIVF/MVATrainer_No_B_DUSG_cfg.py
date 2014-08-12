@@ -11,25 +11,15 @@ process.load("FWCore.MessageLogger.MessageLogger_cfi")
 process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	useCategories		= cms.bool(False),
 	calibrationRecord	= cms.string("CombinedSVV2NoVertex"),
-	ignoreFlavours		= cms.vint32(0, 4),
+	ignoreFlavours		= cms.vint32(0,4),
 	signalFlavours		= cms.vint32(5, 7),
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
-
-	factor = cms.double(1),
-	bound = cms.double(50),
-	#weightThreshold = cms.untracked.double(0.1),
-
+	useBBvsB 		= cms.bool(False),
 	fileNames = cms.vstring(
-		" /afs/cern.ch/user/t/thaarres/removeMe/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/CSV_MLP/VariableExtraction/rootfiles/QCD_all/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_B.root",
-		" /afs/cern.ch/user/t/thaarres/removeMe/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/CSV_MLP/VariableExtraction/rootfiles/QCD_all/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_DUSG.root"
-	),
-	weightFile = cms.string("weights/CombinedSVV2NoVertex_BDUSG_histo.txt"),
-	biasFiles = cms.vstring(
-		"*",
-		"-",
-		"weights/CombinedSVV2NoVertex_B_DUSG_ratio.txt"
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_B.root",
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2NoVertex_DUSG.root"
 	)
 )
 

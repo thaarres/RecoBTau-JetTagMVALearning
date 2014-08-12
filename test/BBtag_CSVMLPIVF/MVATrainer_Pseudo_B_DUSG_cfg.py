@@ -16,20 +16,11 @@ process.CombinedSVV2Trainer = cms.EDAnalyzer("JetTagMVATreeTrainer",
 	minimumTransverseMomentum = cms.double(15.0),
 	minimumPseudoRapidity	= cms.double(0),
 	maximumPseudoRapidity	= cms.double(2.5),
-
-	factor = cms.double(1),
-	bound = cms.double(50),
-
+	useBBvsB 		= cms.bool(False),
 	fileNames = cms.vstring(
-		" /afs/cern.ch/user/t/thaarres/removeMe/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/CSV_MLP/VariableExtraction/rootfiles/QCD_all/skimmed_20k_eachptetabin_CombinedSVV2PseudoVertex_B.root",
-		" /afs/cern.ch/user/t/thaarres/removeMe/CMSSW_5_3_14/src/RecoBTau/JetTagMVALearning/test/CSV_MLP/VariableExtraction/rootfiles/QCD_all/skimmed_20k_eachptetabin_CombinedSVV2PseudoVertex_DUSG.root"
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2PseudoVertex_B.root",
+		" /shome/thaarres/QCD_Pt-15to3000_TuneZ2star_Flat_8TeV_pythia6_Summer12_DR53X-PU_S10_START53_V7A-v1_AODSIM/RecoVsRecoReco/skimmed_20k_eachptetabin_CombinedSVV2PseudoVertex_DUSG.root"
 	),
-	weightFile = cms.string("weights/CombinedSVV2PseudoVertex_BDUSG_histo.txt"),
-	biasFiles = cms.vstring(
-		"*",
-		"-",
-		"weights/CombinedSVV2PseudoVertex_B_DUSG_ratio.txt"
-	)
 )
 
 process.looper = cms.Looper("JetTagMVATrainerLooper",
